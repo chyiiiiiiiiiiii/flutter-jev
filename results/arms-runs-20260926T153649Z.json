@@ -1,0 +1,7524 @@
+[
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 1,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 1.968,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.142,
+  "transport_calls": 22,
+  "settle_seconds": 0.39,
+  "settles": 2,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 1.968,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 7,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 1,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 1.95,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.129,
+  "transport_calls": 22,
+  "settle_seconds": 0.384,
+  "settles": 2,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 1.95,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 7,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 1,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 1.959,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.131,
+  "transport_calls": 22,
+  "settle_seconds": 0.388,
+  "settles": 2,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 1.959,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 7,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "uncertain",
+  "steps": 5,
+  "model_calls": 5,
+  "input_tokens": 4683,
+  "output_tokens": 486,
+  "cost_usd": 0.000197,
+  "wall_seconds": 14.065,
+  "model_seconds": 1.193,
+  "transport_seconds": 1.197,
+  "transport_calls": 180,
+  "settle_seconds": 13.875,
+  "settles": 10,
+  "median_decision_ms": 222.4,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 10437,
+  "compact_chars": 1849,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Focus the text field @e1 (email_field_v17).",
+    "typed": null,
+    "target": "email_field_v17",
+    "kind": "tap",
+    "confidence": 0.87,
+    "complete": 0.01,
+    "ms": 282.2,
+    "at": 0.392,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.93,
+    "complete": 0.01,
+    "ms": 206.4,
+    "at": 6.884,
+    "cost": 7.2e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 0.37,
+    "complete": 0.01,
+    "ms": 260.9,
+    "at": 7.252,
+    "cost": 0.000112
+   },
+   {
+    "step": 4,
+    "action": "Focus the text field @e1 (email_field_v17).",
+    "typed": null,
+    "target": "email_field_v17",
+    "kind": "tap",
+    "confidence": 0.49,
+    "complete": 0.01,
+    "ms": 220.8,
+    "at": 7.662,
+    "cost": 0.000154
+   },
+   {
+    "step": 5,
+    "action": "Stop and report failure: the app is showing an error, or the task is impossible no matter which screens are visited next. Do not choose this merely because the task is unfinished, or because the next thing needed is on a different screen.",
+    "typed": null,
+    "target": "fail",
+    "kind": "finish",
+    "confidence": 0.51,
+    "complete": 0.01,
+    "ms": 222.4,
+    "at": 14.065,
+    "cost": 0.000197
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 7,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "uncertain",
+  "steps": 5,
+  "model_calls": 5,
+  "input_tokens": 4683,
+  "output_tokens": 486,
+  "cost_usd": 0.000197,
+  "wall_seconds": 14.101,
+  "model_seconds": 1.34,
+  "transport_seconds": 1.224,
+  "transport_calls": 180,
+  "settle_seconds": 13.878,
+  "settles": 10,
+  "median_decision_ms": 244.3,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 10437,
+  "compact_chars": 1849,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Focus the text field @e1 (email_field_v17).",
+    "typed": null,
+    "target": "email_field_v17",
+    "kind": "tap",
+    "confidence": 0.87,
+    "complete": 0.01,
+    "ms": 378.4,
+    "at": 0.412,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.95,
+    "complete": 0.01,
+    "ms": 228.4,
+    "at": 6.899,
+    "cost": 7.2e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 0.45,
+    "complete": 0.01,
+    "ms": 267.7,
+    "at": 7.267,
+    "cost": 0.000112
+   },
+   {
+    "step": 4,
+    "action": "Focus the text field @e1 (email_field_v17).",
+    "typed": null,
+    "target": "email_field_v17",
+    "kind": "tap",
+    "confidence": 0.48,
+    "complete": 0.01,
+    "ms": 221.3,
+    "at": 7.672,
+    "cost": 0.000154
+   },
+   {
+    "step": 5,
+    "action": "Stop and report failure: the app is showing an error, or the task is impossible no matter which screens are visited next. Do not choose this merely because the task is unfinished, or because the next thing needed is on a different screen.",
+    "typed": null,
+    "target": "fail",
+    "kind": "finish",
+    "confidence": 0.51,
+    "complete": 0.01,
+    "ms": 244.3,
+    "at": 14.1,
+    "cost": 0.000197
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 7,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "uncertain",
+  "steps": 5,
+  "model_calls": 5,
+  "input_tokens": 4683,
+  "output_tokens": 486,
+  "cost_usd": 0.000197,
+  "wall_seconds": 13.979,
+  "model_seconds": 1.319,
+  "transport_seconds": 1.126,
+  "transport_calls": 180,
+  "settle_seconds": 13.817,
+  "settles": 10,
+  "median_decision_ms": 261.5,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 10437,
+  "compact_chars": 1849,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Focus the text field @e1 (email_field_v17).",
+    "typed": null,
+    "target": "email_field_v17",
+    "kind": "tap",
+    "confidence": 0.85,
+    "complete": 0.01,
+    "ms": 315.5,
+    "at": 0.382,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.94,
+    "complete": 0.01,
+    "ms": 253.7,
+    "at": 6.8,
+    "cost": 7.2e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 0.46,
+    "complete": 0.01,
+    "ms": 272.2,
+    "at": 7.15,
+    "cost": 0.000112
+   },
+   {
+    "step": 4,
+    "action": "Focus the text field @e1 (email_field_v17).",
+    "typed": null,
+    "target": "email_field_v17",
+    "kind": "tap",
+    "confidence": 0.55,
+    "complete": 0.01,
+    "ms": 215.9,
+    "at": 7.561,
+    "cost": 0.000154
+   },
+   {
+    "step": 5,
+    "action": "Stop and report failure: the app is showing an error, or the task is impossible no matter which screens are visited next. Do not choose this merely because the task is unfinished, or because the next thing needed is on a different screen.",
+    "typed": null,
+    "target": "fail",
+    "kind": "finish",
+    "confidence": 0.54,
+    "complete": 0.01,
+    "ms": 261.5,
+    "at": 13.979,
+    "cost": 0.000197
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 7,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 16,
+  "input_tokens": 13723,
+  "output_tokens": 521,
+  "cost_usd": 0.004212,
+  "wall_seconds": 16.699,
+  "model_seconds": 15.864,
+  "transport_seconds": 1.286,
+  "transport_calls": 118,
+  "settle_seconds": 5.643,
+  "settles": 32,
+  "median_decision_ms": 966.0,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 64199,
+  "compact_chars": 6485,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field_v17 field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field_v17",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1277.9,
+    "at": 1.31,
+    "cost": 0.000199
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1052.0,
+    "at": 2.383,
+    "cost": 0.000439
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 893.9,
+    "at": 3.295,
+    "cost": 0.000668
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 897.5,
+    "at": 5.215,
+    "cost": 0.001195
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v17.",
+    "typed": null,
+    "target": "order_5207_v17",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.3,
+    "ms": 1132.2,
+    "at": 7.513,
+    "cost": 0.001957
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 896.0,
+    "at": 9.573,
+    "cost": 0.002565
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 1048.8,
+    "at": 10.761,
+    "cost": 0.0028
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1002.5,
+    "at": 11.846,
+    "cost": 0.003044
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 877.9,
+    "at": 12.753,
+    "cost": 0.003299
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1105.3,
+    "at": 13.913,
+    "cost": 0.003534
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 856.8,
+    "at": 14.812,
+    "cost": 0.003774
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 905.2,
+    "at": 16.699,
+    "cost": 0.004212
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 7,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 16,
+  "input_tokens": 13723,
+  "output_tokens": 521,
+  "cost_usd": 0.004212,
+  "wall_seconds": 17.057,
+  "model_seconds": 16.208,
+  "transport_seconds": 1.268,
+  "transport_calls": 118,
+  "settle_seconds": 5.628,
+  "settles": 32,
+  "median_decision_ms": 988.2,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 64165,
+  "compact_chars": 6485,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field_v17 field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field_v17",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1000.2,
+    "at": 1.033,
+    "cost": 0.000199
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1048.2,
+    "at": 2.103,
+    "cost": 0.000439
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 977.1,
+    "at": 3.099,
+    "cost": 0.000668
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 982.9,
+    "at": 5.371,
+    "cost": 0.001195
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v17.",
+    "typed": null,
+    "target": "order_5207_v17",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.3,
+    "ms": 917.9,
+    "at": 7.674,
+    "cost": 0.001957
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 993.6,
+    "at": 9.849,
+    "cost": 0.002565
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 952.7,
+    "at": 10.938,
+    "cost": 0.0028
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1022.0,
+    "at": 12.037,
+    "cost": 0.003044
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 960.9,
+    "at": 13.025,
+    "cost": 0.003299
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 932.4,
+    "at": 14.002,
+    "cost": 0.003534
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 1080.6,
+    "at": 15.132,
+    "cost": 0.003774
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 962.2,
+    "at": 17.057,
+    "cost": 0.004212
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 7,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 16,
+  "input_tokens": 13723,
+  "output_tokens": 521,
+  "cost_usd": 0.004212,
+  "wall_seconds": 16.715,
+  "model_seconds": 15.865,
+  "transport_seconds": 1.28,
+  "transport_calls": 117,
+  "settle_seconds": 5.547,
+  "settles": 32,
+  "median_decision_ms": 996.8,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 64199,
+  "compact_chars": 6485,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field_v17 field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field_v17",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 973.6,
+    "at": 1.007,
+    "cost": 0.000199
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1042.2,
+    "at": 2.072,
+    "cost": 0.000439
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 937.7,
+    "at": 3.026,
+    "cost": 0.000668
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 873.2,
+    "at": 5.045,
+    "cost": 0.001195
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v17.",
+    "typed": null,
+    "target": "order_5207_v17",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.3,
+    "ms": 993.4,
+    "at": 7.148,
+    "cost": 0.001957
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 980.1,
+    "at": 9.222,
+    "cost": 0.002565
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 1046.0,
+    "at": 10.407,
+    "cost": 0.0028
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1080.3,
+    "at": 11.562,
+    "cost": 0.003044
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1013.7,
+    "at": 12.602,
+    "cost": 0.003299
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1010.7,
+    "at": 13.665,
+    "cost": 0.003534
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 1099.0,
+    "at": 14.813,
+    "cost": 0.003774
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 882.9,
+    "at": 16.714,
+    "cost": 0.004212
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 7,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18985,
+  "output_tokens": 1785,
+  "cost_usd": 0.00112,
+  "wall_seconds": 9.512,
+  "model_seconds": 4.054,
+  "transport_seconds": 1.221,
+  "transport_calls": 120,
+  "settle_seconds": 5.638,
+  "settles": 34,
+  "median_decision_ms": 227.7,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000323,
+  "writer_seconds": 2.928,
+  "raw_chars": 74629,
+  "compact_chars": 7145,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field_v17 field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field_v17",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 302.3,
+    "at": 1.416,
+    "cost": 0.000151
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 248.9,
+    "at": 1.807,
+    "cost": 0.00019
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 227.0,
+    "at": 2.167,
+    "cost": 0.00023
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.41,
+    "complete": 0.03,
+    "ms": 242.3,
+    "at": 3.259,
+    "cost": 0.000376
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v17.",
+    "typed": null,
+    "target": "order_5207_v17",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.04,
+    "ms": 261.1,
+    "at": 4.877,
+    "cost": 0.000621
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 207.9,
+    "at": 5.645,
+    "cost": 0.000725
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.71,
+    "complete": 0.04,
+    "ms": 222.9,
+    "at": 6.127,
+    "cost": 0.000767
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.03,
+    "ms": 226.4,
+    "at": 7.57,
+    "cost": 0.000904
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.07,
+    "ms": 244.3,
+    "at": 7.943,
+    "cost": 0.000949
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.08,
+    "ms": 219.6,
+    "at": 8.345,
+    "cost": 0.000993
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.18,
+    "ms": 282.8,
+    "at": 8.75,
+    "cost": 0.001036
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.96,
+    "complete": 0.93,
+    "ms": 224.5,
+    "at": 9.512,
+    "cost": 0.00112
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 7,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18985,
+  "output_tokens": 1785,
+  "cost_usd": 0.00112,
+  "wall_seconds": 9.454,
+  "model_seconds": 4.152,
+  "transport_seconds": 1.191,
+  "transport_calls": 120,
+  "settle_seconds": 5.589,
+  "settles": 34,
+  "median_decision_ms": 239.0,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000323,
+  "writer_seconds": 2.85,
+  "raw_chars": 74604,
+  "compact_chars": 7145,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field_v17 field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field_v17",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 270.7,
+    "at": 1.323,
+    "cost": 0.000151
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 228.6,
+    "at": 1.688,
+    "cost": 0.00019
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 207.2,
+    "at": 2.046,
+    "cost": 0.00023
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.39,
+    "complete": 0.04,
+    "ms": 209.2,
+    "at": 3.145,
+    "cost": 0.000376
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v17.",
+    "typed": null,
+    "target": "order_5207_v17",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.04,
+    "ms": 281.1,
+    "at": 4.855,
+    "cost": 0.000621
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.06,
+    "ms": 254.4,
+    "at": 5.605,
+    "cost": 0.000725
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.72,
+    "complete": 0.04,
+    "ms": 252.8,
+    "at": 6.091,
+    "cost": 0.000767
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.97,
+    "complete": 0.04,
+    "ms": 216.6,
+    "at": 7.525,
+    "cost": 0.000904
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.06,
+    "ms": 253.7,
+    "at": 7.901,
+    "cost": 0.000949
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 239.0,
+    "at": 8.298,
+    "cost": 0.000993
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.15,
+    "ms": 209.4,
+    "at": 8.686,
+    "cost": 0.001036
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 204.0,
+    "at": 9.453,
+    "cost": 0.00112
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 7,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18985,
+  "output_tokens": 1785,
+  "cost_usd": 0.00112,
+  "wall_seconds": 9.322,
+  "model_seconds": 4.239,
+  "transport_seconds": 1.247,
+  "transport_calls": 120,
+  "settle_seconds": 5.703,
+  "settles": 34,
+  "median_decision_ms": 243.0,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000323,
+  "writer_seconds": 2.652,
+  "raw_chars": 74554,
+  "compact_chars": 7145,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field_v17 field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field_v17",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 317.8,
+    "at": 1.325,
+    "cost": 0.000151
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 280.4,
+    "at": 1.726,
+    "cost": 0.00019
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 243.0,
+    "at": 2.09,
+    "cost": 0.00023
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.39,
+    "complete": 0.04,
+    "ms": 218.3,
+    "at": 3.195,
+    "cost": 0.000376
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v17.",
+    "typed": null,
+    "target": "order_5207_v17",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.04,
+    "ms": 280.5,
+    "at": 4.754,
+    "cost": 0.000621
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.06,
+    "ms": 252.2,
+    "at": 5.494,
+    "cost": 0.000725
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.7,
+    "complete": 0.04,
+    "ms": 238.4,
+    "at": 5.983,
+    "cost": 0.000767
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 246.3,
+    "at": 7.35,
+    "cost": 0.000904
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.06,
+    "ms": 241.7,
+    "at": 7.735,
+    "cost": 0.000949
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 217.4,
+    "at": 8.142,
+    "cost": 0.000993
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.15,
+    "ms": 281.6,
+    "at": 8.545,
+    "cost": 0.001036
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 232.1,
+    "at": 9.322,
+    "cost": 0.00112
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 7,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 3,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 2.686,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.203,
+  "transport_calls": 36,
+  "settle_seconds": 1.094,
+  "settles": 6,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 0.406,
+    "cost": 0.0
+   },
+   {
+    "step": 2,
+    "kind": "fill",
+    "target": "password_field",
+    "at": 0.759,
+    "cost": 0.0
+   },
+   {
+    "step": 3,
+    "kind": "tap",
+    "target": "signin_button",
+    "at": 2.686,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 55,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 3,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 2.73,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.24,
+  "transport_calls": 36,
+  "settle_seconds": 1.133,
+  "settles": 6,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 0.409,
+    "cost": 0.0
+   },
+   {
+    "step": 2,
+    "kind": "fill",
+    "target": "password_field",
+    "at": 0.786,
+    "cost": 0.0
+   },
+   {
+    "step": 3,
+    "kind": "tap",
+    "target": "signin_button",
+    "at": 2.73,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 55,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 3,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 2.691,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.202,
+  "transport_calls": 36,
+  "settle_seconds": 1.099,
+  "settles": 6,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 0.401,
+    "cost": 0.0
+   },
+   {
+    "step": 2,
+    "kind": "fill",
+    "target": "password_field",
+    "at": 0.756,
+    "cost": 0.0
+   },
+   {
+    "step": 3,
+    "kind": "tap",
+    "target": "signin_button",
+    "at": 2.691,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 55,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18788,
+  "output_tokens": 1812,
+  "cost_usd": 0.000789,
+  "wall_seconds": 12.836,
+  "model_seconds": 4.404,
+  "transport_seconds": 1.848,
+  "transport_calls": 189,
+  "settle_seconds": 11.935,
+  "settles": 34,
+  "median_decision_ms": 247.8,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 74206,
+  "compact_chars": 7118,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.01,
+    "ms": 298.8,
+    "at": 0.395,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.01,
+    "ms": 249.5,
+    "at": 0.79,
+    "cost": 7.1e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 237.6,
+    "at": 1.153,
+    "cost": 0.00011
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.46,
+    "complete": 0.03,
+    "ms": 211.5,
+    "at": 2.366,
+    "cost": 0.000256
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.04,
+    "ms": 268.6,
+    "at": 3.109,
+    "cost": 0.000389
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.06,
+    "ms": 269.8,
+    "at": 3.876,
+    "cost": 0.000492
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.88,
+    "complete": 0.03,
+    "ms": 240.3,
+    "at": 4.371,
+    "cost": 0.000533
+   },
+   {
+    "step": 8,
+    "action": "Focus the text field @e3 (return_notes_field).",
+    "typed": null,
+    "target": "return_notes_field",
+    "kind": "tap",
+    "confidence": 0.59,
+    "complete": 0.04,
+    "ms": 391.6,
+    "at": 4.833,
+    "cost": 0.000575
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.87,
+    "complete": 0.05,
+    "ms": 232.1,
+    "at": 11.285,
+    "cost": 0.00062
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 247.8,
+    "at": 11.684,
+    "cost": 0.000663
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.16,
+    "ms": 237.1,
+    "at": 12.072,
+    "cost": 0.000706
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.98,
+    "complete": 0.94,
+    "ms": 220.8,
+    "at": 12.835,
+    "cost": 0.000789
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18788,
+  "output_tokens": 1817,
+  "cost_usd": 0.000789,
+  "wall_seconds": 12.754,
+  "model_seconds": 4.053,
+  "transport_seconds": 1.876,
+  "transport_calls": 189,
+  "settle_seconds": 11.96,
+  "settles": 34,
+  "median_decision_ms": 235.3,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 74576,
+  "compact_chars": 7118,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.01,
+    "ms": 303.4,
+    "at": 0.398,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.01,
+    "ms": 235.1,
+    "at": 0.792,
+    "cost": 7.1e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 219.8,
+    "at": 1.158,
+    "cost": 0.00011
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.53,
+    "complete": 0.03,
+    "ms": 273.2,
+    "at": 2.291,
+    "cost": 0.000256
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.04,
+    "ms": 235.9,
+    "at": 3.031,
+    "cost": 0.000389
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 218.1,
+    "at": 3.807,
+    "cost": 0.000492
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.83,
+    "complete": 0.03,
+    "ms": 275.8,
+    "at": 4.302,
+    "cost": 0.000533
+   },
+   {
+    "step": 8,
+    "action": "Focus the text field @e3 (return_notes_field).",
+    "typed": null,
+    "target": "return_notes_field",
+    "kind": "tap",
+    "confidence": 0.5,
+    "complete": 0.04,
+    "ms": 211.8,
+    "at": 4.737,
+    "cost": 0.000575
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.83,
+    "complete": 0.05,
+    "ms": 244.2,
+    "at": 11.177,
+    "cost": 0.00062
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.06,
+    "ms": 225.2,
+    "at": 11.581,
+    "cost": 0.000663
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.18,
+    "ms": 235.3,
+    "at": 11.979,
+    "cost": 0.000706
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 237.1,
+    "at": 12.753,
+    "cost": 0.000789
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18503,
+  "output_tokens": 1747,
+  "cost_usd": 0.000777,
+  "wall_seconds": 13.209,
+  "model_seconds": 4.578,
+  "transport_seconds": 1.832,
+  "transport_calls": 188,
+  "settle_seconds": 11.818,
+  "settles": 34,
+  "median_decision_ms": 234.5,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 68929,
+  "compact_chars": 6796,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.01,
+    "ms": 269.2,
+    "at": 0.397,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.01,
+    "ms": 220.5,
+    "at": 0.763,
+    "cost": 7.1e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 232.7,
+    "at": 1.129,
+    "cost": 0.00011
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.43,
+    "complete": 0.03,
+    "ms": 228.1,
+    "at": 2.195,
+    "cost": 0.000244
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.03,
+    "ms": 231.1,
+    "at": 2.954,
+    "cost": 0.000377
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 213.8,
+    "at": 4.191,
+    "cost": 0.00048
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.78,
+    "complete": 0.03,
+    "ms": 282.8,
+    "at": 4.677,
+    "cost": 0.000521
+   },
+   {
+    "step": 8,
+    "action": "Focus the text field @e3 (return_notes_field).",
+    "typed": null,
+    "target": "return_notes_field",
+    "kind": "tap",
+    "confidence": 0.41,
+    "complete": 0.04,
+    "ms": 203.2,
+    "at": 5.119,
+    "cost": 0.000563
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.87,
+    "complete": 0.05,
+    "ms": 217.0,
+    "at": 11.635,
+    "cost": 0.000608
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.06,
+    "ms": 236.1,
+    "at": 12.049,
+    "cost": 0.000652
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.23,
+    "ms": 312.6,
+    "at": 12.442,
+    "cost": 0.000694
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 269.0,
+    "at": 13.209,
+    "cost": 0.000777
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 14423,
+  "output_tokens": 555,
+  "cost_usd": 0.004438,
+  "wall_seconds": 17.463,
+  "model_seconds": 16.69,
+  "transport_seconds": 1.311,
+  "transport_calls": 120,
+  "settle_seconds": 5.716,
+  "settles": 34,
+  "median_decision_ms": 964.8,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 64307,
+  "compact_chars": 6529,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1224.4,
+    "at": 1.258,
+    "cost": 0.000185
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1028.3,
+    "at": 2.309,
+    "cost": 0.000421
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 939.4,
+    "at": 3.269,
+    "cost": 0.000667
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 964.8,
+    "at": 5.228,
+    "cost": 0.001182
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 968.7,
+    "at": 7.295,
+    "cost": 0.001932
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 934.7,
+    "at": 9.38,
+    "cost": 0.002551
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 932.9,
+    "at": 11.457,
+    "cost": 0.003001
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 946.1,
+    "at": 12.484,
+    "cost": 0.003245
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.6,
+    "ms": 931.4,
+    "at": 13.435,
+    "cost": 0.003512
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 980.1,
+    "at": 14.462,
+    "cost": 0.003757
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 899.7,
+    "at": 15.405,
+    "cost": 0.003993
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 1067.6,
+    "at": 17.462,
+    "cost": 0.004438
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 14423,
+  "output_tokens": 555,
+  "cost_usd": 0.004438,
+  "wall_seconds": 18.153,
+  "model_seconds": 17.379,
+  "transport_seconds": 1.299,
+  "transport_calls": 120,
+  "settle_seconds": 5.727,
+  "settles": 34,
+  "median_decision_ms": 968.4,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 64307,
+  "compact_chars": 6529,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1280.9,
+    "at": 1.315,
+    "cost": 0.000185
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1107.5,
+    "at": 2.47,
+    "cost": 0.000421
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 966.1,
+    "at": 3.456,
+    "cost": 0.000667
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 917.9,
+    "at": 5.445,
+    "cost": 0.001182
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 1191.4,
+    "at": 8.109,
+    "cost": 0.001932
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 949.4,
+    "at": 10.193,
+    "cost": 0.002551
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 888.9,
+    "at": 12.159,
+    "cost": 0.003001
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 968.4,
+    "at": 13.205,
+    "cost": 0.003245
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.6,
+    "ms": 990.5,
+    "at": 14.218,
+    "cost": 0.003512
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 950.4,
+    "at": 15.218,
+    "cost": 0.003757
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 935.2,
+    "at": 16.195,
+    "cost": 0.003993
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 977.5,
+    "at": 18.152,
+    "cost": 0.004438
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 14423,
+  "output_tokens": 555,
+  "cost_usd": 0.004438,
+  "wall_seconds": 17.129,
+  "model_seconds": 16.352,
+  "transport_seconds": 1.303,
+  "transport_calls": 120,
+  "settle_seconds": 5.721,
+  "settles": 34,
+  "median_decision_ms": 969.4,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 64307,
+  "compact_chars": 6529,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1025.3,
+    "at": 1.057,
+    "cost": 0.000185
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1063.1,
+    "at": 2.168,
+    "cost": 0.000421
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 946.6,
+    "at": 3.132,
+    "cost": 0.000667
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 862.7,
+    "at": 4.957,
+    "cost": 0.001182
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 971.9,
+    "at": 6.922,
+    "cost": 0.001932
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 1058.8,
+    "at": 9.163,
+    "cost": 0.002551
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 981.8,
+    "at": 11.185,
+    "cost": 0.003001
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 921.4,
+    "at": 12.184,
+    "cost": 0.003245
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.6,
+    "ms": 928.4,
+    "at": 13.136,
+    "cost": 0.003512
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 953.7,
+    "at": 14.138,
+    "cost": 0.003757
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 923.2,
+    "at": 15.105,
+    "cost": 0.003993
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 969.4,
+    "at": 17.128,
+    "cost": 0.004438
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 19,
+  "input_tokens": 21459,
+  "output_tokens": 2032,
+  "cost_usd": 0.001217,
+  "wall_seconds": 11.316,
+  "model_seconds": 4.644,
+  "transport_seconds": 1.464,
+  "transport_calls": 132,
+  "settle_seconds": 6.809,
+  "settles": 37,
+  "median_decision_ms": 239.2,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000316,
+  "writer_seconds": 3.054,
+  "raw_chars": 85091,
+  "compact_chars": 7928,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 341.8,
+    "at": 1.619,
+    "cost": 0.000144
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 239.2,
+    "at": 2.02,
+    "cost": 0.000183
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 250.5,
+    "at": 2.387,
+    "cost": 0.000222
+   },
+   {
+    "step": 4,
+    "action": "Scroll down to reveal content below the fold.",
+    "typed": null,
+    "target": "scroll",
+    "kind": "scroll",
+    "confidence": 0.39,
+    "complete": 0.03,
+    "ms": 253.7,
+    "at": 3.491,
+    "cost": 0.000369
+   },
+   {
+    "step": 5,
+    "action": "Tap @e8, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.5,
+    "complete": 0.02,
+    "ms": 215.5,
+    "at": 4.998,
+    "cost": 0.000431
+   },
+   {
+    "step": 6,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 240.0,
+    "at": 6.582,
+    "cost": 0.000677
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.08,
+    "ms": 212.5,
+    "at": 7.307,
+    "cost": 0.000782
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.76,
+    "complete": 0.04,
+    "ms": 215.8,
+    "at": 7.961,
+    "cost": 0.000863
+   },
+   {
+    "step": 9,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.05,
+    "ms": 206.8,
+    "at": 9.357,
+    "cost": 0.001
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.95,
+    "complete": 0.07,
+    "ms": 206.9,
+    "at": 9.742,
+    "cost": 0.001045
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.07,
+    "ms": 373.3,
+    "at": 10.156,
+    "cost": 0.001089
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.19,
+    "ms": 251.6,
+    "at": 10.549,
+    "cost": 0.001132
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 239.9,
+    "at": 11.316,
+    "cost": 0.001217
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 19024,
+  "output_tokens": 1797,
+  "cost_usd": 0.001115,
+  "wall_seconds": 9.765,
+  "model_seconds": 4.041,
+  "transport_seconds": 1.257,
+  "transport_calls": 120,
+  "settle_seconds": 5.704,
+  "settles": 34,
+  "median_decision_ms": 242.8,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000316,
+  "writer_seconds": 3.142,
+  "raw_chars": 74891,
+  "compact_chars": 7152,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 291.9,
+    "at": 1.582,
+    "cost": 0.000144
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 257.0,
+    "at": 1.974,
+    "cost": 0.000183
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 238.0,
+    "at": 2.343,
+    "cost": 0.000222
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.42,
+    "complete": 0.03,
+    "ms": 249.8,
+    "at": 3.491,
+    "cost": 0.000369
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 226.8,
+    "at": 5.104,
+    "cost": 0.000614
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.08,
+    "ms": 242.8,
+    "at": 5.817,
+    "cost": 0.000718
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.79,
+    "complete": 0.04,
+    "ms": 256.5,
+    "at": 6.306,
+    "cost": 0.00076
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 209.1,
+    "at": 7.806,
+    "cost": 0.000897
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 220.0,
+    "at": 8.19,
+    "cost": 0.000942
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 212.8,
+    "at": 8.602,
+    "cost": 0.000986
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.15,
+    "ms": 230.7,
+    "at": 8.998,
+    "cost": 0.00103
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.96,
+    "complete": 0.92,
+    "ms": 266.0,
+    "at": 9.765,
+    "cost": 0.001115
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 18,
+  "input_tokens": 19931,
+  "output_tokens": 1866,
+  "cost_usd": 0.001153,
+  "wall_seconds": 9.805,
+  "model_seconds": 4.158,
+  "transport_seconds": 1.262,
+  "transport_calls": 122,
+  "settle_seconds": 5.678,
+  "settles": 36,
+  "median_decision_ms": 226.2,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000316,
+  "writer_seconds": 3.051,
+  "raw_chars": 74990,
+  "compact_chars": 7189,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 271.5,
+    "at": 1.468,
+    "cost": 0.000144
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 243.0,
+    "at": 1.862,
+    "cost": 0.000183
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button_v65.",
+    "typed": null,
+    "target": "signin_button_v65",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 209.6,
+    "at": 2.228,
+    "cost": 0.000222
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.38,
+    "complete": 0.03,
+    "ms": 231.1,
+    "at": 3.326,
+    "cost": 0.000369
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207_v65.",
+    "typed": null,
+    "target": "order_5207_v65",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.04,
+    "ms": 197.9,
+    "at": 4.985,
+    "cost": 0.000614
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button.",
+    "typed": null,
+    "target": "start_return_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.09,
+    "ms": 240.6,
+    "at": 5.736,
+    "cost": 0.000718
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.74,
+    "complete": 0.04,
+    "ms": 216.4,
+    "at": 6.406,
+    "cost": 0.000798
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 224.8,
+    "at": 7.858,
+    "cost": 0.000935
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 314.6,
+    "at": 8.241,
+    "cost": 0.00098
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm_v65.",
+    "typed": null,
+    "target": "return_confirm_v65",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.06,
+    "ms": 218.4,
+    "at": 8.65,
+    "cost": 0.001024
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.15,
+    "ms": 206.5,
+    "at": 9.041,
+    "cost": 0.001068
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.91,
+    "ms": 202.9,
+    "at": 9.805,
+    "cost": 0.001153
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 55,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  },
+  "rerun": "first attempt raised JSONDecodeError from the API"
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 4,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 3.147,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.411,
+  "transport_calls": 42,
+  "settle_seconds": 1.44,
+  "settles": 8,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 0.401,
+    "cost": 0.0
+   },
+   {
+    "step": 2,
+    "kind": "fill",
+    "target": "password_field",
+    "at": 0.779,
+    "cost": 0.0
+   },
+   {
+    "step": 3,
+    "kind": "tap",
+    "target": "signin_button",
+    "at": 1.205,
+    "cost": 0.0
+   },
+   {
+    "step": 4,
+    "kind": "tap",
+    "target": "nav_orders",
+    "at": 3.147,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 4,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 4,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 3.133,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.4,
+  "transport_calls": 42,
+  "settle_seconds": 1.427,
+  "settles": 8,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 0.399,
+    "cost": 0.0
+   },
+   {
+    "step": 2,
+    "kind": "fill",
+    "target": "password_field",
+    "at": 0.754,
+    "cost": 0.0
+   },
+   {
+    "step": 3,
+    "kind": "tap",
+    "target": "signin_button",
+    "at": 1.18,
+    "cost": 0.0
+   },
+   {
+    "step": 4,
+    "kind": "tap",
+    "target": "nav_orders",
+    "at": 3.133,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 4,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 4,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 3.123,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.395,
+  "transport_calls": 42,
+  "settle_seconds": 1.412,
+  "settles": 8,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 0.398,
+    "cost": 0.0
+   },
+   {
+    "step": 2,
+    "kind": "fill",
+    "target": "password_field",
+    "at": 0.75,
+    "cost": 0.0
+   },
+   {
+    "step": 3,
+    "kind": "tap",
+    "target": "signin_button",
+    "at": 1.172,
+    "cost": 0.0
+   },
+   {
+    "step": 4,
+    "kind": "tap",
+    "target": "nav_orders",
+    "at": 3.123,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 4,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 18,
+  "input_tokens": 20399,
+  "output_tokens": 2025,
+  "cost_usd": 0.000857,
+  "wall_seconds": 13.095,
+  "model_seconds": 4.462,
+  "transport_seconds": 1.85,
+  "transport_calls": 198,
+  "settle_seconds": 12.324,
+  "settles": 36,
+  "median_decision_ms": 242.8,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 84622,
+  "compact_chars": 7851,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.01,
+    "ms": 327.4,
+    "at": 0.39,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.01,
+    "ms": 246.2,
+    "at": 0.786,
+    "cost": 7.1e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 230.5,
+    "at": 1.157,
+    "cost": 0.00011
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 0.52,
+    "complete": 0.03,
+    "ms": 284.9,
+    "at": 2.259,
+    "cost": 0.000255
+   },
+   {
+    "step": 5,
+    "action": "Type \"pour-over\" into the empty orders_search field at @e2.",
+    "typed": "pour-over",
+    "target": "orders_search",
+    "kind": "fill",
+    "confidence": 0.45,
+    "complete": 0.02,
+    "ms": 262.7,
+    "at": 3.014,
+    "cost": 0.000388
+   },
+   {
+    "step": 6,
+    "action": "Tap @e7, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.05,
+    "ms": 253.8,
+    "at": 3.415,
+    "cost": 0.000457
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.06,
+    "ms": 229.8,
+    "at": 4.166,
+    "cost": 0.000555
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.78,
+    "complete": 0.03,
+    "ms": 248.9,
+    "at": 4.649,
+    "cost": 0.000597
+   },
+   {
+    "step": 9,
+    "action": "Focus the text field @e3 (return_notes_field).",
+    "typed": null,
+    "target": "return_notes_field",
+    "kind": "tap",
+    "confidence": 0.47,
+    "complete": 0.03,
+    "ms": 228.2,
+    "at": 5.087,
+    "cost": 0.000641
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.8,
+    "complete": 0.05,
+    "ms": 241.2,
+    "at": 11.536,
+    "cost": 0.000687
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 244.5,
+    "at": 11.939,
+    "cost": 0.00073
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.19,
+    "ms": 281.6,
+    "at": 12.337,
+    "cost": 0.000773
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.94,
+    "ms": 198.1,
+    "at": 13.095,
+    "cost": 0.000857
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 19,
+  "input_tokens": 21319,
+  "output_tokens": 2094,
+  "cost_usd": 0.000895,
+  "wall_seconds": 13.285,
+  "model_seconds": 4.493,
+  "transport_seconds": 1.858,
+  "transport_calls": 201,
+  "settle_seconds": 12.357,
+  "settles": 38,
+  "median_decision_ms": 222.9,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 84845,
+  "compact_chars": 7888,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.01,
+    "ms": 314.1,
+    "at": 0.39,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.01,
+    "ms": 215.8,
+    "at": 0.79,
+    "cost": 7.1e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 200.4,
+    "at": 1.152,
+    "cost": 0.00011
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 0.43,
+    "complete": 0.03,
+    "ms": 272.2,
+    "at": 2.263,
+    "cost": 0.000255
+   },
+   {
+    "step": 5,
+    "action": "Type \"pour-over\" into the empty orders_search field at @e2.",
+    "typed": "pour-over",
+    "target": "orders_search",
+    "kind": "fill",
+    "confidence": 0.57,
+    "complete": 0.02,
+    "ms": 216.2,
+    "at": 3.005,
+    "cost": 0.000388
+   },
+   {
+    "step": 6,
+    "action": "Tap @e7, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.04,
+    "ms": 270.4,
+    "at": 3.402,
+    "cost": 0.000457
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.06,
+    "ms": 221.8,
+    "at": 4.138,
+    "cost": 0.000555
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.88,
+    "complete": 0.03,
+    "ms": 209.1,
+    "at": 4.809,
+    "cost": 0.000636
+   },
+   {
+    "step": 9,
+    "action": "Focus the text field @e3 (return_notes_field).",
+    "typed": null,
+    "target": "return_notes_field",
+    "kind": "tap",
+    "confidence": 0.56,
+    "complete": 0.04,
+    "ms": 199.8,
+    "at": 5.238,
+    "cost": 0.00068
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.81,
+    "complete": 0.05,
+    "ms": 233.2,
+    "at": 11.746,
+    "cost": 0.000725
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 212.3,
+    "at": 12.147,
+    "cost": 0.000769
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.16,
+    "ms": 281.4,
+    "at": 12.53,
+    "cost": 0.000812
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.94,
+    "ms": 222.9,
+    "at": 13.284,
+    "cost": 0.000895
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 19,
+  "input_tokens": 21612,
+  "output_tokens": 2130,
+  "cost_usd": 0.000908,
+  "wall_seconds": 19.537,
+  "model_seconds": 4.654,
+  "transport_seconds": 2.424,
+  "transport_calls": 234,
+  "settle_seconds": 18.19,
+  "settles": 37,
+  "median_decision_ms": 234.5,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 88089,
+  "compact_chars": 8081,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.01,
+    "ms": 289.0,
+    "at": 0.387,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.01,
+    "ms": 231.4,
+    "at": 0.775,
+    "cost": 7.1e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 224.5,
+    "at": 1.132,
+    "cost": 0.00011
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 0.46,
+    "complete": 0.03,
+    "ms": 254.6,
+    "at": 2.295,
+    "cost": 0.000255
+   },
+   {
+    "step": 5,
+    "action": "Scroll down to reveal content below the fold.",
+    "typed": null,
+    "target": "scroll",
+    "kind": "scroll",
+    "confidence": 0.45,
+    "complete": 0.02,
+    "ms": 224.2,
+    "at": 3.033,
+    "cost": 0.000388
+   },
+   {
+    "step": 6,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.04,
+    "ms": 231.3,
+    "at": 9.695,
+    "cost": 0.000465
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.06,
+    "ms": 220.3,
+    "at": 10.432,
+    "cost": 0.000569
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.82,
+    "complete": 0.04,
+    "ms": 224.7,
+    "at": 11.084,
+    "cost": 0.00065
+   },
+   {
+    "step": 9,
+    "action": "Focus the text field @e3 (return_notes_field).",
+    "typed": null,
+    "target": "return_notes_field",
+    "kind": "tap",
+    "confidence": 0.64,
+    "complete": 0.04,
+    "ms": 238.4,
+    "at": 11.532,
+    "cost": 0.000694
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.8,
+    "complete": 0.05,
+    "ms": 236.8,
+    "at": 17.978,
+    "cost": 0.000739
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.05,
+    "ms": 312.1,
+    "at": 18.377,
+    "cost": 0.000782
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.18,
+    "ms": 234.5,
+    "at": 18.777,
+    "cost": 0.000825
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 301.2,
+    "at": 19.537,
+    "cost": 0.000908
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 18,
+  "input_tokens": 16026,
+  "output_tokens": 584,
+  "cost_usd": 0.004882,
+  "wall_seconds": 25.498,
+  "model_seconds": 18.299,
+  "transport_seconds": 1.828,
+  "transport_calls": 162,
+  "settle_seconds": 11.936,
+  "settles": 35,
+  "median_decision_ms": 995.2,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 77603,
+  "compact_chars": 7450,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1258.4,
+    "at": 1.292,
+    "cost": 0.00019
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1019.7,
+    "at": 2.359,
+    "cost": 0.000424
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1050.8,
+    "at": 3.422,
+    "cost": 0.000648
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1012.4,
+    "at": 5.506,
+    "cost": 0.001177
+   },
+   {
+    "step": 5,
+    "action": "Scroll down to reveal content below the fold.",
+    "typed": null,
+    "target": "scroll",
+    "kind": "scroll",
+    "confidence": 0.9,
+    "complete": 0.0,
+    "ms": 969.4,
+    "at": 7.559,
+    "cost": 0.001903
+   },
+   {
+    "step": 6,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 936.3,
+    "at": 14.913,
+    "cost": 0.002326
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 1050.5,
+    "at": 17.19,
+    "cost": 0.002949
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 958.0,
+    "at": 19.338,
+    "cost": 0.003418
+   },
+   {
+    "step": 9,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 949.3,
+    "at": 20.365,
+    "cost": 0.003677
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1019.3,
+    "at": 21.41,
+    "cost": 0.003938
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 941.5,
+    "at": 22.4,
+    "cost": 0.004174
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 942.8,
+    "at": 23.39,
+    "cost": 0.004417
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 1094.9,
+    "at": 25.498,
+    "cost": 0.004882
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 17,
+  "input_tokens": 15335,
+  "output_tokens": 553,
+  "cost_usd": 0.004663,
+  "wall_seconds": 23.647,
+  "model_seconds": 16.348,
+  "transport_seconds": 1.813,
+  "transport_calls": 160,
+  "settle_seconds": 11.864,
+  "settles": 33,
+  "median_decision_ms": 950.2,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 77492,
+  "compact_chars": 7413,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1066.8,
+    "at": 1.1,
+    "cost": 0.00019
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 908.0,
+    "at": 2.057,
+    "cost": 0.000424
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 939.7,
+    "at": 3.016,
+    "cost": 0.000648
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 941.4,
+    "at": 5.185,
+    "cost": 0.001177
+   },
+   {
+    "step": 5,
+    "action": "Scroll down to reveal content below the fold.",
+    "typed": null,
+    "target": "scroll",
+    "kind": "scroll",
+    "confidence": 0.9,
+    "complete": 0.0,
+    "ms": 855.4,
+    "at": 7.138,
+    "cost": 0.001903
+   },
+   {
+    "step": 6,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 966.3,
+    "at": 14.534,
+    "cost": 0.002326
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 950.2,
+    "at": 16.613,
+    "cost": 0.002949
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 914.5,
+    "at": 17.664,
+    "cost": 0.003198
+   },
+   {
+    "step": 9,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 905.0,
+    "at": 18.638,
+    "cost": 0.003458
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 904.8,
+    "at": 19.559,
+    "cost": 0.003719
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1027.6,
+    "at": 20.638,
+    "cost": 0.003955
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 985.5,
+    "at": 21.671,
+    "cost": 0.004198
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 1017.4,
+    "at": 23.646,
+    "cost": 0.004663
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 18,
+  "input_tokens": 16026,
+  "output_tokens": 584,
+  "cost_usd": 0.004882,
+  "wall_seconds": 24.938,
+  "model_seconds": 17.763,
+  "transport_seconds": 1.823,
+  "transport_calls": 162,
+  "settle_seconds": 11.916,
+  "settles": 35,
+  "median_decision_ms": 951.5,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 77603,
+  "compact_chars": 7450,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 908.5,
+    "at": 0.941,
+    "cost": 0.00019
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 944.6,
+    "at": 1.907,
+    "cost": 0.000424
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 960.8,
+    "at": 2.88,
+    "cost": 0.000648
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 981.1,
+    "at": 4.837,
+    "cost": 0.001177
+   },
+   {
+    "step": 5,
+    "action": "Scroll down to reveal content below the fold.",
+    "typed": null,
+    "target": "scroll",
+    "kind": "scroll",
+    "confidence": 0.9,
+    "complete": 0.0,
+    "ms": 1251.4,
+    "at": 7.191,
+    "cost": 0.001903
+   },
+   {
+    "step": 6,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 947.8,
+    "at": 14.571,
+    "cost": 0.002326
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 1040.1,
+    "at": 16.718,
+    "cost": 0.002949
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 921.2,
+    "at": 18.621,
+    "cost": 0.003418
+   },
+   {
+    "step": 9,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 946.5,
+    "at": 19.646,
+    "cost": 0.003677
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 955.1,
+    "at": 20.626,
+    "cost": 0.003938
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1116.3,
+    "at": 21.792,
+    "cost": 0.004174
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 852.5,
+    "at": 22.687,
+    "cost": 0.004417
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 1125.7,
+    "at": 24.937,
+    "cost": 0.004882
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 18,
+  "input_tokens": 20642,
+  "output_tokens": 2002,
+  "cost_usd": 0.001178,
+  "wall_seconds": 9.683,
+  "model_seconds": 4.403,
+  "transport_seconds": 1.248,
+  "transport_calls": 128,
+  "settle_seconds": 5.982,
+  "settles": 36,
+  "median_decision_ms": 242.1,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000311,
+  "writer_seconds": 2.662,
+  "raw_chars": 84866,
+  "compact_chars": 7866,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 273.2,
+    "at": 1.313,
+    "cost": 0.000143
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 207.3,
+    "at": 1.705,
+    "cost": 0.000181
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 254.3,
+    "at": 2.056,
+    "cost": 0.00022
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 0.44,
+    "complete": 0.03,
+    "ms": 234.5,
+    "at": 3.202,
+    "cost": 0.000367
+   },
+   {
+    "step": 5,
+    "action": "Type \"5207\" into the empty orders_search field at @e2.",
+    "typed": "5207",
+    "target": "orders_search",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.02,
+    "ms": 246.9,
+    "at": 4.779,
+    "cost": 0.000606
+   },
+   {
+    "step": 6,
+    "action": "Tap @e7, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.05,
+    "ms": 233.0,
+    "at": 5.169,
+    "cost": 0.000676
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.07,
+    "ms": 237.3,
+    "at": 5.902,
+    "cost": 0.000775
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.69,
+    "complete": 0.04,
+    "ms": 222.6,
+    "at": 6.382,
+    "cost": 0.000818
+   },
+   {
+    "step": 9,
+    "action": "Type \"The item arrived damaged.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 215.5,
+    "at": 7.737,
+    "cost": 0.000958
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 207.4,
+    "at": 8.114,
+    "cost": 0.001004
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 267.7,
+    "at": 8.514,
+    "cost": 0.001048
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.11,
+    "ms": 273.8,
+    "at": 8.902,
+    "cost": 0.001092
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.98,
+    "complete": 0.93,
+    "ms": 210.8,
+    "at": 9.683,
+    "cost": 0.001178
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 18,
+  "input_tokens": 20642,
+  "output_tokens": 2002,
+  "cost_usd": 0.001178,
+  "wall_seconds": 9.723,
+  "model_seconds": 4.318,
+  "transport_seconds": 1.258,
+  "transport_calls": 128,
+  "settle_seconds": 5.988,
+  "settles": 36,
+  "median_decision_ms": 235.4,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000311,
+  "writer_seconds": 2.77,
+  "raw_chars": 84597,
+  "compact_chars": 7866,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 298.4,
+    "at": 1.419,
+    "cost": 0.000143
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 215.4,
+    "at": 1.782,
+    "cost": 0.000181
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 237.7,
+    "at": 2.142,
+    "cost": 0.00022
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 0.45,
+    "complete": 0.03,
+    "ms": 207.0,
+    "at": 3.252,
+    "cost": 0.000367
+   },
+   {
+    "step": 5,
+    "action": "Type \"5207\" into the empty orders_search field at @e2.",
+    "typed": "5207",
+    "target": "orders_search",
+    "kind": "fill",
+    "confidence": 0.99,
+    "complete": 0.02,
+    "ms": 300.4,
+    "at": 4.862,
+    "cost": 0.000606
+   },
+   {
+    "step": 6,
+    "action": "Tap @e7, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.05,
+    "ms": 241.6,
+    "at": 5.253,
+    "cost": 0.000676
+   },
+   {
+    "step": 7,
+    "action": "Tap @e2, the FilledButton start_return_button_v14.",
+    "typed": null,
+    "target": "start_return_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.07,
+    "ms": 247.7,
+    "at": 6.009,
+    "cost": 0.000775
+   },
+   {
+    "step": 8,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.78,
+    "complete": 0.05,
+    "ms": 219.8,
+    "at": 6.491,
+    "cost": 0.000818
+   },
+   {
+    "step": 9,
+    "action": "Type \"The item arrived damaged.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived damaged.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 282.0,
+    "at": 7.785,
+    "cost": 0.000958
+   },
+   {
+    "step": 10,
+    "action": "Tap @e5, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 212.6,
+    "at": 8.159,
+    "cost": 0.001004
+   },
+   {
+    "step": 11,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.06,
+    "ms": 219.3,
+    "at": 8.566,
+    "cost": 0.001048
+   },
+   {
+    "step": 12,
+    "action": "Tap @e3, the FilledButton return_next_button_v14.",
+    "typed": null,
+    "target": "return_next_button_v14",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.13,
+    "ms": 217.0,
+    "at": 8.966,
+    "cost": 0.001092
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 250.5,
+    "at": 9.723,
+    "cost": 0.001178
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 4,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "uncertain",
+  "steps": 4,
+  "model_calls": 6,
+  "input_tokens": 6132,
+  "output_tokens": 657,
+  "cost_usd": 0.000367,
+  "wall_seconds": 3.295,
+  "model_seconds": 1.405,
+  "transport_seconds": 0.453,
+  "transport_calls": 43,
+  "settle_seconds": 2.052,
+  "settles": 12,
+  "median_decision_ms": 221.7,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 1,
+  "writer_cost_usd": 0.000109,
+  "writer_seconds": 1.0,
+  "raw_chars": 27800,
+  "compact_chars": 2762,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 300.6,
+    "at": 1.393,
+    "cost": 0.000143
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 207.5,
+    "at": 1.799,
+    "cost": 0.000181
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 231.0,
+    "at": 2.16,
+    "cost": 0.00022
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders_v14.",
+    "typed": null,
+    "target": "nav_orders_v14",
+    "kind": "tap",
+    "confidence": 0.34,
+    "complete": 0.04,
+    "ms": 212.5,
+    "at": 3.295,
+    "cost": 0.000367
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 4,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 1,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 1.963,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.142,
+  "transport_calls": 22,
+  "settle_seconds": 0.387,
+  "settles": 2,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 1.963,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 91,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 1,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 1.961,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.134,
+  "transport_calls": 22,
+  "settle_seconds": 0.387,
+  "settles": 2,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 1.961,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 91,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "scripted",
+  "label": "return-flow",
+  "verdict": "fail",
+  "steps": 1,
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 1.971,
+  "model_seconds": 0.0,
+  "transport_seconds": 0.14,
+  "transport_calls": 22,
+  "settle_seconds": 0.391,
+  "settles": 2,
+  "median_decision_ms": null,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 0,
+  "compact_chars": 0,
+  "trace": [
+   {
+    "step": 1,
+    "kind": "fill",
+    "target": "email_field",
+    "at": 1.971,
+    "cost": 0.0,
+    "failed": true
+   }
+  ],
+  "task": "return-flow",
+  "arm": "scripted",
+  "chaos": 91,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "uncertain",
+  "steps": 5,
+  "model_calls": 5,
+  "input_tokens": 4683,
+  "output_tokens": 486,
+  "cost_usd": 0.000197,
+  "wall_seconds": 14.043,
+  "model_seconds": 1.348,
+  "transport_seconds": 1.176,
+  "transport_calls": 180,
+  "settle_seconds": 13.861,
+  "settles": 10,
+  "median_decision_ms": 245.2,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 10437,
+  "compact_chars": 1849,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Focus the text field @e1 (email_field_v11).",
+    "typed": null,
+    "target": "email_field_v11",
+    "kind": "tap",
+    "confidence": 0.87,
+    "complete": 0.01,
+    "ms": 359.1,
+    "at": 0.394,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.94,
+    "complete": 0.01,
+    "ms": 218.0,
+    "at": 6.868,
+    "cost": 7.2e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 0.5,
+    "complete": 0.01,
+    "ms": 315.6,
+    "at": 7.224,
+    "cost": 0.000112
+   },
+   {
+    "step": 4,
+    "action": "Focus the text field @e1 (email_field_v11).",
+    "typed": null,
+    "target": "email_field_v11",
+    "kind": "tap",
+    "confidence": 0.52,
+    "complete": 0.01,
+    "ms": 210.6,
+    "at": 7.626,
+    "cost": 0.000154
+   },
+   {
+    "step": 5,
+    "action": "Stop and report failure: the app is showing an error, or the task is impossible no matter which screens are visited next. Do not choose this merely because the task is unfinished, or because the next thing needed is on a different screen.",
+    "typed": null,
+    "target": "fail",
+    "kind": "finish",
+    "confidence": 0.44,
+    "complete": 0.01,
+    "ms": 245.2,
+    "at": 14.042,
+    "cost": 0.000197
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 91,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "uncertain",
+  "steps": 5,
+  "model_calls": 5,
+  "input_tokens": 4683,
+  "output_tokens": 486,
+  "cost_usd": 0.000197,
+  "wall_seconds": 14.094,
+  "model_seconds": 1.347,
+  "transport_seconds": 1.168,
+  "transport_calls": 181,
+  "settle_seconds": 13.911,
+  "settles": 10,
+  "median_decision_ms": 264.4,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 10437,
+  "compact_chars": 1849,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Focus the text field @e1 (email_field_v11).",
+    "typed": null,
+    "target": "email_field_v11",
+    "kind": "tap",
+    "confidence": 0.84,
+    "complete": 0.01,
+    "ms": 264.4,
+    "at": 0.384,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.95,
+    "complete": 0.01,
+    "ms": 350.4,
+    "at": 6.854,
+    "cost": 7.2e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 0.44,
+    "complete": 0.01,
+    "ms": 212.9,
+    "at": 7.215,
+    "cost": 0.000112
+   },
+   {
+    "step": 4,
+    "action": "Focus the text field @e1 (email_field_v11).",
+    "typed": null,
+    "target": "email_field_v11",
+    "kind": "tap",
+    "confidence": 0.52,
+    "complete": 0.01,
+    "ms": 240.1,
+    "at": 7.617,
+    "cost": 0.000154
+   },
+   {
+    "step": 5,
+    "action": "Stop and report failure: the app is showing an error, or the task is impossible no matter which screens are visited next. Do not choose this merely because the task is unfinished, or because the next thing needed is on a different screen.",
+    "typed": null,
+    "target": "fail",
+    "kind": "finish",
+    "confidence": 0.52,
+    "complete": 0.01,
+    "ms": 279.1,
+    "at": 14.094,
+    "cost": 0.000197
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 91,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "jev",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+  "verdict": "uncertain",
+  "steps": 5,
+  "model_calls": 5,
+  "input_tokens": 4683,
+  "output_tokens": 486,
+  "cost_usd": 0.000197,
+  "wall_seconds": 14.091,
+  "model_seconds": 1.32,
+  "transport_seconds": 1.16,
+  "transport_calls": 181,
+  "settle_seconds": 13.928,
+  "settles": 10,
+  "median_decision_ms": 267.3,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 10437,
+  "compact_chars": 1849,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Focus the text field @e1 (email_field_v11).",
+    "typed": null,
+    "target": "email_field_v11",
+    "kind": "tap",
+    "confidence": 0.86,
+    "complete": 0.01,
+    "ms": 337.1,
+    "at": 0.384,
+    "cost": 3.3e-05
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 0.94,
+    "complete": 0.01,
+    "ms": 210.5,
+    "at": 6.853,
+    "cost": 7.2e-05
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 0.48,
+    "complete": 0.01,
+    "ms": 267.3,
+    "at": 7.201,
+    "cost": 0.000112
+   },
+   {
+    "step": 4,
+    "action": "Focus the text field @e1 (email_field_v11).",
+    "typed": null,
+    "target": "email_field_v11",
+    "kind": "tap",
+    "confidence": 0.44,
+    "complete": 0.01,
+    "ms": 283.0,
+    "at": 7.618,
+    "cost": 0.000154
+   },
+   {
+    "step": 5,
+    "action": "Stop and report failure: the app is showing an error, or the task is impossible no matter which screens are visited next. Do not choose this merely because the task is unfinished, or because the next thing needed is on a different screen.",
+    "typed": null,
+    "target": "fail",
+    "kind": "finish",
+    "confidence": 0.49,
+    "complete": 0.01,
+    "ms": 222.4,
+    "at": 14.09,
+    "cost": 0.000197
+   }
+  ],
+  "task": "return-flow",
+  "arm": "jev",
+  "chaos": 91,
+  "claimed": false,
+  "real": false,
+  "state": {
+   "signedIn": false,
+   "orders": {
+    "5207": "delivered",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 19,
+  "input_tokens": 16390,
+  "output_tokens": 617,
+  "cost_usd": 0.005023,
+  "wall_seconds": 20.216,
+  "model_seconds": 19.259,
+  "transport_seconds": 1.468,
+  "transport_calls": 131,
+  "settle_seconds": 6.178,
+  "settles": 38,
+  "median_decision_ms": 1013.9,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 80124,
+  "compact_chars": 7603,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field_v11 field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field_v11",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1221.6,
+    "at": 1.254,
+    "cost": 0.000199
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1045.5,
+    "at": 2.349,
+    "cost": 0.000439
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 971.4,
+    "at": 3.338,
+    "cost": 0.000668
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 971.7,
+    "at": 5.407,
+    "cost": 0.001195
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 872.8,
+    "at": 7.444,
+    "cost": 0.001914
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button_v11.",
+    "typed": null,
+    "target": "start_return_button_v11",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 990.3,
+    "at": 9.609,
+    "cost": 0.002541
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 1013.9,
+    "at": 11.784,
+    "cost": 0.003007
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1037.4,
+    "at": 12.9,
+    "cost": 0.00326
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 945.2,
+    "at": 13.872,
+    "cost": 0.003514
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1022.6,
+    "at": 14.951,
+    "cost": 0.003749
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 919.5,
+    "at": 15.916,
+    "cost": 0.003989
+   },
+   {
+    "step": 12,
+    "action": "Tap @e2, the TextButton return_done_close_button.",
+    "typed": null,
+    "target": "return_done_close_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 956.1,
+    "at": 17.954,
+    "cost": 0.004451
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 1044.7,
+    "at": 20.216,
+    "cost": 0.005023
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 91,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 19,
+  "input_tokens": 16390,
+  "output_tokens": 617,
+  "cost_usd": 0.005023,
+  "wall_seconds": 20.403,
+  "model_seconds": 19.452,
+  "transport_seconds": 1.436,
+  "transport_calls": 131,
+  "settle_seconds": 6.118,
+  "settles": 38,
+  "median_decision_ms": 1020.5,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 80158,
+  "compact_chars": 7603,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field_v11 field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field_v11",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1088.3,
+    "at": 1.123,
+    "cost": 0.000199
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1110.0,
+    "at": 2.286,
+    "cost": 0.000439
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 946.2,
+    "at": 3.25,
+    "cost": 0.000668
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 963.2,
+    "at": 5.356,
+    "cost": 0.001195
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 907.8,
+    "at": 7.277,
+    "cost": 0.001914
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button_v11.",
+    "typed": null,
+    "target": "start_return_button_v11",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 1168.9,
+    "at": 9.636,
+    "cost": 0.002541
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 1093.7,
+    "at": 11.972,
+    "cost": 0.003007
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 930.9,
+    "at": 12.984,
+    "cost": 0.00326
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 953.2,
+    "at": 13.963,
+    "cost": 0.003514
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1128.0,
+    "at": 15.144,
+    "cost": 0.003749
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 956.9,
+    "at": 16.144,
+    "cost": 0.003989
+   },
+   {
+    "step": 12,
+    "action": "Tap @e2, the TextButton return_done_close_button.",
+    "typed": null,
+    "target": "return_done_close_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 975.7,
+    "at": 18.207,
+    "cost": 0.004451
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 1117.5,
+    "at": 20.401,
+    "cost": 0.005023
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 91,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "lite-free",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 13,
+  "model_calls": 19,
+  "input_tokens": 16390,
+  "output_tokens": 617,
+  "cost_usd": 0.005023,
+  "wall_seconds": 19.293,
+  "model_seconds": 18.361,
+  "transport_seconds": 1.398,
+  "transport_calls": 131,
+  "settle_seconds": 6.103,
+  "settles": 38,
+  "median_decision_ms": 957.0,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 0,
+  "writer_cost_usd": 0.0,
+  "writer_seconds": 0.0,
+  "raw_chars": 80158,
+  "compact_chars": 7603,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type text of your choosing into the empty email_field_v11 field (put it in `text`).",
+    "typed": "demo@example.com",
+    "target": "email_field_v11",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1034.8,
+    "at": 1.068,
+    "cost": 0.000199
+   },
+   {
+    "step": 2,
+    "action": "Type text of your choosing into the empty password_field field (put it in `text`).",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 986.2,
+    "at": 2.111,
+    "cost": 0.000439
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1100.3,
+    "at": 3.231,
+    "cost": 0.000668
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 902.8,
+    "at": 5.207,
+    "cost": 0.001195
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 963.3,
+    "at": 7.257,
+    "cost": 0.001914
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button_v11.",
+    "typed": null,
+    "target": "start_return_button_v11",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.5,
+    "ms": 957.0,
+    "at": 9.381,
+    "cost": 0.002541
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.33,
+    "ms": 957.0,
+    "at": 11.317,
+    "cost": 0.003007
+   },
+   {
+    "step": 8,
+    "action": "Type text of your choosing into the empty return_notes_field field (put it in `text`).",
+    "typed": "Item arrived damaged",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1007.4,
+    "at": 12.405,
+    "cost": 0.00326
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 1140.5,
+    "at": 13.571,
+    "cost": 0.003514
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.0,
+    "ms": 946.5,
+    "at": 14.561,
+    "cost": 0.003749
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.9,
+    "ms": 931.4,
+    "at": 15.535,
+    "cost": 0.003989
+   },
+   {
+    "step": 12,
+    "action": "Tap @e2, the TextButton return_done_close_button.",
+    "typed": null,
+    "target": "return_done_close_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 947.5,
+    "at": 17.462,
+    "cost": 0.004451
+   },
+   {
+    "step": 13,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 1.0,
+    "complete": 1.0,
+    "ms": 873.8,
+    "at": 19.291,
+    "cost": 0.005023
+   }
+  ],
+  "task": "return-flow",
+  "arm": "lite-free",
+  "chaos": 91,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 18,
+  "input_tokens": 19862,
+  "output_tokens": 1857,
+  "cost_usd": 0.001157,
+  "wall_seconds": 9.626,
+  "model_seconds": 4.462,
+  "transport_seconds": 1.26,
+  "transport_calls": 122,
+  "settle_seconds": 5.67,
+  "settles": 36,
+  "median_decision_ms": 236.8,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000323,
+  "writer_seconds": 2.765,
+  "raw_chars": 74857,
+  "compact_chars": 7169,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field_v11 field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field_v11",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 285.9,
+    "at": 1.438,
+    "cost": 0.000151
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 242.8,
+    "at": 1.831,
+    "cost": 0.00019
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 242.9,
+    "at": 2.195,
+    "cost": 0.00023
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.38,
+    "complete": 0.04,
+    "ms": 211.0,
+    "at": 3.305,
+    "cost": 0.000376
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.04,
+    "ms": 264.7,
+    "at": 4.812,
+    "cost": 0.00062
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button_v11.",
+    "typed": null,
+    "target": "start_return_button_v11",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.06,
+    "ms": 218.6,
+    "at": 5.551,
+    "cost": 0.000724
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.67,
+    "complete": 0.04,
+    "ms": 221.1,
+    "at": 6.33,
+    "cost": 0.000804
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.97,
+    "complete": 0.04,
+    "ms": 247.7,
+    "at": 7.689,
+    "cost": 0.000941
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.06,
+    "ms": 227.2,
+    "at": 8.07,
+    "cost": 0.000986
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.06,
+    "ms": 230.8,
+    "at": 8.472,
+    "cost": 0.00103
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.18,
+    "ms": 228.7,
+    "at": 8.865,
+    "cost": 0.001073
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.96,
+    "complete": 0.94,
+    "ms": 257.3,
+    "at": 9.626,
+    "cost": 0.001157
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 91,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18949,
+  "output_tokens": 1788,
+  "cost_usd": 0.001119,
+  "wall_seconds": 9.619,
+  "model_seconds": 4.038,
+  "transport_seconds": 1.244,
+  "transport_calls": 120,
+  "settle_seconds": 5.679,
+  "settles": 34,
+  "median_decision_ms": 229.8,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000323,
+  "writer_seconds": 3.054,
+  "raw_chars": 74610,
+  "compact_chars": 7132,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field_v11 field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field_v11",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 268.4,
+    "at": 1.6,
+    "cost": 0.000151
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 347.0,
+    "at": 1.996,
+    "cost": 0.00019
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 245.5,
+    "at": 2.358,
+    "cost": 0.00023
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.35,
+    "complete": 0.03,
+    "ms": 226.2,
+    "at": 3.442,
+    "cost": 0.000376
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.04,
+    "ms": 210.1,
+    "at": 5.09,
+    "cost": 0.00062
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button_v11.",
+    "typed": null,
+    "target": "start_return_button_v11",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.05,
+    "ms": 247.6,
+    "at": 5.834,
+    "cost": 0.000724
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.7,
+    "complete": 0.04,
+    "ms": 237.2,
+    "at": 6.315,
+    "cost": 0.000766
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 229.5,
+    "at": 7.667,
+    "cost": 0.000902
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.97,
+    "complete": 0.07,
+    "ms": 240.0,
+    "at": 8.05,
+    "cost": 0.000948
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 207.4,
+    "at": 8.455,
+    "cost": 0.000992
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.13,
+    "ms": 213.0,
+    "at": 8.846,
+    "cost": 0.001034
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.93,
+    "ms": 229.8,
+    "at": 9.619,
+    "cost": 0.001119
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 91,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ },
+ {
+  "mode": "hybrid-v2",
+  "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+  "verdict": "pass",
+  "steps": 12,
+  "model_calls": 17,
+  "input_tokens": 18949,
+  "output_tokens": 1788,
+  "cost_usd": 0.001119,
+  "wall_seconds": 9.486,
+  "model_seconds": 4.216,
+  "transport_seconds": 1.227,
+  "transport_calls": 120,
+  "settle_seconds": 5.63,
+  "settles": 34,
+  "median_decision_ms": 241.5,
+  "retries": 0,
+  "empty_reads": 0,
+  "writer_calls": 3,
+  "writer_cost_usd": 0.000323,
+  "writer_seconds": 2.88,
+  "raw_chars": 74654,
+  "compact_chars": 7132,
+  "trace": [
+   {
+    "step": 1,
+    "action": "Type \"demo@example.com\" into the empty email_field_v11 field at @e1.",
+    "typed": "demo@example.com",
+    "target": "email_field_v11",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 349.0,
+    "at": 1.314,
+    "cost": 0.000151
+   },
+   {
+    "step": 2,
+    "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+    "typed": "hunter2",
+    "target": "password_field",
+    "kind": "fill",
+    "confidence": 1.0,
+    "complete": 0.01,
+    "ms": 215.6,
+    "at": 1.705,
+    "cost": 0.00019
+   },
+   {
+    "step": 3,
+    "action": "Tap @e4, the FilledButton signin_button.",
+    "typed": null,
+    "target": "signin_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.02,
+    "ms": 241.5,
+    "at": 2.064,
+    "cost": 0.00023
+   },
+   {
+    "step": 4,
+    "action": "Tap @e7, the NavigationDestination nav_orders.",
+    "typed": null,
+    "target": "nav_orders",
+    "kind": "tap",
+    "confidence": 0.39,
+    "complete": 0.03,
+    "ms": 264.6,
+    "at": 3.188,
+    "cost": 0.000376
+   },
+   {
+    "step": 5,
+    "action": "Tap @e9, the RowCard order_5207.",
+    "typed": null,
+    "target": "order_5207",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.04,
+    "ms": 243.7,
+    "at": 4.847,
+    "cost": 0.00062
+   },
+   {
+    "step": 6,
+    "action": "Tap @e2, the FilledButton start_return_button_v11.",
+    "typed": null,
+    "target": "start_return_button_v11",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.07,
+    "ms": 219.1,
+    "at": 5.581,
+    "cost": 0.000724
+   },
+   {
+    "step": 7,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.65,
+    "complete": 0.04,
+    "ms": 223.4,
+    "at": 6.065,
+    "cost": 0.000766
+   },
+   {
+    "step": 8,
+    "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+    "typed": "The item arrived with a cracked screen.",
+    "target": "return_notes_field",
+    "kind": "fill",
+    "confidence": 0.98,
+    "complete": 0.04,
+    "ms": 290.2,
+    "at": 7.541,
+    "cost": 0.000902
+   },
+   {
+    "step": 9,
+    "action": "Tap @e5, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 0.98,
+    "complete": 0.07,
+    "ms": 237.7,
+    "at": 7.919,
+    "cost": 0.000948
+   },
+   {
+    "step": 10,
+    "action": "Tap @e2, the CheckboxListTile return_confirm.",
+    "typed": null,
+    "target": "return_confirm",
+    "kind": "tap",
+    "confidence": 0.99,
+    "complete": 0.05,
+    "ms": 212.1,
+    "at": 8.323,
+    "cost": 0.000992
+   },
+   {
+    "step": 11,
+    "action": "Tap @e3, the FilledButton return_next_button.",
+    "typed": null,
+    "target": "return_next_button",
+    "kind": "tap",
+    "confidence": 1.0,
+    "complete": 0.12,
+    "ms": 243.1,
+    "at": 8.716,
+    "cost": 0.001034
+   },
+   {
+    "step": 12,
+    "action": "Stop and report success: the screen itself confirms the task has been completed.",
+    "typed": null,
+    "target": "pass",
+    "kind": "finish",
+    "confidence": 0.97,
+    "complete": 0.94,
+    "ms": 273.9,
+    "at": 9.486,
+    "cost": 0.001119
+   }
+  ],
+  "task": "return-flow",
+  "arm": "hybrid-v2",
+  "chaos": 91,
+  "claimed": true,
+  "real": true,
+  "state": {
+   "signedIn": true,
+   "orders": {
+    "5207": "returning",
+    "5213": "inTransit",
+    "5198": "delivered",
+    "5191": "refunded",
+    "5184": "cancelled",
+    "5226": "processing"
+   },
+   "cart": {},
+   "addresses": [
+    {
+     "label": "Home",
+     "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+    },
+    {
+     "label": "Workshop",
+     "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+    }
+   ],
+   "tickets": []
+  }
+ }
+]

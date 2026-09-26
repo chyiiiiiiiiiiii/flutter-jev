@@ -1,0 +1,6 @@
+.dart_tool/
+build/
+.DS_Store
+*.log
+__pycache__/
+.e2e/

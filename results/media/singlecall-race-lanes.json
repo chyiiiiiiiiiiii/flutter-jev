@@ -1,0 +1,47 @@
+{
+  "item": {
+    "title": "median of 40 calls per tier over 20 real Hacker News items",
+    "footnote": "they do not always agree: jev and pro give the same include and bucket on 9 of 20 items. neither is ground truth; the task is a judgement call."
+  },
+  "lanes": [
+    {
+      "label": "Jev",
+      "sub": "System One \u00b7 typed answers, no text generated",
+      "seconds": 0.2769581455067964,
+      "cost": 2.5221e-05,
+      "answer": "include no   infra   shallow",
+      "colour": [
+        31,
+        77,
+        58
+      ],
+      "detail": "90 output tokens"
+    },
+    {
+      "label": "Gemini 3.1 Flash-Lite",
+      "sub": "LLM \u00b7 thinking off, writes JSON",
+      "seconds": 0.9673372914985521,
+      "cost": 0.00010999999999999999,
+      "answer": "include yes   ai_ml   practical",
+      "colour": [
+        154,
+        107,
+        31
+      ],
+      "detail": "17 output tokens"
+    },
+    {
+      "label": "Gemini 3.1 Pro",
+      "sub": "LLM \u00b7 thinking on, writes JSON",
+      "seconds": 5.390019250495243,
+      "cost": 0.005285,
+      "answer": "include yes   infra   practical",
+      "colour": [
+        155,
+        44,
+        63
+      ],
+      "detail": "26 output tokens + 364 thinking"
+    }
+  ]
+}

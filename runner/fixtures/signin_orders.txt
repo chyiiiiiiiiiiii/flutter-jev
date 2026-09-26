@@ -1,0 +1,35 @@
+Found 4 interactive element(s):
+
+Type: TextField, Key: "email_field"
+Type: TextField, Key: "password_field"
+Type: ElevatedButton, Key: "signin_button", Text: "Sign in"
+Type: TextButton, Text: "Forgot password?"
+---
+Found 4 interactive element(s):
+
+Type: TextField, Key: "email_field", Text: "demo@example.com"
+Type: TextField, Key: "password_field"
+Type: ElevatedButton, Key: "signin_button", Text: "Sign in"
+Type: TextButton, Text: "Forgot password?"
+---
+Found 4 interactive element(s):
+
+Type: TextField, Key: "email_field", Text: "demo@example.com"
+Type: TextField, Key: "password_field", Text: "••••••••"
+Type: ElevatedButton, Key: "signin_button", Text: "Sign in"
+Type: TextButton, Text: "Forgot password?"
+---
+Found 4 interactive element(s):
+
+Type: NavigationDestination, Text: "Home"
+Type: NavigationDestination, Text: "Orders"
+Type: NavigationDestination, Text: "Profile"
+Type: IconButton, Key: "search_button"
+---
+Found 5 interactive element(s):
+
+Type: ListTile, Key: "order_5207", Text: "Pour-over kit · Order #5207"
+Type: ListTile, Key: "order_5213", Text: "Pocket speaker · Order #5213"
+Type: NavigationDestination, Text: "Home"
+Type: NavigationDestination, Text: "Orders"
+Type: NavigationDestination, Text: "Profile"

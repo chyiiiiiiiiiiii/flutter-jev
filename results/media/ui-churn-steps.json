@@ -1,0 +1,194 @@
+{
+  "scripted": {
+    "report": {
+      "mode": "scripted",
+      "label": "return-flow",
+      "verdict": "fail",
+      "steps": 4,
+      "model_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "wall_seconds": 3.133,
+      "model_seconds": 0.0,
+      "transport_seconds": 0.0,
+      "transport_calls": 0,
+      "settle_seconds": 0.0,
+      "settles": 0,
+      "median_decision_ms": null,
+      "retries": 0,
+      "empty_reads": 0,
+      "writer_calls": 0,
+      "writer_cost_usd": 0.0,
+      "writer_seconds": 0.0,
+      "raw_chars": 0,
+      "compact_chars": 0,
+      "trace": []
+    },
+    "shots": [
+      {
+        "at": 0.113,
+        "file": "../results/media/ui-churn-frames-scripted/000.png",
+        "label": "ready",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 0.741,
+        "file": "../results/media/ui-churn-frames-scripted/001.png",
+        "label": "1. fill email_field",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 1.323,
+        "file": "../results/media/ui-churn-frames-scripted/002.png",
+        "label": "2. fill password_field",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 1.982,
+        "file": "../results/media/ui-churn-frames-scripted/003.png",
+        "label": "3. tap signin_button",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 3.133,
+        "file": "../results/media/ui-churn-frames-scripted/004.png",
+        "label": "x 4. tap nav_orders",
+        "detail": "the app calls it nav_orders_v14 now - the script stops here",
+        "failed": true
+      }
+    ]
+  },
+  "jev": {
+    "report": {
+      "mode": "jev",
+      "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+      "verdict": "pass",
+      "steps": 13,
+      "model_calls": 13,
+      "input_tokens": 13198,
+      "output_tokens": 1448,
+      "cost_usd": 0.000554,
+      "wall_seconds": 18.662,
+      "model_seconds": 3.356,
+      "transport_seconds": 0.0,
+      "transport_calls": 0,
+      "settle_seconds": 0.0,
+      "settles": 0,
+      "median_decision_ms": 249.4,
+      "retries": 0,
+      "empty_reads": 0,
+      "writer_calls": 0,
+      "writer_cost_usd": 0.0,
+      "writer_seconds": 0.0,
+      "raw_chars": 0,
+      "compact_chars": 0,
+      "trace": []
+    },
+    "shots": [
+      {
+        "at": 0.117,
+        "file": "../results/media/ui-churn-frames-jev/000.png",
+        "label": "ready",
+        "detail": "$0.0000",
+        "failed": false
+      },
+      {
+        "at": 1.063,
+        "file": "../results/media/ui-churn-frames-jev/001.png",
+        "label": "1. fill email_field",
+        "detail": "$0.0000 so far   confidence 0.98   288ms",
+        "failed": false
+      },
+      {
+        "at": 1.897,
+        "file": "../results/media/ui-churn-frames-jev/002.png",
+        "label": "2. fill password_field",
+        "detail": "$0.0001 so far   confidence 0.99   243ms",
+        "failed": false
+      },
+      {
+        "at": 2.794,
+        "file": "../results/media/ui-churn-frames-jev/003.png",
+        "label": "3. tap signin_button",
+        "detail": "$0.0001 so far   confidence 1.00   249ms",
+        "failed": false
+      },
+      {
+        "at": 4.322,
+        "file": "../results/media/ui-churn-frames-jev/004.png",
+        "label": "4. tap nav_orders_v14",
+        "detail": "$0.0002 so far   confidence 0.45   266ms",
+        "failed": false
+      },
+      {
+        "at": 5.37,
+        "file": "../results/media/ui-churn-frames-jev/005.png",
+        "label": "5. fill orders_search",
+        "detail": "$0.0002 so far   confidence 0.53   261ms",
+        "failed": false
+      },
+      {
+        "at": 6.369,
+        "file": "../results/media/ui-churn-frames-jev/006.png",
+        "label": "6. tap order_5207",
+        "detail": "$0.0003 so far   confidence 0.98   337ms",
+        "failed": false
+      },
+      {
+        "at": 7.41,
+        "file": "../results/media/ui-churn-frames-jev/007.png",
+        "label": "7. tap start_return_button_v14",
+        "detail": "$0.0003 so far   confidence 0.99   246ms",
+        "failed": false
+      },
+      {
+        "at": 8.272,
+        "file": "../results/media/ui-churn-frames-jev/008.png",
+        "label": "8. tap return_next_button_v14",
+        "detail": "$0.0004 so far   confidence 0.85   219ms",
+        "failed": false
+      },
+      {
+        "at": 9.166,
+        "file": "../results/media/ui-churn-frames-jev/009.png",
+        "label": "9. tap return_notes_field",
+        "detail": "$0.0004 so far   confidence 0.66   249ms",
+        "failed": false
+      },
+      {
+        "at": 15.775,
+        "file": "../results/media/ui-churn-frames-jev/010.png",
+        "label": "10. tap return_next_button_v14",
+        "detail": "$0.0004 so far   confidence 0.60   260ms",
+        "failed": false
+      },
+      {
+        "at": 16.656,
+        "file": "../results/media/ui-churn-frames-jev/011.png",
+        "label": "11. tap return_confirm",
+        "detail": "$0.0005 so far   confidence 0.98   264ms",
+        "failed": false
+      },
+      {
+        "at": 17.499,
+        "file": "../results/media/ui-churn-frames-jev/012.png",
+        "label": "12. tap return_next_button_v14",
+        "detail": "$0.0005 so far   confidence 1.00   225ms",
+        "failed": false
+      },
+      {
+        "at": 18.662,
+        "file": "../results/media/ui-churn-frames-jev/013.png",
+        "label": "13. reports pass",
+        "detail": "$0.0006 so far   confidence 0.93   249ms",
+        "failed": false
+      }
+    ]
+  },
+  "total_seconds": 21.662
+}

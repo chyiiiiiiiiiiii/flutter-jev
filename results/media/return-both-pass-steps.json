@@ -1,0 +1,236 @@
+{
+  "scripted": {
+    "report": {
+      "mode": "scripted",
+      "label": "return-flow",
+      "verdict": "pass",
+      "steps": 10,
+      "model_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "wall_seconds": 8.253,
+      "model_seconds": 0.0,
+      "transport_seconds": 0.0,
+      "transport_calls": 0,
+      "settle_seconds": 0.0,
+      "settles": 0,
+      "median_decision_ms": null,
+      "retries": 0,
+      "empty_reads": 0,
+      "writer_calls": 0,
+      "writer_cost_usd": 0.0,
+      "writer_seconds": 0.0,
+      "raw_chars": 0,
+      "compact_chars": 0,
+      "trace": []
+    },
+    "shots": [
+      {
+        "at": 0.117,
+        "file": "../results/media/return-both-pass-frames-scripted/000.png",
+        "label": "ready",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 0.736,
+        "file": "../results/media/return-both-pass-frames-scripted/001.png",
+        "label": "1. fill email_field",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 1.318,
+        "file": "../results/media/return-both-pass-frames-scripted/002.png",
+        "label": "2. fill password_field",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 1.966,
+        "file": "../results/media/return-both-pass-frames-scripted/003.png",
+        "label": "3. tap signin_button",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 3.181,
+        "file": "../results/media/return-both-pass-frames-scripted/004.png",
+        "label": "4. tap nav_orders",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 4.02,
+        "file": "../results/media/return-both-pass-frames-scripted/005.png",
+        "label": "5. tap order_5207",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 4.824,
+        "file": "../results/media/return-both-pass-frames-scripted/006.png",
+        "label": "6. tap start_return_button",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 5.46,
+        "file": "../results/media/return-both-pass-frames-scripted/007.png",
+        "label": "7. tap return_next_button",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 6.095,
+        "file": "../results/media/return-both-pass-frames-scripted/008.png",
+        "label": "8. tap return_next_button",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 6.716,
+        "file": "../results/media/return-both-pass-frames-scripted/009.png",
+        "label": "9. tap return_confirm",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 7.328,
+        "file": "../results/media/return-both-pass-frames-scripted/010.png",
+        "label": "10. tap return_next_button",
+        "detail": "$0.0000  no model",
+        "failed": false
+      },
+      {
+        "at": 8.253,
+        "file": "../results/media/return-both-pass-frames-scripted/011.png",
+        "label": "10. tap return_next_button",
+        "detail": "$0.0000  no model",
+        "failed": false
+      }
+    ]
+  },
+  "jev": {
+    "report": {
+      "mode": "jev",
+      "label": "sign in with the demo account, open order 5207, and submit a return request for it",
+      "verdict": "pass",
+      "steps": 12,
+      "model_calls": 12,
+      "input_tokens": 11635,
+      "output_tokens": 1228,
+      "cost_usd": 0.000489,
+      "wall_seconds": 17.666,
+      "model_seconds": 2.901,
+      "transport_seconds": 0.0,
+      "transport_calls": 0,
+      "settle_seconds": 0.0,
+      "settles": 0,
+      "median_decision_ms": 240.1,
+      "retries": 0,
+      "empty_reads": 0,
+      "writer_calls": 0,
+      "writer_cost_usd": 0.0,
+      "writer_seconds": 0.0,
+      "raw_chars": 0,
+      "compact_chars": 0,
+      "trace": []
+    },
+    "shots": [
+      {
+        "at": 0.114,
+        "file": "../results/media/return-both-pass-frames-jev/000.png",
+        "label": "ready",
+        "detail": "$0.0000",
+        "failed": false
+      },
+      {
+        "at": 1.07,
+        "file": "../results/media/return-both-pass-frames-jev/001.png",
+        "label": "1. fill email_field",
+        "detail": "$0.0000 so far   confidence 0.98   295ms",
+        "failed": false
+      },
+      {
+        "at": 1.897,
+        "file": "../results/media/return-both-pass-frames-jev/002.png",
+        "label": "2. fill password_field",
+        "detail": "$0.0001 so far   confidence 0.99   235ms",
+        "failed": false
+      },
+      {
+        "at": 2.848,
+        "file": "../results/media/return-both-pass-frames-jev/003.png",
+        "label": "3. tap signin_button",
+        "detail": "$0.0001 so far   confidence 1.00   274ms",
+        "failed": false
+      },
+      {
+        "at": 4.302,
+        "file": "../results/media/return-both-pass-frames-jev/004.png",
+        "label": "4. tap nav_orders",
+        "detail": "$0.0002 so far   confidence 0.41   250ms",
+        "failed": false
+      },
+      {
+        "at": 5.37,
+        "file": "../results/media/return-both-pass-frames-jev/005.png",
+        "label": "5. tap order_5207",
+        "detail": "$0.0002 so far   confidence 0.99   229ms",
+        "failed": false
+      },
+      {
+        "at": 6.438,
+        "file": "../results/media/return-both-pass-frames-jev/006.png",
+        "label": "6. tap start_return_button",
+        "detail": "$0.0003 so far   confidence 0.97   243ms",
+        "failed": false
+      },
+      {
+        "at": 7.326,
+        "file": "../results/media/return-both-pass-frames-jev/007.png",
+        "label": "7. tap return_next_button",
+        "detail": "$0.0003 so far   confidence 0.90   238ms",
+        "failed": false
+      },
+      {
+        "at": 8.218,
+        "file": "../results/media/return-both-pass-frames-jev/008.png",
+        "label": "8. tap return_notes_field",
+        "detail": "$0.0003 so far   confidence 0.60   243ms",
+        "failed": false
+      },
+      {
+        "at": 14.816,
+        "file": "../results/media/return-both-pass-frames-jev/009.png",
+        "label": "9. tap return_next_button",
+        "detail": "$0.0004 so far   confidence 0.68   213ms",
+        "failed": false
+      },
+      {
+        "at": 15.699,
+        "file": "../results/media/return-both-pass-frames-jev/010.png",
+        "label": "10. tap return_confirm",
+        "detail": "$0.0004 so far   confidence 0.98   253ms",
+        "failed": false
+      },
+      {
+        "at": 16.538,
+        "file": "../results/media/return-both-pass-frames-jev/011.png",
+        "label": "11. tap return_next_button",
+        "detail": "$0.0005 so far   confidence 0.99   220ms",
+        "failed": false
+      },
+      {
+        "at": 17.666,
+        "file": "../results/media/return-both-pass-frames-jev/012.png",
+        "label": "12. reports pass",
+        "detail": "$0.0005 so far   confidence 0.93   209ms",
+        "failed": false
+      }
+    ]
+  },
+  "total_seconds": 20.666
+}

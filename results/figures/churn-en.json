@@ -1,0 +1,200 @@
+{
+ "name": "churn-en",
+ "component": "table",
+ "title": "After a UI rename: scripts 0/12, Jev + LLM 11/12",
+ "sub": "Return flow under 4 churn seeds (renamed keys, swapped labels, shuffled lists), 3 runs each, judged by the app's store",
+ "alt": "After UI churn: hand-written script 0/12, all-LLM 12/12, Jev picks and LLM writes 11/12, Jev with a value table 6/12",
+ "src": "Each dot is one run; filled means really done. No false passes in 48 runs. Jev with the hand-written value table stops on seeds 7 and 91: the rename hits an input field and the table looks values up by the old key. A value table is a selector too. Jev + LLM's one miss stopped at `nav_orders_v14`, confidence 0.34, with no false pass. Data: github.com/chyiiiiiiiiiiii/flutter-jev",
+ "columns": [
+  {
+   "head": "Setup",
+   "type": "name",
+   "width": "150px"
+  },
+  {
+   "head": "seed 4",
+   "type": "dots",
+   "width": "56px"
+  },
+  {
+   "head": "seed 7",
+   "type": "dots",
+   "width": "56px"
+  },
+  {
+   "head": "seed 55",
+   "type": "dots",
+   "width": "56px"
+  },
+  {
+   "head": "seed 91",
+   "type": "dots",
+   "width": "56px"
+  },
+  {
+   "head": "Total",
+   "type": "text",
+   "width": "70px",
+   "size": 15
+  },
+  {
+   "head": "Time per run",
+   "type": "bar",
+   "max": 18.723,
+   "scale": 62
+  },
+  {
+   "head": "Cost per run",
+   "type": "text",
+   "width": "80px",
+   "align": "right",
+   "boldHero": true
+  }
+ ],
+ "rows": [
+  {
+   "hero": false,
+   "cells": [
+    {
+     "name": "Hand-written script",
+     "note": "dies at step 1–4"
+    },
+    {
+     "done": 0,
+     "of": 3
+    },
+    {
+     "done": 0,
+     "of": 3
+    },
+    {
+     "done": 0,
+     "of": 3
+    },
+    {
+     "done": 0,
+     "of": 3
+    },
+    {
+     "text": "0/12",
+     "tone": "red"
+    },
+    {
+     "value": null,
+     "label": "2.3 s"
+    },
+    {
+     "text": "—"
+    }
+   ]
+  },
+  {
+   "hero": false,
+   "cells": [
+    {
+     "name": "Jev only",
+     "note": "stops when an input is renamed"
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "done": 0,
+     "of": 3
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "done": 0,
+     "of": 3
+    },
+    {
+     "text": "6/12",
+     "tone": "strong"
+    },
+    {
+     "value": 14.011,
+     "label": "14.0 s"
+    },
+    {
+     "text": "$0.0005"
+    }
+   ]
+  },
+  {
+   "hero": false,
+   "cells": [
+    {
+     "name": "LLM does it all",
+     "note": "flash-lite picks and writes"
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "text": "12/12",
+     "tone": "strong"
+    },
+    {
+     "value": 18.723,
+     "label": "18.7 s"
+    },
+    {
+     "text": "$0.0046"
+    }
+   ]
+  },
+  {
+   "hero": true,
+   "cells": [
+    {
+     "name": "Jev picks, LLM writes",
+     "note": "LLM only for new fields"
+    },
+    {
+     "done": 2,
+     "of": 3
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "done": 3,
+     "of": 3
+    },
+    {
+     "text": "11/12",
+     "tone": "strong"
+    },
+    {
+     "value": 9.622499999999999,
+     "label": "9.6 s"
+    },
+    {
+     "text": "$0.0011"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "name": "stale-en",
+ "component": "compare",
+ "title": "Same stale test data: the LLM reports success, Jev stops",
+ "sub": "The task says order 5198 arrived damaged; the value table still says order 5213, parcel not moving. Both get identical inputs; only the decider differs",
+ "alt": "Same stale data: the LLM sends the wrong support ticket and reports done; Jev's confidence drops to 0.30 and it stops without sending anything",
+ "src": "3 runs each: 3 green runs from the LLM that sent the wrong ticket; Jev stops all 3 times at confidence 0.30–0.36, held by the 0.60 finish and 0.70 submit thresholds. Temperature 0, so the repeats are not independent samples. Data: github.com/chyiiiiiiiiiiii/flutter-jev",
+ "columns": [
+  {
+   "name": "LLM decides",
+   "note": "flash-lite, self-reported confidence",
+   "steps": [
+    {
+     "text": "type order “5213”",
+     "right": "conf 1.00"
+    },
+    {
+     "text": "type “My parcel has not mov…”",
+     "right": "conf 0.90"
+    },
+    {
+     "text": "press send",
+     "right": "conf 0.90"
+    },
+    {
+     "text": "report: done",
+     "right": "conf 1.00"
+    }
+   ],
+   "blocks": [
+    {
+     "label": "The agent says",
+     "value": "done"
+    },
+    {
+     "label": "What the app stored",
+     "value": "✗ the wrong support ticket (order 5213)",
+     "tone": "red"
+    }
+   ],
+   "foot": "15.0 s · $0.0032"
+  },
+  {
+   "name": "Jev decides",
+   "note": "Jev's probability distribution",
+   "steps": [
+    {
+     "text": "type order “5213”",
+     "right": "conf 0.97"
+    },
+    {
+     "text": "type “My parcel has not mov…”",
+     "right": "conf 0.94"
+    },
+    {
+     "text": "wants to press send",
+     "right": "conf 0.30",
+     "tone": "red"
+    }
+   ],
+   "blocks": [
+    {
+     "label": "The agent says",
+     "value": "not sure, stopping"
+    },
+    {
+     "label": "What the app stored",
+     "value": "nothing was sent"
+    }
+   ],
+   "foot": "4.8 s · $0.0006"
+  }
+ ]
+}

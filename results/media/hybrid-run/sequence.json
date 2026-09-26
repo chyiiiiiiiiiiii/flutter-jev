@@ -1,0 +1,107 @@
+{
+ "name": "hybrid-run",
+ "eyebrow": "實測錄影 · Jev 挑每一步，LLM 只寫字 · 任務：回報訂單 5198 到貨損壞",
+ "frames": [
+  {
+   "line": "開始：一句話的任務，沒有腳本",
+   "meta": "sign in with the demo account, then contact support saying order 5198 arrived damaged",
+   "clock": "0.0 秒",
+   "cost": "$0.0000",
+   "image": "00.png"
+  },
+  {
+   "tag": "LLM 寫",
+   "tagStyle": "outline",
+   "line": "「demo@example.com」→ `email_field`",
+   "meta": "Jev 選了這一步（信心 1.00），要填的字由 LLM 看畫面寫",
+   "clock": "1.5 秒",
+   "cost": "$0.0001",
+   "image": "01.png"
+  },
+  {
+   "tag": "LLM 寫",
+   "tagStyle": "outline",
+   "line": "「hunter2」→ `password_field`",
+   "meta": "Jev 選了這一步（信心 1.00），要填的字由 LLM 看畫面寫",
+   "clock": "1.8 秒",
+   "cost": "$0.0002",
+   "image": "02.png"
+  },
+  {
+   "tag": "Jev 挑",
+   "line": "點 `signin_button`",
+   "meta": "信心 1.00",
+   "clock": "2.2 秒",
+   "cost": "$0.0002",
+   "image": "03.png"
+  },
+  {
+   "tag": "Jev 挑",
+   "line": "點 `nav_support`",
+   "meta": "信心 0.98",
+   "clock": "2.7 秒",
+   "cost": "$0.0003",
+   "image": "04.png"
+  },
+  {
+   "tag": "LLM 寫",
+   "tagStyle": "outline",
+   "line": "「order 5198 arrived damaged」→ `support_search`",
+   "meta": "Jev 選了這一步（信心 0.84），要填的字由 LLM 看畫面寫",
+   "clock": "4.1 秒",
+   "cost": "$0.0005",
+   "image": "05.png"
+  },
+  {
+   "tag": "Jev 挑",
+   "line": "點 `contact_us_button`",
+   "meta": "信心 1.00",
+   "clock": "4.5 秒",
+   "cost": "$0.0005",
+   "image": "06.png"
+  },
+  {
+   "tag": "LLM 寫",
+   "tagStyle": "outline",
+   "line": "「5198」→ `contact_order_field`",
+   "meta": "Jev 選了這一步（信心 0.97），要填的字由 LLM 看畫面寫",
+   "clock": "5.9 秒",
+   "cost": "$0.0007",
+   "image": "07.png"
+  },
+  {
+   "tag": "LLM 寫",
+   "tagStyle": "outline",
+   "line": "「My order 5198 arrived damaged.」→ `contact_message_field`",
+   "meta": "Jev 選了這一步（信心 1.00），要填的字由 LLM 看畫面寫",
+   "clock": "6.2 秒",
+   "cost": "$0.0007",
+   "image": "08.png"
+  },
+  {
+   "tag": "Jev 挑",
+   "line": "點 `contact_send_button`",
+   "meta": "信心 1.00",
+   "clock": "6.6 秒",
+   "cost": "$0.0008",
+   "image": "09.png"
+  },
+  {
+   "tag": "Jev 判斷",
+   "line": "回報：做完了",
+   "meta": "信心 0.98",
+   "clock": "7.0 秒",
+   "cost": "$0.0008",
+   "image": "10.png"
+  },
+  {
+   "line": "app 裡實際寫進 ✓",
+   "tone": "",
+   "meta": "訂單 5198：「My order 5198 arrived damaged.」",
+   "clock": "7.0 秒",
+   "cost": "10 步 · $0.0008",
+   "image": "10.png"
+  }
+ ],
+ "alt": "一次實際的跑：Jev 挑動作、LLM 寫字，10 步、7.0 秒、$0.0008，app 收到訂單 5198 的客服單"
+}

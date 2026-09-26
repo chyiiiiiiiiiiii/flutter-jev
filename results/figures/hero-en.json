@@ -1,0 +1,58 @@
+{
+ "name": "hero-en",
+ "component": "hero",
+ "eyebrow": "Flutter E2E · measured",
+ "title": "Let Jev pick, let the LLM write.",
+ "alt": "Jev picks, LLM writes: 17/18 correct; 11/12 after UI renames where scripts go 0/12; 1.7x faster; 3.6x cheaper",
+ "src": "Correct, fast, cheap: 6 tasks x 3 runs. Robust: the return flow under 4 UI churn seeds x 3 runs. Every run judged by what the app stored, not by what the agent said. Data: github.com/chyiiiiiiiiiiii/flutter-jev",
+ "stats": [
+  {
+   "value": "17/18",
+   "label": "Correct: the 1 miss was a safe stop; 0 false passes"
+  },
+  {
+   "value": "11/12",
+   "label": "Robust: survives UI renames; scripts go 0/12"
+  },
+  {
+   "value": "1.7×",
+   "label": "Fast: 8.6 s per run vs 14.5 s"
+  },
+  {
+   "value": "3.6×",
+   "label": "Cheap: $0.0009 per run vs $0.0034"
+  }
+ ],
+ "mini": {
+  "title": "Time per run",
+  "max": 49.247,
+  "rows": [
+   {
+    "name": "Jev only",
+    "value": 5.4395,
+    "label": "5.4 s"
+   },
+   {
+    "name": "LLM decides",
+    "value": 14.898,
+    "label": "14.9 s"
+   },
+   {
+    "name": "LLM does it all",
+    "value": 14.4845,
+    "label": "14.5 s"
+   },
+   {
+    "name": "Frontier LLM",
+    "value": 49.247,
+    "label": "49.2 s"
+   },
+   {
+    "name": "Jev picks, LLM writes",
+    "value": 8.5535,
+    "label": "8.6 s",
+    "hero": true
+   }
+  ]
+ }
+}

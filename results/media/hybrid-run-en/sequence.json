@@ -1,0 +1,107 @@
+{
+ "name": "hybrid-run-en",
+ "eyebrow": "One recorded run · Jev picks every step, an LLM only writes · Task: report order 5198 arrived damaged",
+ "frames": [
+  {
+   "line": "Start: a one-sentence task, no script",
+   "meta": "sign in with the demo account, then contact support saying order 5198 arrived damaged",
+   "clock": "0.0 s",
+   "cost": "$0.0000",
+   "image": "00.png"
+  },
+  {
+   "tag": "LLM writes",
+   "tagStyle": "outline",
+   "line": "“demo@example.com” → `email_field`",
+   "meta": "Jev chose this step (confidence 1.00); the LLM wrote the words from the screen",
+   "clock": "1.6 s",
+   "cost": "$0.0001",
+   "image": "01.png"
+  },
+  {
+   "tag": "LLM writes",
+   "tagStyle": "outline",
+   "line": "“hunter2” → `password_field`",
+   "meta": "Jev chose this step (confidence 1.00); the LLM wrote the words from the screen",
+   "clock": "2.0 s",
+   "cost": "$0.0002",
+   "image": "02.png"
+  },
+  {
+   "tag": "Jev picks",
+   "line": "tap `signin_button`",
+   "meta": "confidence 1.00",
+   "clock": "2.4 s",
+   "cost": "$0.0002",
+   "image": "03.png"
+  },
+  {
+   "tag": "Jev picks",
+   "line": "tap `nav_support`",
+   "meta": "confidence 0.97",
+   "clock": "2.9 s",
+   "cost": "$0.0003",
+   "image": "04.png"
+  },
+  {
+   "tag": "LLM writes",
+   "tagStyle": "outline",
+   "line": "“order 5198 arrived damaged” → `support_search`",
+   "meta": "Jev chose this step (confidence 0.90); the LLM wrote the words from the screen",
+   "clock": "4.5 s",
+   "cost": "$0.0005",
+   "image": "05.png"
+  },
+  {
+   "tag": "Jev picks",
+   "line": "tap `contact_us_button`",
+   "meta": "confidence 1.00",
+   "clock": "4.9 s",
+   "cost": "$0.0005",
+   "image": "06.png"
+  },
+  {
+   "tag": "LLM writes",
+   "tagStyle": "outline",
+   "line": "“5198” → `contact_order_field`",
+   "meta": "Jev chose this step (confidence 0.95); the LLM wrote the words from the screen",
+   "clock": "6.4 s",
+   "cost": "$0.0007",
+   "image": "07.png"
+  },
+  {
+   "tag": "LLM writes",
+   "tagStyle": "outline",
+   "line": "“My order 5198 arrived damaged.” → `contact_message_field`",
+   "meta": "Jev chose this step (confidence 1.00); the LLM wrote the words from the screen",
+   "clock": "6.7 s",
+   "cost": "$0.0007",
+   "image": "08.png"
+  },
+  {
+   "tag": "Jev picks",
+   "line": "tap `contact_send_button`",
+   "meta": "confidence 1.00",
+   "clock": "7.1 s",
+   "cost": "$0.0008",
+   "image": "09.png"
+  },
+  {
+   "tag": "Jev judges",
+   "line": "report: done",
+   "meta": "confidence 0.98",
+   "clock": "7.5 s",
+   "cost": "$0.0008",
+   "image": "10.png"
+  },
+  {
+   "line": "What the app actually stored ✓",
+   "tone": "",
+   "meta": "order 5198: “My order 5198 arrived damaged.”",
+   "clock": "7.5 s",
+   "cost": "10 steps · $0.0008",
+   "image": "10.png"
+  }
+ ],
+ "alt": "One recorded run: Jev picks the actions, an LLM writes the text, 10 steps, 7.5 s, $0.0008; the app received the ticket for order 5198"
+}
