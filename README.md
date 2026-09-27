@@ -134,8 +134,17 @@ end-to-end gain at about 1.5x. The report works through why.
 
 ## Running it
 
+**API key.** Everything here calls TypeSafe's own endpoint (`api.typesafe.ai`) with an
+official key: sign in at [console.typesafe.ai](https://console.typesafe.ai) with Google or
+email and create one under Settings → Keys. Use the official key if you can; it is the
+direct route, and every latency in this repo was measured over it (Taiwan to US-West).
+Jev is also [available on OpenRouter](https://openrouter.ai/docs/guides/community/jev),
+which adds a hop I have not measured, and the runner would need its endpoint and key
+swapped to use it.
+
+
 ```bash
-export TYPESAFE_API_KEY=...          # console.typesafe.ai, or call Jev through OpenRouter
+export TYPESAFE_API_KEY=...          # official key from console.typesafe.ai (see below)
 export GEMINI_API_KEY=...            # the LLM side: genui, arms.py, record_gif.py
 dart pub global activate marionette_cli
 
