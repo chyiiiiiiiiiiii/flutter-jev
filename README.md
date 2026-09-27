@@ -91,7 +91,7 @@ difference lies.
 
 Under churn, four seeds x three runs of the return flow (`--chaos 7 55 4 91`):
 
-![After UI churn: hand-written script 0/12, all-LLM 12/12, Jev picks and LLM writes 11/12, Jev with a value table 6/12](results/figures/churn-en.png)
+![After UI churn: hand-written script 0/12, all-LLM 12/12, Jev picks and LLM writes 11/12, with a referee 12/12, Jev with a value table 6/12](results/figures/churn-en.png)
 
 Jev on its own failed only when the rename hit the email field: the value table
 is keyed by widget key, so it is a selector too, and breaks like one (safely:
