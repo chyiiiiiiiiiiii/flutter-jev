@@ -139,8 +139,8 @@ official key: sign in at [console.typesafe.ai](https://console.typesafe.ai) with
 email and create one under Settings → Keys. Use the official key if you can; it is the
 direct route, and every latency in this repo was measured over it (Taiwan to US-West).
 Jev is also [available on OpenRouter](https://openrouter.ai/docs/guides/community/jev),
-which adds a hop I have not measured, and the runner would need its endpoint and key
-swapped to use it.
+but the extra hop is slow: about 1.3-2.2 s per call there against about 0.36 s direct
+to TypeSafe. The runner would also need its endpoint and key swapped to use it.
 
 
 ```bash
