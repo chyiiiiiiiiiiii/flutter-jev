@@ -1,0 +1,3230 @@
+[
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 12,
+    "model_calls": 18,
+    "input_tokens": 19748,
+    "output_tokens": 1839,
+    "cost_usd": 0.001144,
+    "wall_seconds": 9.754,
+    "model_seconds": 4.361,
+    "transport_seconds": 1.552,
+    "transport_calls": 118,
+    "settle_seconds": 5.559,
+    "settles": 36,
+    "median_decision_ms": 243.2,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000315,
+    "writer_seconds": 2.642,
+    "raw_chars": 75058,
+    "compact_chars": 7157,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 259.4,
+        "at": 1.324,
+        "cost": 0.000143
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 251.6,
+        "at": 1.745,
+        "cost": 0.000181
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 214.2,
+        "at": 2.114,
+        "cost": 0.00022
+      },
+      {
+        "step": 4,
+        "action": "Tap @e7, the NavigationDestination nav_orders.",
+        "typed": null,
+        "target": "nav_orders",
+        "kind": "tap",
+        "confidence": 0.43,
+        "complete": 0.04,
+        "ms": 301.1,
+        "at": 3.306,
+        "cost": 0.000366
+      },
+      {
+        "step": 5,
+        "action": "Tap @e7, the RowCard order_5207.",
+        "typed": null,
+        "target": "order_5207",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 239.8,
+        "at": 4.951,
+        "cost": 0.00061
+      },
+      {
+        "step": 6,
+        "action": "Tap @e2, the FilledButton start_return_button.",
+        "typed": null,
+        "target": "start_return_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.08,
+        "ms": 273.4,
+        "at": 5.731,
+        "cost": 0.000713
+      },
+      {
+        "step": 7,
+        "action": "Tap @e3, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.69,
+        "complete": 0.04,
+        "ms": 224.1,
+        "at": 6.402,
+        "cost": 0.000792
+      },
+      {
+        "step": 8,
+        "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+        "typed": "The item arrived with a cracked screen.",
+        "target": "return_notes_field",
+        "kind": "fill",
+        "confidence": 0.98,
+        "complete": 0.04,
+        "ms": 247.7,
+        "at": 7.72,
+        "cost": 0.000929
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.96,
+        "complete": 0.07,
+        "ms": 245.2,
+        "at": 8.127,
+        "cost": 0.000974
+      },
+      {
+        "step": 10,
+        "action": "Tap @e2, the CheckboxListTile return_confirm.",
+        "typed": null,
+        "target": "return_confirm",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.06,
+        "ms": 203.7,
+        "at": 8.544,
+        "cost": 0.001018
+      },
+      {
+        "step": 11,
+        "action": "Tap @e3, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.12,
+        "ms": 260.4,
+        "at": 8.959,
+        "cost": 0.00106
+      },
+      {
+        "step": 12,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.96,
+        "complete": 0.93,
+        "ms": 220.6,
+        "at": 9.753,
+        "cost": 0.001144
+      }
+    ],
+    "task": "return-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "returning",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 12,
+    "model_calls": 18,
+    "input_tokens": 19790,
+    "output_tokens": 1848,
+    "cost_usd": 0.001146,
+    "wall_seconds": 10.091,
+    "model_seconds": 4.126,
+    "transport_seconds": 1.597,
+    "transport_calls": 119,
+    "settle_seconds": 5.686,
+    "settles": 36,
+    "median_decision_ms": 221.3,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000315,
+    "writer_seconds": 2.905,
+    "raw_chars": 75288,
+    "compact_chars": 7199,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 244.3,
+        "at": 1.409,
+        "cost": 0.000143
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 218.3,
+        "at": 1.826,
+        "cost": 0.000181
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 202.2,
+        "at": 2.202,
+        "cost": 0.00022
+      },
+      {
+        "step": 4,
+        "action": "Tap @e7, the NavigationDestination nav_orders.",
+        "typed": null,
+        "target": "nav_orders",
+        "kind": "tap",
+        "confidence": 0.38,
+        "complete": 0.04,
+        "ms": 221.0,
+        "at": 3.433,
+        "cost": 0.000368
+      },
+      {
+        "step": 5,
+        "action": "Tap @e7, the RowCard order_5207.",
+        "typed": null,
+        "target": "order_5207",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 220.3,
+        "at": 5.228,
+        "cost": 0.000612
+      },
+      {
+        "step": 6,
+        "action": "Tap @e2, the FilledButton start_return_button.",
+        "typed": null,
+        "target": "start_return_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.08,
+        "ms": 211.5,
+        "at": 6.029,
+        "cost": 0.000715
+      },
+      {
+        "step": 7,
+        "action": "Tap @e3, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.74,
+        "complete": 0.05,
+        "ms": 201.0,
+        "at": 6.738,
+        "cost": 0.000794
+      },
+      {
+        "step": 8,
+        "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+        "typed": "The item arrived with a cracked screen.",
+        "target": "return_notes_field",
+        "kind": "fill",
+        "confidence": 0.98,
+        "complete": 0.03,
+        "ms": 221.7,
+        "at": 8.077,
+        "cost": 0.000931
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.97,
+        "complete": 0.07,
+        "ms": 211.2,
+        "at": 8.474,
+        "cost": 0.000976
+      },
+      {
+        "step": 10,
+        "action": "Tap @e2, the CheckboxListTile return_confirm.",
+        "typed": null,
+        "target": "return_confirm",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.06,
+        "ms": 216.2,
+        "at": 8.883,
+        "cost": 0.001019
+      },
+      {
+        "step": 11,
+        "action": "Tap @e3, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.12,
+        "ms": 249.1,
+        "at": 9.285,
+        "cost": 0.001062
+      },
+      {
+        "step": 12,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.97,
+        "complete": 0.92,
+        "ms": 233.5,
+        "at": 10.09,
+        "cost": 0.001146
+      }
+    ],
+    "task": "return-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "returning",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, open order 5207, and submit a return request for it (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 13,
+    "model_calls": 17,
+    "input_tokens": 19179,
+    "output_tokens": 1863,
+    "cost_usd": 0.00112,
+    "wall_seconds": 11.085,
+    "model_seconds": 3.905,
+    "transport_seconds": 1.829,
+    "transport_calls": 125,
+    "settle_seconds": 6.863,
+    "settles": 33,
+    "median_decision_ms": 220.5,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000315,
+    "writer_seconds": 2.873,
+    "raw_chars": 82107,
+    "compact_chars": 7587,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 303.1,
+        "at": 1.504,
+        "cost": 0.000143
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 248.4,
+        "at": 1.933,
+        "cost": 0.000181
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 216.0,
+        "at": 2.311,
+        "cost": 0.00022
+      },
+      {
+        "step": 4,
+        "action": "Scroll down to reveal content below the fold.",
+        "typed": null,
+        "target": "scroll",
+        "kind": "scroll",
+        "confidence": 0.42,
+        "complete": 0.04,
+        "ms": 201.1,
+        "at": 3.457,
+        "cost": 0.000368
+      },
+      {
+        "step": 5,
+        "action": "Tap @e8, the NavigationDestination nav_orders.",
+        "typed": null,
+        "target": "nav_orders",
+        "kind": "tap",
+        "confidence": 0.43,
+        "complete": 0.02,
+        "ms": 262.9,
+        "at": 5.019,
+        "cost": 0.000429
+      },
+      {
+        "step": 6,
+        "action": "Tap @e7, the RowCard order_5207.",
+        "typed": null,
+        "target": "order_5207",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 203.1,
+        "at": 6.652,
+        "cost": 0.000674
+      },
+      {
+        "step": 7,
+        "action": "Tap @e2, the FilledButton start_return_button.",
+        "typed": null,
+        "target": "start_return_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.08,
+        "ms": 212.8,
+        "at": 7.236,
+        "cost": 0.000727
+      },
+      {
+        "step": 8,
+        "action": "Tap @e3, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.77,
+        "complete": 0.04,
+        "ms": 239.3,
+        "at": 7.749,
+        "cost": 0.000769
+      },
+      {
+        "step": 9,
+        "action": "Type \"The item arrived with a cracked screen.\" into the empty return_notes_field field at @e3.",
+        "typed": "The item arrived with a cracked screen.",
+        "target": "return_notes_field",
+        "kind": "fill",
+        "confidence": 0.98,
+        "complete": 0.04,
+        "ms": 251.4,
+        "at": 9.061,
+        "cost": 0.000906
+      },
+      {
+        "step": 10,
+        "action": "Tap @e5, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.96,
+        "complete": 0.07,
+        "ms": 267.7,
+        "at": 9.461,
+        "cost": 0.00095
+      },
+      {
+        "step": 11,
+        "action": "Tap @e2, the CheckboxListTile return_confirm.",
+        "typed": null,
+        "target": "return_confirm",
+        "kind": "tap",
+        "confidence": 0.98,
+        "complete": 0.06,
+        "ms": 220.5,
+        "at": 9.867,
+        "cost": 0.000994
+      },
+      {
+        "step": 12,
+        "action": "Tap @e3, the FilledButton return_next_button.",
+        "typed": null,
+        "target": "return_next_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.15,
+        "ms": 200.9,
+        "at": 10.279,
+        "cost": 0.001036
+      },
+      {
+        "step": 13,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.96,
+        "complete": 0.93,
+        "ms": 201.5,
+        "at": 11.085,
+        "cost": 0.00112
+      }
+    ],
+    "task": "return-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "returning",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add the pocket speaker to the cart and open the cart (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 8,
+    "model_calls": 12,
+    "input_tokens": 12983,
+    "output_tokens": 1313,
+    "cost_usd": 0.00078,
+    "wall_seconds": 6.959,
+    "model_seconds": 2.865,
+    "transport_seconds": 1.495,
+    "transport_calls": 79,
+    "settle_seconds": 4.103,
+    "settles": 24,
+    "median_decision_ms": 233.4,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 2,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000235,
+    "writer_seconds": 1.912,
+    "raw_chars": 53595,
+    "compact_chars": 4694,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 309.0,
+        "at": 1.709,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 261.1,
+        "at": 2.131,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 249.4,
+        "at": 2.507,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e8, the NavigationDestination nav_shop.",
+        "typed": null,
+        "target": "nav_shop",
+        "kind": "tap",
+        "confidence": 0.96,
+        "complete": 0.09,
+        "ms": 249.1,
+        "at": 3.596,
+        "cost": 0.000362
+      },
+      {
+        "step": 5,
+        "action": "Tap @e9, the Card product_p-speaker.",
+        "typed": null,
+        "target": "product_p-speaker",
+        "kind": "tap",
+        "confidence": 0.9,
+        "complete": 0.03,
+        "ms": 209.6,
+        "at": 5.043,
+        "cost": 0.000559
+      },
+      {
+        "step": 6,
+        "action": "Tap @e2, the FilledButton add_to_cart_button.",
+        "typed": null,
+        "target": "add_to_cart_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 213.6,
+        "at": 5.76,
+        "cost": 0.000652
+      },
+      {
+        "step": 7,
+        "action": "Tap @e2, the OutlinedButton view_cart_button.",
+        "typed": null,
+        "target": "view_cart_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.09,
+        "ms": 231.5,
+        "at": 6.213,
+        "cost": 0.000693
+      },
+      {
+        "step": 8,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.98,
+        "complete": 0.95,
+        "ms": 248.8,
+        "at": 6.959,
+        "cost": 0.00078
+      }
+    ],
+    "task": "cart-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {
+        "p-speaker": 1
+      },
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add the pocket speaker to the cart and open the cart (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 8,
+    "model_calls": 11,
+    "input_tokens": 12023,
+    "output_tokens": 1259,
+    "cost_usd": 0.000739,
+    "wall_seconds": 6.464,
+    "model_seconds": 2.535,
+    "transport_seconds": 1.159,
+    "transport_calls": 76,
+    "settle_seconds": 3.712,
+    "settles": 22,
+    "median_decision_ms": 228.7,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 2,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000235,
+    "writer_seconds": 1.939,
+    "raw_chars": 55155,
+    "compact_chars": 4751,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 244.6,
+        "at": 1.419,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 251.3,
+        "at": 1.746,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 222.8,
+        "at": 2.117,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e8, the NavigationDestination nav_shop.",
+        "typed": null,
+        "target": "nav_shop",
+        "kind": "tap",
+        "confidence": 0.94,
+        "complete": 0.1,
+        "ms": 202.2,
+        "at": 3.314,
+        "cost": 0.000366
+      },
+      {
+        "step": 5,
+        "action": "Tap @e9, the Card product_p-speaker.",
+        "typed": null,
+        "target": "product_p-speaker",
+        "kind": "tap",
+        "confidence": 0.9,
+        "complete": 0.03,
+        "ms": 204.9,
+        "at": 4.76,
+        "cost": 0.000563
+      },
+      {
+        "step": 6,
+        "action": "Tap @e2, the FilledButton add_to_cart_button.",
+        "typed": null,
+        "target": "add_to_cart_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 250.5,
+        "at": 5.305,
+        "cost": 0.000611
+      },
+      {
+        "step": 7,
+        "action": "Tap @e2, the OutlinedButton view_cart_button.",
+        "typed": null,
+        "target": "view_cart_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.1,
+        "ms": 264.9,
+        "at": 5.691,
+        "cost": 0.000653
+      },
+      {
+        "step": 8,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.98,
+        "complete": 0.95,
+        "ms": 203.2,
+        "at": 6.464,
+        "cost": 0.000739
+      }
+    ],
+    "task": "cart-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {
+        "p-speaker": 1
+      },
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add the pocket speaker to the cart and open the cart (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 8,
+    "model_calls": 11,
+    "input_tokens": 12023,
+    "output_tokens": 1259,
+    "cost_usd": 0.000739,
+    "wall_seconds": 6.286,
+    "model_seconds": 2.577,
+    "transport_seconds": 1.109,
+    "transport_calls": 79,
+    "settle_seconds": 3.871,
+    "settles": 22,
+    "median_decision_ms": 241.8,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 2,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000235,
+    "writer_seconds": 1.647,
+    "raw_chars": 55204,
+    "compact_chars": 4751,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 268.7,
+        "at": 1.277,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 251.5,
+        "at": 1.702,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 197.1,
+        "at": 2.075,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e8, the NavigationDestination nav_shop.",
+        "typed": null,
+        "target": "nav_shop",
+        "kind": "tap",
+        "confidence": 0.95,
+        "complete": 0.1,
+        "ms": 214.0,
+        "at": 3.258,
+        "cost": 0.000366
+      },
+      {
+        "step": 5,
+        "action": "Tap @e9, the Card product_p-speaker.",
+        "typed": null,
+        "target": "product_p-speaker",
+        "kind": "tap",
+        "confidence": 0.9,
+        "complete": 0.04,
+        "ms": 246.6,
+        "at": 4.556,
+        "cost": 0.000563
+      },
+      {
+        "step": 6,
+        "action": "Tap @e2, the FilledButton add_to_cart_button.",
+        "typed": null,
+        "target": "add_to_cart_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 245.5,
+        "at": 5.099,
+        "cost": 0.000611
+      },
+      {
+        "step": 7,
+        "action": "Tap @e2, the OutlinedButton view_cart_button.",
+        "typed": null,
+        "target": "view_cart_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.09,
+        "ms": 205.0,
+        "at": 5.516,
+        "cost": 0.000653
+      },
+      {
+        "step": 8,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.98,
+        "complete": 0.95,
+        "ms": 222.5,
+        "at": 6.285,
+        "cost": 0.000739
+      }
+    ],
+    "task": "cart-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {
+        "p-speaker": 1
+      },
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then contact support about order 5213 not moving (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 16778,
+    "output_tokens": 1531,
+    "cost_usd": 0.001078,
+    "wall_seconds": 8.886,
+    "model_seconds": 3.683,
+    "transport_seconds": 0.988,
+    "transport_calls": 102,
+    "settle_seconds": 4.771,
+    "settles": 30,
+    "median_decision_ms": 233.2,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000373,
+    "writer_seconds": 3.297,
+    "raw_chars": 60518,
+    "compact_chars": 6551,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 296.3,
+        "at": 1.622,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 213.7,
+        "at": 2.032,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 267.0,
+        "at": 2.394,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e9, the NavigationDestination nav_support.",
+        "typed": null,
+        "target": "nav_support",
+        "kind": "tap",
+        "confidence": 0.85,
+        "complete": 0.05,
+        "ms": 250.5,
+        "at": 3.512,
+        "cost": 0.000365
+      },
+      {
+        "step": 5,
+        "action": "Type \"order 5213 not moving\" into the empty support_search field at @e2.",
+        "typed": "order 5213 not moving",
+        "target": "support_search",
+        "kind": "fill",
+        "confidence": 0.94,
+        "complete": 0.05,
+        "ms": 209.8,
+        "at": 5.044,
+        "cost": 0.000558
+      },
+      {
+        "step": 6,
+        "action": "Tap @e4, the FilledButton contact_us_button.",
+        "typed": null,
+        "target": "contact_us_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 246.0,
+        "at": 5.425,
+        "cost": 0.00062
+      },
+      {
+        "step": 7,
+        "action": "Type \"5213\" into the empty contact_order_field field at @e2.",
+        "typed": "5213",
+        "target": "contact_order_field",
+        "kind": "fill",
+        "confidence": 0.97,
+        "complete": 0.03,
+        "ms": 233.2,
+        "at": 7.184,
+        "cost": 0.000856
+      },
+      {
+        "step": 8,
+        "action": "Type \"My order 5213 is not moving and seems to be stuck. Could you please check the status for me?\" into the empty contact_message_field field at @e3.",
+        "typed": "My order 5213 is not moving and seems to be stuck. Could you please check the status for me?",
+        "target": "contact_message_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 263.7,
+        "at": 7.547,
+        "cost": 0.000901
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton contact_send_button.",
+        "typed": null,
+        "target": "contact_send_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.09,
+        "ms": 369.6,
+        "at": 7.94,
+        "cost": 0.000947
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.97,
+        "complete": 0.91,
+        "ms": 247.5,
+        "at": 8.885,
+        "cost": 0.001078
+      }
+    ],
+    "task": "support-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "CS-77709",
+          "order": "5213",
+          "message": "My order 5213 is not moving and seems to be stuck. Could you please check the status for me?"
+        }
+      ]
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then contact support about order 5213 not moving (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 16,
+    "input_tokens": 17879,
+    "output_tokens": 1601,
+    "cost_usd": 0.001124,
+    "wall_seconds": 9.034,
+    "model_seconds": 3.675,
+    "transport_seconds": 1.012,
+    "transport_calls": 104,
+    "settle_seconds": 4.819,
+    "settles": 32,
+    "median_decision_ms": 223.1,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000373,
+    "writer_seconds": 3.143,
+    "raw_chars": 62890,
+    "compact_chars": 6996,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 252.1,
+        "at": 1.361,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 222.4,
+        "at": 1.772,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 204.4,
+        "at": 2.135,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e9, the NavigationDestination nav_support.",
+        "typed": null,
+        "target": "nav_support",
+        "kind": "tap",
+        "confidence": 0.88,
+        "complete": 0.05,
+        "ms": 253.4,
+        "at": 3.247,
+        "cost": 0.000365
+      },
+      {
+        "step": 5,
+        "action": "Type \"order 5213 not moving\" into the empty support_search field at @e2.",
+        "typed": "order 5213 not moving",
+        "target": "support_search",
+        "kind": "fill",
+        "confidence": 0.93,
+        "complete": 0.05,
+        "ms": 203.9,
+        "at": 4.866,
+        "cost": 0.000558
+      },
+      {
+        "step": 6,
+        "action": "Tap @e4, the FilledButton contact_us_button.",
+        "typed": null,
+        "target": "contact_us_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 278.0,
+        "at": 5.25,
+        "cost": 0.00062
+      },
+      {
+        "step": 7,
+        "action": "Type \"5213\" into the empty contact_order_field field at @e2.",
+        "typed": "5213",
+        "target": "contact_order_field",
+        "kind": "fill",
+        "confidence": 0.98,
+        "complete": 0.04,
+        "ms": 208.3,
+        "at": 7.029,
+        "cost": 0.000856
+      },
+      {
+        "step": 8,
+        "action": "Type \"My order 5213 is not moving and seems to be stuck. Could you please check the status for me?\" into the empty contact_message_field field at @e3.",
+        "typed": "My order 5213 is not moving and seems to be stuck. Could you please check the status for me?",
+        "target": "contact_message_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 223.8,
+        "at": 7.4,
+        "cost": 0.000901
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton contact_send_button.",
+        "typed": null,
+        "target": "contact_send_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.08,
+        "ms": 235.5,
+        "at": 8.036,
+        "cost": 0.000993
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.96,
+        "complete": 0.9,
+        "ms": 248.9,
+        "at": 9.034,
+        "cost": 0.001124
+      }
+    ],
+    "task": "support-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "CS-91365",
+          "order": "5213",
+          "message": "My order 5213 is not moving and seems to be stuck. Could you please check the status for me?"
+        }
+      ]
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then contact support about order 5213 not moving (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 16,
+    "input_tokens": 18396,
+    "output_tokens": 1719,
+    "cost_usd": 0.001146,
+    "wall_seconds": 9.213,
+    "model_seconds": 4.003,
+    "transport_seconds": 0.938,
+    "transport_calls": 102,
+    "settle_seconds": 4.578,
+    "settles": 32,
+    "median_decision_ms": 231.1,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000373,
+    "writer_seconds": 3.204,
+    "raw_chars": 68722,
+    "compact_chars": 7308,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 263.1,
+        "at": 1.571,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 205.6,
+        "at": 1.969,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 192.8,
+        "at": 2.327,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e9, the NavigationDestination nav_support.",
+        "typed": null,
+        "target": "nav_support",
+        "kind": "tap",
+        "confidence": 0.89,
+        "complete": 0.06,
+        "ms": 260.8,
+        "at": 3.341,
+        "cost": 0.000362
+      },
+      {
+        "step": 5,
+        "action": "Type \"order 5213 not moving\" into the empty support_search field at @e2.",
+        "typed": "order 5213 not moving",
+        "target": "support_search",
+        "kind": "fill",
+        "confidence": 0.93,
+        "complete": 0.04,
+        "ms": 245.8,
+        "at": 4.761,
+        "cost": 0.000556
+      },
+      {
+        "step": 6,
+        "action": "Tap @e4, the FilledButton contact_us_button.",
+        "typed": null,
+        "target": "contact_us_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 226.1,
+        "at": 5.368,
+        "cost": 0.000688
+      },
+      {
+        "step": 7,
+        "action": "Type \"5213\" into the empty contact_order_field field at @e2.",
+        "typed": "5213",
+        "target": "contact_order_field",
+        "kind": "fill",
+        "confidence": 0.98,
+        "complete": 0.03,
+        "ms": 236.1,
+        "at": 7.166,
+        "cost": 0.000924
+      },
+      {
+        "step": 8,
+        "action": "Type \"My order 5213 is not moving and seems to be stuck. Could you please check the status for me?\" into the empty contact_message_field field at @e3.",
+        "typed": "My order 5213 is not moving and seems to be stuck. Could you please check the status for me?",
+        "target": "contact_message_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 202.8,
+        "at": 7.526,
+        "cost": 0.000969
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton contact_send_button.",
+        "typed": null,
+        "target": "contact_send_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.1,
+        "ms": 253.1,
+        "at": 7.895,
+        "cost": 0.001015
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.95,
+        "complete": 0.88,
+        "ms": 216.2,
+        "at": 9.213,
+        "cost": 0.001146
+      }
+    ],
+    "task": "support-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "CS-5394",
+          "order": "5213",
+          "message": "My order 5213 is not moving and seems to be stuck. Could you please check the status for me?"
+        }
+      ]
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add a new saved delivery address labelled Office (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 15628,
+    "output_tokens": 1489,
+    "cost_usd": 0.000924,
+    "wall_seconds": 8.466,
+    "model_seconds": 3.54,
+    "transport_seconds": 0.987,
+    "transport_calls": 99,
+    "settle_seconds": 4.489,
+    "settles": 30,
+    "median_decision_ms": 230.5,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000268,
+    "writer_seconds": 2.967,
+    "raw_chars": 59950,
+    "compact_chars": 5574,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 257.8,
+        "at": 1.36,
+        "cost": 0.000141
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 301.5,
+        "at": 1.759,
+        "cost": 0.000179
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 220.0,
+        "at": 2.116,
+        "cost": 0.000218
+      },
+      {
+        "step": 4,
+        "action": "Tap @e10, the NavigationDestination nav_account.",
+        "typed": null,
+        "target": "nav_account",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 210.0,
+        "at": 3.203,
+        "cost": 0.000363
+      },
+      {
+        "step": 5,
+        "action": "Tap @e2, the RowCard profile_addresses.",
+        "typed": null,
+        "target": "profile_addresses",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 259.0,
+        "at": 3.639,
+        "cost": 0.000421
+      },
+      {
+        "step": 6,
+        "action": "Tap @e3, the OutlinedButton add_address_button.",
+        "typed": null,
+        "target": "add_address_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 212.8,
+        "at": 4.353,
+        "cost": 0.00051
+      },
+      {
+        "step": 7,
+        "action": "Type \"Office\" into the empty address_label_field field at @e1.",
+        "typed": "Office",
+        "target": "address_label_field",
+        "kind": "fill",
+        "confidence": 0.99,
+        "complete": 0.02,
+        "ms": 221.0,
+        "at": 7.047,
+        "cost": 0.000749
+      },
+      {
+        "step": 8,
+        "action": "Type \"123 Business Way, Suite 400, Tech City, TC 90210\" into the empty address_lines_field field at @e2.",
+        "typed": "123 Business Way, Suite 400, Tech City, TC 90210",
+        "target": "address_lines_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 230.5,
+        "at": 7.417,
+        "cost": 0.000788
+      },
+      {
+        "step": 9,
+        "action": "Tap @e4, the FilledButton address_save_button.",
+        "typed": null,
+        "target": "address_save_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.06,
+        "ms": 255.0,
+        "at": 7.783,
+        "cost": 0.00083
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 1.0,
+        "complete": 0.94,
+        "ms": 225.8,
+        "at": 8.466,
+        "cost": 0.000924
+      }
+    ],
+    "task": "address-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        },
+        {
+          "label": "Office",
+          "lines": "123 Business Way, Suite 400, Tech City, TC 90210"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add a new saved delivery address labelled Office (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 15571,
+    "output_tokens": 1480,
+    "cost_usd": 0.000922,
+    "wall_seconds": 8.498,
+    "model_seconds": 3.508,
+    "transport_seconds": 1.0,
+    "transport_calls": 97,
+    "settle_seconds": 4.359,
+    "settles": 30,
+    "median_decision_ms": 227.5,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000268,
+    "writer_seconds": 3.077,
+    "raw_chars": 57754,
+    "compact_chars": 5469,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 346.2,
+        "at": 1.315,
+        "cost": 0.000141
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 252.7,
+        "at": 1.711,
+        "cost": 0.000179
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 203.8,
+        "at": 2.071,
+        "cost": 0.000218
+      },
+      {
+        "step": 4,
+        "action": "Tap @e10, the NavigationDestination nav_account.",
+        "typed": null,
+        "target": "nav_account",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 246.5,
+        "at": 3.086,
+        "cost": 0.000361
+      },
+      {
+        "step": 5,
+        "action": "Tap @e2, the RowCard profile_addresses.",
+        "typed": null,
+        "target": "profile_addresses",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 206.7,
+        "at": 3.521,
+        "cost": 0.000418
+      },
+      {
+        "step": 6,
+        "action": "Tap @e3, the OutlinedButton add_address_button.",
+        "typed": null,
+        "target": "add_address_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 234.2,
+        "at": 4.257,
+        "cost": 0.000508
+      },
+      {
+        "step": 7,
+        "action": "Type \"Office\" into the empty address_label_field field at @e1.",
+        "typed": "Office",
+        "target": "address_label_field",
+        "kind": "fill",
+        "confidence": 0.99,
+        "complete": 0.02,
+        "ms": 235.7,
+        "at": 7.099,
+        "cost": 0.000746
+      },
+      {
+        "step": 8,
+        "action": "Type \"123 Business Way, Suite 400, Tech City, TC 90210\" into the empty address_lines_field field at @e2.",
+        "typed": "123 Business Way, Suite 400, Tech City, TC 90210",
+        "target": "address_lines_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 215.4,
+        "at": 7.464,
+        "cost": 0.000785
+      },
+      {
+        "step": 9,
+        "action": "Tap @e4, the FilledButton address_save_button.",
+        "typed": null,
+        "target": "address_save_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.07,
+        "ms": 214.7,
+        "at": 7.83,
+        "cost": 0.000827
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 1.0,
+        "complete": 0.95,
+        "ms": 204.6,
+        "at": 8.497,
+        "cost": 0.000922
+      }
+    ],
+    "task": "address-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        },
+        {
+          "label": "Office",
+          "lines": "123 Business Way, Suite 400, Tech City, TC 90210"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add a new saved delivery address labelled Office (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 15628,
+    "output_tokens": 1489,
+    "cost_usd": 0.000924,
+    "wall_seconds": 8.463,
+    "model_seconds": 3.421,
+    "transport_seconds": 0.986,
+    "transport_calls": 99,
+    "settle_seconds": 4.554,
+    "settles": 30,
+    "median_decision_ms": 221.8,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000268,
+    "writer_seconds": 2.971,
+    "raw_chars": 60158,
+    "compact_chars": 5574,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 271.7,
+        "at": 1.53,
+        "cost": 0.000141
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 195.4,
+        "at": 1.895,
+        "cost": 0.000179
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 259.8,
+        "at": 2.258,
+        "cost": 0.000218
+      },
+      {
+        "step": 4,
+        "action": "Tap @e10, the NavigationDestination nav_account.",
+        "typed": null,
+        "target": "nav_account",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 226.0,
+        "at": 3.369,
+        "cost": 0.000363
+      },
+      {
+        "step": 5,
+        "action": "Tap @e2, the RowCard profile_addresses.",
+        "typed": null,
+        "target": "profile_addresses",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 218.6,
+        "at": 3.8,
+        "cost": 0.000421
+      },
+      {
+        "step": 6,
+        "action": "Tap @e3, the OutlinedButton add_address_button.",
+        "typed": null,
+        "target": "add_address_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 224.8,
+        "at": 4.515,
+        "cost": 0.00051
+      },
+      {
+        "step": 7,
+        "action": "Type \"Office\" into the empty address_label_field field at @e1.",
+        "typed": "Office",
+        "target": "address_label_field",
+        "kind": "fill",
+        "confidence": 0.99,
+        "complete": 0.02,
+        "ms": 259.4,
+        "at": 7.077,
+        "cost": 0.000749
+      },
+      {
+        "step": 8,
+        "action": "Type \"123 Business Way, Suite 400, Tech City, TC 90210\" into the empty address_lines_field field at @e2.",
+        "typed": "123 Business Way, Suite 400, Tech City, TC 90210",
+        "target": "address_lines_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 214.1,
+        "at": 7.448,
+        "cost": 0.000788
+      },
+      {
+        "step": 9,
+        "action": "Tap @e4, the FilledButton address_save_button.",
+        "typed": null,
+        "target": "address_save_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.06,
+        "ms": 234.0,
+        "at": 7.808,
+        "cost": 0.00083
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 1.0,
+        "complete": 0.95,
+        "ms": 208.1,
+        "at": 8.462,
+        "cost": 0.000924
+      }
+    ],
+    "task": "address-flow",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        },
+        {
+          "label": "Office",
+          "lines": "123 Business Way, Suite 400, Tech City, TC 90210"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add a new saved delivery address labelled Home at 5F, 12 Zhongshan Rd (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 14,
+    "input_tokens": 14776,
+    "output_tokens": 1417,
+    "cost_usd": 0.000833,
+    "wall_seconds": 7.296,
+    "model_seconds": 3.319,
+    "transport_seconds": 1.012,
+    "transport_calls": 98,
+    "settle_seconds": 4.595,
+    "settles": 28,
+    "median_decision_ms": 226.9,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 2,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000212,
+    "writer_seconds": 1.927,
+    "raw_chars": 59174,
+    "compact_chars": 5385,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 252.6,
+        "at": 1.295,
+        "cost": 0.000134
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 208.3,
+        "at": 1.698,
+        "cost": 0.000172
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 225.7,
+        "at": 2.059,
+        "cost": 0.000212
+      },
+      {
+        "step": 4,
+        "action": "Tap @e10, the NavigationDestination nav_account.",
+        "typed": null,
+        "target": "nav_account",
+        "kind": "tap",
+        "confidence": 0.98,
+        "complete": 0.04,
+        "ms": 380.9,
+        "at": 3.196,
+        "cost": 0.000358
+      },
+      {
+        "step": 5,
+        "action": "Tap @e2, the RowCard profile_addresses.",
+        "typed": null,
+        "target": "profile_addresses",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 210.8,
+        "at": 3.629,
+        "cost": 0.000416
+      },
+      {
+        "step": 6,
+        "action": "Tap @e3, the OutlinedButton add_address_button.",
+        "typed": null,
+        "target": "add_address_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.03,
+        "ms": 248.1,
+        "at": 4.331,
+        "cost": 0.000507
+      },
+      {
+        "step": 7,
+        "action": "Type \"Home\" into the empty address_label_field field at @e1.",
+        "typed": "Home",
+        "target": "address_label_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 201.0,
+        "at": 5.882,
+        "cost": 0.00066
+      },
+      {
+        "step": 8,
+        "action": "Type \"5F, 12 Zhongshan Rd\" into the empty address_lines_field field at @e2.",
+        "typed": "5F, 12 Zhongshan Rd",
+        "target": "address_lines_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 217.5,
+        "at": 6.251,
+        "cost": 0.000699
+      },
+      {
+        "step": 9,
+        "action": "Tap @e4, the FilledButton address_save_button.",
+        "typed": null,
+        "target": "address_save_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.09,
+        "ms": 204.7,
+        "at": 6.616,
+        "cost": 0.00074
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.99,
+        "complete": 0.93,
+        "ms": 260.6,
+        "at": 7.296,
+        "cost": 0.000833
+      }
+    ],
+    "task": "address-home",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        },
+        {
+          "label": "Home",
+          "lines": "5F, 12 Zhongshan Rd"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add a new saved delivery address labelled Home at 5F, 12 Zhongshan Rd (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 15668,
+    "output_tokens": 1491,
+    "cost_usd": 0.000912,
+    "wall_seconds": 8.107,
+    "model_seconds": 3.514,
+    "transport_seconds": 0.994,
+    "transport_calls": 99,
+    "settle_seconds": 4.528,
+    "settles": 30,
+    "median_decision_ms": 222.5,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000254,
+    "writer_seconds": 2.618,
+    "raw_chars": 60055,
+    "compact_chars": 5461,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 254.4,
+        "at": 1.329,
+        "cost": 0.000134
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 231.7,
+        "at": 1.726,
+        "cost": 0.000172
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 380.7,
+        "at": 2.115,
+        "cost": 0.000212
+      },
+      {
+        "step": 4,
+        "action": "Tap @e10, the NavigationDestination nav_account.",
+        "typed": null,
+        "target": "nav_account",
+        "kind": "tap",
+        "confidence": 0.98,
+        "complete": 0.04,
+        "ms": 222.5,
+        "at": 3.235,
+        "cost": 0.000358
+      },
+      {
+        "step": 5,
+        "action": "Tap @e2, the RowCard profile_addresses.",
+        "typed": null,
+        "target": "profile_addresses",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 200.6,
+        "at": 3.673,
+        "cost": 0.000416
+      },
+      {
+        "step": 6,
+        "action": "Tap @e3, the OutlinedButton add_address_button.",
+        "typed": null,
+        "target": "add_address_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 219.4,
+        "at": 4.381,
+        "cost": 0.000507
+      },
+      {
+        "step": 7,
+        "action": "Type \"Home\" into the empty address_label_field field at @e1.",
+        "typed": "Home",
+        "target": "address_label_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 216.8,
+        "at": 6.712,
+        "cost": 0.000739
+      },
+      {
+        "step": 8,
+        "action": "Type \"5F, 12 Zhongshan Rd\" into the empty address_lines_field field at @e2.",
+        "typed": "5F, 12 Zhongshan Rd",
+        "target": "address_lines_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 233.1,
+        "at": 7.076,
+        "cost": 0.000779
+      },
+      {
+        "step": 9,
+        "action": "Tap @e4, the FilledButton address_save_button.",
+        "typed": null,
+        "target": "address_save_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.08,
+        "ms": 202.2,
+        "at": 7.44,
+        "cost": 0.000819
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.99,
+        "complete": 0.94,
+        "ms": 247.2,
+        "at": 8.107,
+        "cost": 0.000912
+      }
+    ],
+    "task": "address-home",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        },
+        {
+          "label": "Home",
+          "lines": "5F, 12 Zhongshan Rd"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then add a new saved delivery address labelled Home at 5F, 12 Zhongshan Rd (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 15668,
+    "output_tokens": 1489,
+    "cost_usd": 0.000912,
+    "wall_seconds": 8.333,
+    "model_seconds": 3.32,
+    "transport_seconds": 1.015,
+    "transport_calls": 99,
+    "settle_seconds": 4.548,
+    "settles": 30,
+    "median_decision_ms": 220.2,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000254,
+    "writer_seconds": 2.925,
+    "raw_chars": 59820,
+    "compact_chars": 5461,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 255.7,
+        "at": 1.351,
+        "cost": 0.000134
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 235.4,
+        "at": 1.748,
+        "cost": 0.000172
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 201.8,
+        "at": 2.101,
+        "cost": 0.000212
+      },
+      {
+        "step": 4,
+        "action": "Tap @e10, the NavigationDestination nav_account.",
+        "typed": null,
+        "target": "nav_account",
+        "kind": "tap",
+        "confidence": 0.98,
+        "complete": 0.04,
+        "ms": 254.5,
+        "at": 3.206,
+        "cost": 0.000358
+      },
+      {
+        "step": 5,
+        "action": "Tap @e2, the RowCard profile_addresses.",
+        "typed": null,
+        "target": "profile_addresses",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 221.8,
+        "at": 3.636,
+        "cost": 0.000416
+      },
+      {
+        "step": 6,
+        "action": "Tap @e3, the OutlinedButton add_address_button.",
+        "typed": null,
+        "target": "add_address_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.03,
+        "ms": 220.8,
+        "at": 4.338,
+        "cost": 0.000507
+      },
+      {
+        "step": 7,
+        "action": "Type \"Home\" into the empty address_label_field field at @e1.",
+        "typed": "Home",
+        "target": "address_label_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 257.6,
+        "at": 6.958,
+        "cost": 0.000739
+      },
+      {
+        "step": 8,
+        "action": "Type \"5F, 12 Zhongshan Rd\" into the empty address_lines_field field at @e2.",
+        "typed": "5F, 12 Zhongshan Rd",
+        "target": "address_lines_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 196.7,
+        "at": 7.329,
+        "cost": 0.000779
+      },
+      {
+        "step": 9,
+        "action": "Tap @e4, the FilledButton address_save_button.",
+        "typed": null,
+        "target": "address_save_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.08,
+        "ms": 213.7,
+        "at": 7.694,
+        "cost": 0.000819
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.99,
+        "complete": 0.93,
+        "ms": 223.5,
+        "at": 8.333,
+        "cost": 0.000912
+      }
+    ],
+    "task": "address-home",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        },
+        {
+          "label": "Home",
+          "lines": "5F, 12 Zhongshan Rd"
+        }
+      ],
+      "tickets": []
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then contact support saying order 5198 arrived damaged (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 16529,
+    "output_tokens": 1524,
+    "cost_usd": 0.001052,
+    "wall_seconds": 8.577,
+    "model_seconds": 3.54,
+    "transport_seconds": 1.222,
+    "transport_calls": 98,
+    "settle_seconds": 4.645,
+    "settles": 30,
+    "median_decision_ms": 227.4,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000358,
+    "writer_seconds": 3.0,
+    "raw_chars": 58149,
+    "compact_chars": 6346,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 274.9,
+        "at": 1.435,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 227.4,
+        "at": 1.802,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 205.4,
+        "at": 2.188,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e9, the NavigationDestination nav_support.",
+        "typed": null,
+        "target": "nav_support",
+        "kind": "tap",
+        "confidence": 0.96,
+        "complete": 0.05,
+        "ms": 203.2,
+        "at": 3.228,
+        "cost": 0.000362
+      },
+      {
+        "step": 5,
+        "action": "Type \"order 5198 arrived damaged\" into the empty support_search field at @e2.",
+        "typed": "order 5198 arrived damaged",
+        "target": "support_search",
+        "kind": "fill",
+        "confidence": 0.88,
+        "complete": 0.03,
+        "ms": 199.4,
+        "at": 4.67,
+        "cost": 0.000556
+      },
+      {
+        "step": 6,
+        "action": "Tap @e4, the FilledButton contact_us_button.",
+        "typed": null,
+        "target": "contact_us_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.04,
+        "ms": 334.4,
+        "at": 5.059,
+        "cost": 0.000617
+      },
+      {
+        "step": 7,
+        "action": "Type \"5198\" into the empty contact_order_field field at @e2.",
+        "typed": "5198",
+        "target": "contact_order_field",
+        "kind": "fill",
+        "confidence": 0.95,
+        "complete": 0.03,
+        "ms": 240.2,
+        "at": 6.801,
+        "cost": 0.000838
+      },
+      {
+        "step": 8,
+        "action": "Type \"My order 5198 arrived damaged.\" into the empty contact_message_field field at @e3.",
+        "typed": "My order 5198 arrived damaged.",
+        "target": "contact_message_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 222.7,
+        "at": 7.196,
+        "cost": 0.000882
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton contact_send_button.",
+        "typed": null,
+        "target": "contact_send_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.1,
+        "ms": 205.0,
+        "at": 7.581,
+        "cost": 0.000926
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.98,
+        "complete": 0.93,
+        "ms": 253.6,
+        "at": 8.573,
+        "cost": 0.001052
+      }
+    ],
+    "task": "support-damaged",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "CS-99508",
+          "order": "5198",
+          "message": "My order 5198 arrived damaged."
+        }
+      ]
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then contact support saying order 5198 arrived damaged (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 16625,
+    "output_tokens": 1542,
+    "cost_usd": 0.001056,
+    "wall_seconds": 8.735,
+    "model_seconds": 3.377,
+    "transport_seconds": 1.191,
+    "transport_calls": 100,
+    "settle_seconds": 4.77,
+    "settles": 30,
+    "median_decision_ms": 222.4,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000358,
+    "writer_seconds": 3.075,
+    "raw_chars": 61163,
+    "compact_chars": 6479,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 252.2,
+        "at": 1.553,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 208.9,
+        "at": 1.886,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 215.4,
+        "at": 2.253,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e9, the NavigationDestination nav_support.",
+        "typed": null,
+        "target": "nav_support",
+        "kind": "tap",
+        "confidence": 0.98,
+        "complete": 0.05,
+        "ms": 222.4,
+        "at": 3.39,
+        "cost": 0.000366
+      },
+      {
+        "step": 5,
+        "action": "Type \"order 5198 arrived damaged\" into the empty support_search field at @e2.",
+        "typed": "order 5198 arrived damaged",
+        "target": "support_search",
+        "kind": "fill",
+        "confidence": 0.87,
+        "complete": 0.03,
+        "ms": 231.8,
+        "at": 4.754,
+        "cost": 0.00056
+      },
+      {
+        "step": 6,
+        "action": "Tap @e4, the FilledButton contact_us_button.",
+        "typed": null,
+        "target": "contact_us_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 233.5,
+        "at": 5.162,
+        "cost": 0.000621
+      },
+      {
+        "step": 7,
+        "action": "Type \"5198\" into the empty contact_order_field field at @e2.",
+        "typed": "5198",
+        "target": "contact_order_field",
+        "kind": "fill",
+        "confidence": 0.94,
+        "complete": 0.03,
+        "ms": 251.7,
+        "at": 6.995,
+        "cost": 0.000842
+      },
+      {
+        "step": 8,
+        "action": "Type \"My order 5198 arrived damaged.\" into the empty contact_message_field field at @e3.",
+        "typed": "My order 5198 arrived damaged.",
+        "target": "contact_message_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 206.2,
+        "at": 7.371,
+        "cost": 0.000886
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton contact_send_button.",
+        "typed": null,
+        "target": "contact_send_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.1,
+        "ms": 236.6,
+        "at": 7.754,
+        "cost": 0.00093
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.99,
+        "complete": 0.93,
+        "ms": 210.4,
+        "at": 8.734,
+        "cost": 0.001056
+      }
+    ],
+    "task": "support-damaged",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "CS-13129",
+          "order": "5198",
+          "message": "My order 5198 arrived damaged."
+        }
+      ]
+    }
+  },
+  {
+    "mode": "hybrid-ref",
+    "label": "sign in with the demo account, then contact support saying order 5198 arrived damaged (demo account: demo@example.com, password hunter2)",
+    "verdict": "pass",
+    "steps": 10,
+    "model_calls": 15,
+    "input_tokens": 16581,
+    "output_tokens": 1533,
+    "cost_usd": 0.001054,
+    "wall_seconds": 8.61,
+    "model_seconds": 3.783,
+    "transport_seconds": 1.157,
+    "transport_calls": 99,
+    "settle_seconds": 4.65,
+    "settles": 30,
+    "median_decision_ms": 243.2,
+    "retries": 0,
+    "empty_reads": 0,
+    "writer_calls": 3,
+    "referee_calls": 0,
+    "writer_cost_usd": 0.000358,
+    "writer_seconds": 2.758,
+    "raw_chars": 59594,
+    "compact_chars": 6428,
+    "trace": [
+      {
+        "step": 1,
+        "action": "Type \"demo@example.com\" into the empty email_field field at @e1.",
+        "typed": "demo@example.com",
+        "target": "email_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 250.9,
+        "at": 1.275,
+        "cost": 0.000142
+      },
+      {
+        "step": 2,
+        "action": "Type \"hunter2\" into the empty password_field field at @e2.",
+        "typed": "hunter2",
+        "target": "password_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.01,
+        "ms": 232.9,
+        "at": 1.699,
+        "cost": 0.00018
+      },
+      {
+        "step": 3,
+        "action": "Tap @e4, the FilledButton signin_button.",
+        "typed": null,
+        "target": "signin_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.02,
+        "ms": 212.2,
+        "at": 2.076,
+        "cost": 0.000219
+      },
+      {
+        "step": 4,
+        "action": "Tap @e9, the NavigationDestination nav_support.",
+        "typed": null,
+        "target": "nav_support",
+        "kind": "tap",
+        "confidence": 0.98,
+        "complete": 0.04,
+        "ms": 217.7,
+        "at": 3.274,
+        "cost": 0.000364
+      },
+      {
+        "step": 5,
+        "action": "Type \"order 5198 arrived damaged\" into the empty support_search field at @e2.",
+        "typed": "order 5198 arrived damaged",
+        "target": "support_search",
+        "kind": "fill",
+        "confidence": 0.87,
+        "complete": 0.04,
+        "ms": 243.8,
+        "at": 4.743,
+        "cost": 0.000558
+      },
+      {
+        "step": 6,
+        "action": "Tap @e4, the FilledButton contact_us_button.",
+        "typed": null,
+        "target": "contact_us_button",
+        "kind": "tap",
+        "confidence": 0.99,
+        "complete": 0.04,
+        "ms": 282.0,
+        "at": 5.141,
+        "cost": 0.00062
+      },
+      {
+        "step": 7,
+        "action": "Type \"5198\" into the empty contact_order_field field at @e2.",
+        "typed": "5198",
+        "target": "contact_order_field",
+        "kind": "fill",
+        "confidence": 0.95,
+        "complete": 0.03,
+        "ms": 224.6,
+        "at": 6.788,
+        "cost": 0.00084
+      },
+      {
+        "step": 8,
+        "action": "Type \"My order 5198 arrived damaged.\" into the empty contact_message_field field at @e3.",
+        "typed": "My order 5198 arrived damaged.",
+        "target": "contact_message_field",
+        "kind": "fill",
+        "confidence": 1.0,
+        "complete": 0.03,
+        "ms": 273.1,
+        "at": 7.18,
+        "cost": 0.000884
+      },
+      {
+        "step": 9,
+        "action": "Tap @e5, the FilledButton contact_send_button.",
+        "typed": null,
+        "target": "contact_send_button",
+        "kind": "tap",
+        "confidence": 1.0,
+        "complete": 0.08,
+        "ms": 226.4,
+        "at": 7.575,
+        "cost": 0.000928
+      },
+      {
+        "step": 10,
+        "action": "Stop and report success: the screen itself confirms the task has been completed.",
+        "typed": null,
+        "target": "pass",
+        "kind": "finish",
+        "confidence": 0.98,
+        "complete": 0.93,
+        "ms": 227.3,
+        "at": 8.608,
+        "cost": 0.001054
+      }
+    ],
+    "task": "support-damaged",
+    "arm": "hybrid-ref",
+    "chaos": 0,
+    "claimed": true,
+    "real": true,
+    "state": {
+      "signedIn": true,
+      "orders": {
+        "5207": "delivered",
+        "5213": "inTransit",
+        "5198": "delivered",
+        "5191": "refunded",
+        "5184": "cancelled",
+        "5226": "processing"
+      },
+      "cart": {},
+      "addresses": [
+        {
+          "label": "Home",
+          "lines": "27 Harbor Ln\nXitun District, Taichung 407"
+        },
+        {
+          "label": "Workshop",
+          "lines": "3F, 51 Dadun Rd\nNantun District, Taichung 408"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "CS-26467",
+          "order": "5198",
+          "message": "My order 5198 arrived damaged."
+        }
+      ]
+    }
+  }
+]

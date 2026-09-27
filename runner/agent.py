@@ -40,6 +40,9 @@ CONFIDENCE_FLOOR = {
     "finish": 0.60,   # a wrong verdict makes the whole test lie
 }
 
+# Steps a wrong guess can take back: scroll back, retype, go back a screen.
+REVERSIBLE = {"scroll", "fill", "tap"}
+
 # Keys whose taps commit something rather than just navigate.
 COMMITTING = re.compile(
     r"submit|confirm|send|place_order|checkout|delete|remove|signout|"
@@ -146,6 +149,7 @@ class Report:
         self.wall = 0.0
         self.empty_reads = 0
         self.writer_calls = 0
+        self.referee_calls = 0
         self.writer_cost = 0.0
         self.writer_seconds = 0.0
         self.trace: list[dict[str, object]] = []
@@ -199,6 +203,7 @@ class Report:
             "retries": self.usage.retries,
             "empty_reads": self.empty_reads,
             "writer_calls": self.writer_calls,
+            "referee_calls": self.referee_calls,
             "writer_cost_usd": round(self.writer_cost, 6),
             "writer_seconds": round(self.writer_seconds, 3),
             "raw_chars": self.raw_chars,
@@ -331,13 +336,19 @@ def offer_free_text(actions: list[Action]) -> list[Action]:
 async def run_jev(app: Marionette, task: str, values: dict[str, str],
                   max_steps: int, verbose: bool, *, decider=None,
                   writer=None, free_text: bool = False,
-                  mode: str = "jev", on_step=None) -> Report:
+                  mode: str = "jev", on_step=None, referee=None) -> Report:
     """The agent loop. Jev decides unless another `decider` is given.
 
     `writer`, when given, supplies text for fields the value table lacks, and
     `free_text` lets the decider write that text itself. `on_step`, when
     given, is awaited after every step with (step, action, decision), so a
     recorder can capture the screen that step left behind.
+
+    `referee`, when given, is asked instead of stopping when the decider falls
+    below the floor on a step that can be undone (scroll, fill, tap). A flat
+    distribution there usually means two good options, and a second opinion
+    is cheaper than a stopped run. Sending and finishing still stop: those are
+    the steps where low confidence means the inputs are wrong.
     """
     report = Report(mode, task)
     values = dict(values)
@@ -461,6 +472,23 @@ async def run_jev(app: Marionette, task: str, values: dict[str, str],
                 report.verdict = "invalid"
                 break
 
+            jev_pick = None
+            target = chosen.element.key if chosen.element else chosen.id
+            risk = risk_of(chosen.kind, target or "")
+            if (referee is not None and decision.confidence < CONFIDENCE_FLOOR[risk]
+                    and risk in REVERSIBLE):
+                second = await referee.decide(state, actions)
+                report.usage.add(second)
+                report.referee_calls += 1
+                picked = next((a for a in actions if a.id == second.action_id), None)
+                if picked is not None and picked.kind != "finish" and risk_of(
+                        picked.kind, (picked.element.key if picked.element else picked.id) or "") in REVERSIBLE:
+                    print(f"          confidence {decision.confidence:.2f} below the {risk} floor; "
+                          f"referee picked {picked.id} ({second.seconds * 1000:.0f}ms)")
+                    jev_pick, chosen = chosen.id, picked
+                    target = chosen.element.key if chosen.element else chosen.id
+                    risk = risk_of(chosen.kind, target or "")
+
             typed = chosen.text or decision.text or ""
             print(f"  step {step}: {chosen.description}"
                   + (f'  ← "{typed}"' if chosen.kind == "fill"
@@ -484,13 +512,12 @@ async def run_jev(app: Marionette, task: str, values: dict[str, str],
                 "ms": round(decision.seconds * 1000, 1),
                 "at": round(time.perf_counter() - started, 3),
                 "cost": round(report.cost, 6),
+                **({"referee": True, "jev_pick": jev_pick} if jev_pick else {}),
             })
             report.steps = step
 
-            target = chosen.element.key if chosen.element else chosen.id
-            risk = risk_of(chosen.kind, target or "")
             floor = CONFIDENCE_FLOOR[risk]
-            if decision.confidence < floor:
+            if decision.confidence < floor and jev_pick is None:
                 print(f"          confidence {decision.confidence:.2f} below "
                       f"the {risk} floor of {floor}; stopping rather than "
                       f"guessing")

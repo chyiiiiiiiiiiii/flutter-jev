@@ -71,7 +71,7 @@ TASKS: dict[str, tuple[str, Check, bool]] = {
 # The sign-in fields are needed by every task and are the same account every
 # time, so the hybrid and free arms get them told in the sentence already.
 ARMS = ["scripted", "jev", "lite", "lite-free", "pro-free", "hybrid",
-        "hybrid-v2"]
+        "hybrid-v2", "hybrid-ref"]
 
 LITE = "gemini-3.1-flash-lite"
 PRO = "gemini-3.1-pro-preview"
@@ -123,6 +123,13 @@ async def one_run(uri: str, arm: str, name: str,
             async with GeminiWriter(LITE, WRITER_BRIEF_V2) as writer:
                 report = await run_jev(app, sentence + SIGNIN, {}, 25, False,
                                        writer=writer, mode=arm)
+        elif arm == "hybrid-ref":
+            # hybrid-v2, plus flash-lite as a referee when Jev is unsure on a
+            # step that can be undone.
+            async with GeminiWriter(LITE, WRITER_BRIEF_V2) as writer, \
+                    GeminiDecider(LITE, think=False, free_text=False) as referee:
+                report = await run_jev(app, sentence + SIGNIN, {}, 25, False,
+                                       writer=writer, mode=arm, referee=referee)
         else:
             raise ValueError(arm)
         await asyncio.sleep(0.4)

@@ -69,11 +69,16 @@ the app's own store rather than the agent's verdict (`runner/arms.py`):
 | flash-lite picks and writes | 18/18 | 0 | 14.5s | $0.00344 |
 | Pro (reasoning) picks and writes | 14/18 | 0 | 49.2s | $0.05339 |
 | **Jev picks, flash-lite writes** | **17/18** | **0** | **8.6s** | **$0.00094** |
+| Jev picks, flash-lite writes, and referees Jev's ties (separate batch) | 18/18 | 0 | 8.5s | $0.00098 |
 
 The one run Jev + LLM did not finish was a safe stop, not a wrong answer: the home
 screen has two equally good ways to the orders page, Jev's probability split between
 them, and at 0.34 it fell just under the 0.35 tap threshold. I left the threshold
-alone rather than tune it to the result.
+alone rather than tune it to the result. Instead, a seventh setup (`hybrid-ref`,
+`referee=` in `runner/agent.py`) asks flash-lite to break the tie when Jev is unsure on
+a step that can be undone; sending and finishing still stop. In a separate batch it
+went 18/18 and 12/12 under churn at the same cost, and the referee was needed once in
+30 runs, so part of that is a quiet batch rather than a guarantee.
 
 Two of the six tasks need details the value table does not hold. Fed the same
 wrong values, flash-lite filed the wrong support ticket, or saved the wrong address,
@@ -86,7 +91,7 @@ difference lies.
 
 Under churn, four seeds x three runs of the return flow (`--chaos 7 55 4 91`):
 
-![After UI churn: hand-written script 0/12, all-LLM 12/12 at 18.7 s and $0.0046, Jev picks and LLM writes 11/12 at 9.6 s and $0.0011, Jev with a value table 6/12](results/figures/churn-en.png)
+![After UI churn: hand-written script 0/12, all-LLM 12/12, Jev picks and LLM writes 11/12, Jev with a value table 6/12](results/figures/churn-en.png)
 
 Jev on its own failed only when the rename hit the email field: the value table
 is keyed by widget key, so it is a selector too, and breaks like one (safely:
