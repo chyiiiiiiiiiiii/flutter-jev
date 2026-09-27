@@ -1,7 +1,8 @@
 # Flutter × Jev
 
-Measured experiments in driving a Flutter app with [TypeSafe AI's Jev](https://typesafe.ai),
-a System One model that picks from a closed set of options and cannot generate a string.
+Measured experiments in driving a Flutter app with [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev),
+TypeSafe AI's decision model: you list the possible answers as options, it picks one and
+tells you how sure it is, and it never generates text.
 
 Every number in `results/REPORT.md` was measured on one machine (macOS, Flutter
 3.47.1, Taiwan to TypeSafe's US-West service). None are quoted from anyone else's demo.
