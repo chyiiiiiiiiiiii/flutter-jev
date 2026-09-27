@@ -12,11 +12,12 @@ where every surface was picked by Jev. The app, its brand (Boxtide, a fictional 
 catalog and the data here are my own; the benchmark measures that idea rather than
 reproducing the demo.
 
-The short version: let Jev pick every step and let a cheap LLM write only the text a
-field needs. Every run below is judged by what the app actually stored, not by what the
+The short version: let Jev pick every step, let a cheap LLM write only the text a
+field needs, and let the same LLM break the tie when Jev is unsure on a step that can
+be undone. Every run below is judged by what the app actually stored, not by what the
 agent said.
 
-![Jev picks, LLM writes: 17/18 correct with the one miss a safe stop; 11/12 after UI renames where scripts go 0/12; 1.7x faster; 3.6x cheaper](results/figures/hero-en.png)
+![Jev picks, LLM writes, LLM referees ties: 18/18 correct; 12/12 after UI renames where scripts go 0/12; 1.7x faster; 3.5x cheaper](results/figures/hero-en.png)
 
 One of those runs, as it happened. Filled tags are Jev choosing an action; outlined tags
 are the LLM writing words from what is on screen. The last frame is what the app received.
