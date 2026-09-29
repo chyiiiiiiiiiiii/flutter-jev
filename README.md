@@ -24,6 +24,19 @@ are the LLM writing words from what is on screen. The last frame is what the app
 
 ![One recorded run: Jev picks the actions, an LLM writes the text, 10 steps, 7.5 s, $0.0008; the app received the ticket for order 5198](results/media/hybrid-run-en.gif)
 
+## How it fits together
+
+The app, the runner and the verdict all run on your machine. Two kinds of request
+leave it: Jev deciding the next step, and the LLM writing a field or refereeing a tie.
+
+![System design: the runner reads the Flutter app through marionette, compresses the screen into options, asks Jev for the next step in the decision loop, acts, and judges the run from the app's store. Only Jev's decisions and the LLM's writing and refereeing leave the machine](docs/architecture-en.png)
+
+One step of the loop, with Jev and the LLM each in their own lane:
+
+![One step: read the screen, build the options, the LLM writes text only for a new field, Jev picks one option with a probability, the runner checks the floor for that kind of step, asks the LLM to referee when unsure on a step that can be undone and stops on send or finish, then acts and loops](docs/flow-en.png)
+
+Both are drawn by `scripts/make-diagrams.py`; edit it and rerun.
+
 ## What is here
 
 | Path | What it is |
@@ -35,6 +48,7 @@ are the LLM writing words from what is on screen. The last frame is what the app
 | `results/` | The report, the raw run data, and the generated comparison tables. |
 | `results/media/` | Recorded runs with the clock and running cost burned in: `runner/record_gif.py` (one captioned run, frames and spec kept beside the GIF) and `runner/record_steps.py` (side-by-side comparisons). |
 | `results/figures/` | The figure specs (JSON) and the PNGs rendered from them. |
+| `docs/`, `scripts/make-diagrams.py` | The system design and the one-step flow above, and the script that draws them. |
 
 ## Headline results
 
