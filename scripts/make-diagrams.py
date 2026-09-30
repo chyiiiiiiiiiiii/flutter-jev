@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import html
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -69,6 +70,16 @@ svg { position: absolute; left: 0; top: 0; }
 
 COLORS = {"ink": "rgba(255,255,255,.42)", "jev": "#8B7CFF", "llm": "#3FD0D8"}
 
+THEME = {"css": "", "colors": COLORS}
+
+
+def col(name: str) -> str:
+    return THEME["colors"][name]
+
+
+def ground() -> str:
+    return "#FFFFFF" if THEME["css"] else "#0E0F13"
+
 
 class Page:
     def __init__(self, width: int, height: int):
@@ -83,20 +94,20 @@ class Page:
     def arrow(self, points: list[tuple[float, float]], color: str = "ink", dashed: bool = False):
         path = " ".join(f"{x},{y}" for x, y in points)
         dash = ' stroke-dasharray="6 5"' if dashed else ""
-        self.lines.append(f'<polyline points="{path}" fill="none" stroke="{COLORS[color]}" stroke-width="1.8"'
+        self.lines.append(f'<polyline points="{path}" fill="none" stroke="{col(color)}" stroke-width="1.8"'
                           f' stroke-linejoin="round"{dash} marker-end="url(#{color})"/>')
 
     def line(self, points: list[tuple[float, float]]):
         path = " ".join(f"{x},{y}" for x, y in points)
-        self.lines.append(f'<polyline points="{path}" fill="none" stroke="{COLORS["ink"]}" stroke-width="1.8"'
+        self.lines.append(f'<polyline points="{path}" fill="none" stroke="{col("ink")}" stroke-width="1.8"'
                           f' stroke-linejoin="round"/>')
 
     def badge(self, x: float, y: float, text: str, color: str):
         width = 14 + 14 * len(text)
-        self.lines.append(f'<rect x="{x - width / 2}" y="{y - 12}" width="{width}" height="24" rx="12" fill="#0E0F13" '
-                          f'stroke="{COLORS[color]}" stroke-width="1.5"/>'
+        self.lines.append(f'<rect x="{x - width / 2}" y="{y - 12}" width="{width}" height="24" rx="12" fill="{ground()}" '
+                          f'stroke="{col(color)}" stroke-width="1.5"/>'
                           f'<text x="{x}" y="{y + 4.5}" text-anchor="middle" font-size="13" font-weight="700" '
-                          f'fill="{COLORS[color]}">{html.escape(text)}</text>')
+                          f'fill="{col(color)}">{html.escape(text)}</text>')
 
     def header(self, title: str, subtitle: str):
         self.parts.append(f'<div class="head"><div class="mark">J</div><div>'
@@ -106,10 +117,10 @@ class Page:
         markers = "".join(
             f'<marker id="{name}" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" '
             f'orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="{color}"/></marker>'
-            for name, color in COLORS.items())
+            for name, color in THEME["colors"].items())
         svg = (f'<svg width="{self.width}" height="{self.height}" viewBox="0 0 {self.width} {self.height}">'
                f'<defs>{markers}</defs>{"".join(self.lines)}</svg>')
-        return (f'<!doctype html><html><head><meta charset="utf-8"><style>{STYLE}</style></head><body>'
+        return (f'<!doctype html><html><head><meta charset="utf-8"><style>{STYLE}{THEME["css"]}</style></head><body>'
                 f'<div class="canvas" style="width:{self.width}px;height:{self.height}px">'
                 f'{"".join(self.parts)}{svg}</div></body></html>')
 
@@ -288,7 +299,8 @@ def architecture(language: str) -> str:
 
 
 def render(markup: str, out: Path, width: int, height: int) -> None:
-    with tempfile.TemporaryDirectory() as folder:
+    folder = tempfile.mkdtemp()
+    try:
         source = Path(folder) / "page.html"
         source.write_text(markup)
         command = [CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", f"--user-data-dir={folder}/profile",
@@ -305,9 +317,12 @@ def render(markup: str, out: Path, width: int, height: int) -> None:
                 break
             size = current
         process.kill()
+    finally:
+        # Chrome can still be writing its profile after the kill; leftovers are harmless.
+        shutil.rmtree(folder, ignore_errors=True)
     if not out.exists():
         sys.exit(f"Chrome wrote no {out.name}")
-    print(f"{out.relative_to(ROOT)} {out.stat().st_size // 1024} KB")
+    print(f"{out.name} {out.stat().st_size // 1024} KB")
 
 
 def main() -> None:
