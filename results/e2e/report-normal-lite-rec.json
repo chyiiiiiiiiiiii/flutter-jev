@@ -1,0 +1,2934 @@
+{
+  "schemaVersion": "report-1",
+  "run": {
+    "id": "01a129d8-4cd7-7f3f-a44c-d0dc90f2de10",
+    "specVersion": "0.1",
+    "runner": {
+      "name": "e2e",
+      "version": "0.19.0"
+    },
+    "status": "failed",
+    "exitCode": 1,
+    "startedAt": "2026-10-11T07:23:37.300Z",
+    "finishedAt": "2026-10-11T07:27:51.285Z",
+    "project": {
+      "id": "boxtide-e2e",
+      "configDigest": "596db5778eb7545832ef8da4107fd995afabb4f459ec37fbeefb07310b285cb9"
+    },
+    "environment": {
+      "ci": false,
+      "trustNoticeShown": false,
+      "os": "darwin 25.6.0",
+      "arch": "arm64",
+      "runtime": "node v24.21.0"
+    },
+    "vcs": {
+      "commit": "c3cefdd6dacd7a07a323ff39b0ba1413773eab73",
+      "branch": "main",
+      "dirty": true
+    },
+    "targets": [
+      {
+        "id": "iphone",
+        "index": 0,
+        "platform": "ios",
+        "environment": "test",
+        "engine": {
+          "name": "mobile",
+          "version": "0.11.0",
+          "spiVersion": 1
+        },
+        "capabilities": [
+          "actions",
+          "artifacts",
+          "device",
+          "keyboard",
+          "location",
+          "observation",
+          "pointer"
+        ],
+        "artifactCapabilities": [
+          "screenshot",
+          "video"
+        ],
+        "stateCapability": false
+      }
+    ],
+    "serialGroups": [],
+    "results": [
+      {
+        "id": "67bc8679a5ff5b8f0e141c963b589f9bdf9ee5101aebe03e4368047d37316ca5",
+        "testId": "tests/boxtide.e2e.ts::return-flow",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "return-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 24,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "lite",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "passed",
+        "attempts": [
+          {
+            "id": "01a129d8-83f4-707e-ab55-abd9e8ce8cc6",
+            "index": 0,
+            "status": "passed",
+            "startedAt": "2026-10-11T07:23:37.845Z",
+            "durationMs": 57807,
+            "artifacts": [],
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "steps": [
+              {
+                "id": "01a129d8-83f4-707e-ab55-abd9e8ce8cc6:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:23:39.958Z",
+                "durationMs": 2154,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 25,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129d8-83f4-707e-ab55-abd9e8ce8cc6:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:23:42.114Z",
+                "durationMs": 28721,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:23:42.116Z",
+                    "durationMs": 479,
+                    "status": "passed",
+                    "bytes": 628,
+                    "count": 14
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:23:44.304Z",
+                    "durationMs": 3702,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into other \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:23:48.006Z",
+                    "durationMs": 569,
+                    "status": "passed",
+                    "bytes": 2236,
+                    "count": 78
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:23:48.576Z",
+                    "durationMs": 5029,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: XCTest recorded a failure while executing type; the action may not have been performed. Hint: The iOS runner session was invalidated. Re-observe with a fresh snapshot before retrying; if the accessibility tree is unavailable, use screenshot plus coordinate commands instea…"
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:23:53.605Z",
+                    "durationMs": 493,
+                    "status": "passed",
+                    "bytes": 1825,
+                    "count": 60
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:23:54.098Z",
+                    "durationMs": 6469,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:00.567Z",
+                    "durationMs": 473,
+                    "status": "passed",
+                    "bytes": 1876,
+                    "count": 61
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:23:42.626Z",
+                    "durationMs": 18416,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4207,
+                    "inputTokens": 4142,
+                    "outputTokens": 65
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:01.944Z",
+                    "durationMs": 4675,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"hunter2\" into other \"Password\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:06.620Z",
+                    "durationMs": 587,
+                    "status": "passed",
+                    "bytes": 1906,
+                    "count": 61
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:07.211Z",
+                    "durationMs": 1834,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:09.045Z",
+                    "durationMs": 548,
+                    "status": "passed",
+                    "bytes": 1615,
+                    "count": 25
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:01.044Z",
+                    "durationMs": 8549,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7168,
+                    "inputTokens": 7127,
+                    "outputTokens": 41
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:09.595Z",
+                    "durationMs": 797,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 8781,
+                    "inputTokens": 8742,
+                    "outputTokens": 39
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:10.392Z",
+                    "durationMs": 442,
+                    "status": "passed",
+                    "bytes": 1615,
+                    "count": 25
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 3,
+                  "actionSteps": 5,
+                  "observationBytes": 2236,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 3,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 20011,
+                  "outputTokens": 145,
+                  "peakTokensPerCall": 8781,
+                  "cacheReadTokens": 12048
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "4cf081a5e6d27a67e640e1ce7057076929389e3931b907d9fccdf4bc405e3a68",
+                  "write": "saved"
+                },
+                "observationRevision": "b14",
+                "explanation": "Successfully signed in as demo@example.com. The application redirected to the home screen.",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type({\"target\":\"n18\",\"value\":\"demo@example.com\"})",
+                      "type({\"target\":\"n19\",\"value\":\"hunter2\"})",
+                      "tap({\"target\":\"n23\"})"
+                    ],
+                    "outcome": "[type] Typed into #n18.\n\nThe screen changed substantially since revision b2. Current screen (revision b4, path dev.yii.boxtide, 78 nodes):\n#root screen\n #n104 application \"Boxtide\"\n  #n105 scroll-view\n  #n106 text \"Boxtide\"\n  #n107 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n108 other \"Email\" testid=\"email_field\" value=\"demo@example.com\" [focused]\n  #n109 other \"Password\" testid=\"password_field\"\n  #n110 other testid=\"remember_me\"\n  #n111 switch \"Keep me signe…[truncated]"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type({\"target\":\"n364\",\"value\":\"hunter2\"})",
+                      "tap({\"target\":\"n369\"})"
+                    ],
+                    "outcome": "[type] Typed into #n364.\n\nThe screen changed substantially since revision b8. Current screen (revision b10, path dev.yii.boxtide, 61 nodes):\n#root screen\n #n479 application \"Boxtide\"\n  #n480 scroll-view\n  #n481 text \"Boxtide\"\n  #n482 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n483 other \"Email\" testid=\"email_field\" value=\"demo@example.com\"\n  #n484 other \"Password\" testid=\"password_field\" value=\"•••••••\" [focused]\n  #n485 other testid=\"remember_me\"\n  #n486 swi…[truncated]"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"Successfully signed in as demo@example.com. The application redirected to the home screen.\"})"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 26,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129d8-83f4-707e-ab55-abd9e8ce8cc6:2",
+                "index": 2,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByRole(\"button\", name: /^Orders/)",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:24:10.837Z",
+                "durationMs": 202,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:24:10.838Z",
+                    "durationMs": 202,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "since": 1,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 27,
+                  "column": 55
+                }
+              },
+              {
+                "id": "01a129d8-83f4-707e-ab55-abd9e8ce8cc6:3",
+                "index": 3,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Open order {order} and submit a return request for it, finishing every step of the return form",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:24:11.040Z",
+                "durationMs": 19137,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:11.042Z",
+                    "durationMs": 432,
+                    "status": "passed",
+                    "bytes": 1615,
+                    "count": 25
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:12.241Z",
+                    "durationMs": 974,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Orders Tab 2 of 5\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:13.216Z",
+                    "durationMs": 464,
+                    "status": "passed",
+                    "bytes": 2078,
+                    "count": 35
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:11.479Z",
+                    "durationMs": 2202,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4620,
+                    "inputTokens": 4603,
+                    "outputTokens": 17
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:14.645Z",
+                    "durationMs": 1421,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap other \"order_5207\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:16.067Z",
+                    "durationMs": 441,
+                    "status": "passed",
+                    "bytes": 793,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:13.682Z",
+                    "durationMs": 2826,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5654,
+                    "inputTokens": 5637,
+                    "outputTokens": 17
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:17.183Z",
+                    "durationMs": 1348,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Start a return\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:18.531Z",
+                    "durationMs": 451,
+                    "status": "passed",
+                    "bytes": 518,
+                    "count": 13
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:16.511Z",
+                    "durationMs": 2471,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6078,
+                    "inputTokens": 6061,
+                    "outputTokens": 17
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:19.603Z",
+                    "durationMs": 1290,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Continue\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:20.894Z",
+                    "durationMs": 895,
+                    "status": "passed",
+                    "bytes": 675,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:18.983Z",
+                    "durationMs": 2806,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6378,
+                    "inputTokens": 6361,
+                    "outputTokens": 17
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:22.732Z",
+                    "durationMs": 1000,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Continue\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:23.732Z",
+                    "durationMs": 505,
+                    "status": "passed",
+                    "bytes": 662,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:21.795Z",
+                    "durationMs": 2443,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6695,
+                    "inputTokens": 6678,
+                    "outputTokens": 17
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:24.916Z",
+                    "durationMs": 964,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap switch \"I understand this starts a return reque…\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:25.880Z",
+                    "durationMs": 467,
+                    "status": "passed",
+                    "bytes": 661,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:24.239Z",
+                    "durationMs": 2109,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7011,
+                    "inputTokens": 6994,
+                    "outputTokens": 17
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:27.107Z",
+                    "durationMs": 1329,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Submit return request\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:28.436Z",
+                    "durationMs": 426,
+                    "status": "passed",
+                    "bytes": 411,
+                    "count": 11
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:26.349Z",
+                    "durationMs": 2514,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7327,
+                    "inputTokens": 7310,
+                    "outputTokens": 17
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:28.864Z",
+                    "durationMs": 866,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7597,
+                    "inputTokens": 7540,
+                    "outputTokens": 57
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:29.730Z",
+                    "durationMs": 447,
+                    "status": "passed",
+                    "bytes": 411,
+                    "count": 11
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 8,
+                  "actionSteps": 7,
+                  "observationBytes": 2078,
+                  "contextBytes": 0,
+                  "ledgerBytes": 265
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 8,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 51184,
+                  "outputTokens": 176,
+                  "peakTokensPerCall": 7597,
+                  "cacheReadTokens": 26029
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "c611e4da0964fd06b6b6be808f68ce4e442debbd0b77a086931b5ef25ace7c0c",
+                  "write": "saved"
+                },
+                "observationRevision": "b32",
+                "explanation": "I navigated to the orders tab, selected order #5207, initiated a return request, completed all three steps, and submitted the request. The return is now started.",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "tap({\"target\":\"n703\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n703.\n\nThe screen changed substantially since revision b16. Current screen (revision b18, path dev.yii.boxtide, 35 nodes):\n#root screen\n #n741 application \"Boxtide\"\n  #n742 text \"Orders\"\n  #n743 other testid=\"cart_button\"\n  #n744 button \"Cart\"\n  #n745 text \"Your orders\"\n  #n746 text \"Track a delivery, start a return, or cancel.\"\n  #n747 other \"Search by item or order number\" testid=\"orders_search\"\n  #n748 scroll-view\n  #n749 other testid=\"orders_filter_all\"\n  #n750 button \"All\" [selected]\n  #n751 other testid=\"orders_filter_open\"\n  #n752 button \"Open\"\n  #n753 other testid=\"orders…[truncated]"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "tap({\"target\":\"n758\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n758.\n\nThe screen changed substantially since revision b18. Current screen (revision b20, path dev.yii.boxtide, 14 nodes):\n#root screen\n #n788 application \"Boxtide\"\n  #n789 button \"Back\"\n  #n790 text \"Order #5207\"\n  #n791 scroll-view\n  #n792 text \"Everything in one place.\\nDelivered\" text=\"Everything in one place. Delivered\"\n  #n793 text \"Placed 12 Sep 2026 · Harbor Post\"\n  #n794 text \"Pour-over kit\\nMatte white / 600ml · qty 1\\n$58.00\" text=\"Pour-over kit Matte white / 600ml · qty 1 $58.00\"\n  #n795 text \"Subtotal\\n$58.00\\nShipping\\n$5.90\\nTotal\\n$63.90\" text=\"Subtotal $58.00 Shi…[truncated]"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap({\"target\":\"n800\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n800.\n\nThe screen changed substantially since revision b20. Current screen (revision b22, path dev.yii.boxtide, 13 nodes):\n#root screen\n #n813 application \"Boxtide\"\n  #n814 other testid=\"return_back_button\"\n  #n815 button \"Back\"\n  #n816 text \"Return · step 1 of 3\"\n  #n817 scroll-view\n  #n818 other value=\"33\"\n  #n819 text \"Let's make this right.\"\n  #n820 text \"Choose the items you want to send back.\"\n  #n821 other testid=\"return_item_0\"\n  #n822 switch \"Pour-over kit\\nMatte white / 600ml · $58.00\" text=\"Pour-over kit Matte white / 600ml · $58.00\" value=\"1\" [checked]\n  #n823 other t…[truncated]"
+                  },
+                  {
+                    "index": 4,
+                    "calls": [
+                      "tap({\"target\":\"n824\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n824.\n\nThe screen changed substantially since revision b22. Current screen (revision b24, path dev.yii.boxtide, 14 nodes):\n#root screen\n #n838 application \"Boxtide\"\n  #n839 other testid=\"return_back_button\"\n  #n840 button \"Back\"\n  #n841 text \"Return · step 2 of 3\"\n  #n842 scroll-view\n  #n843 other value=\"67\"\n  #n844 text \"Tell us what happened.\"\n  #n845 text \"A reason helps us fix the root cause.\"\n  #n846 button \"Reason for return\\nItem arrived damaged\" text=\"Reason for return Item arrived damaged\" testid=\"return_reason\"\n  #n847 other \"Anything else we should know? (optional)\" te…[truncated]"
+                  },
+                  {
+                    "index": 5,
+                    "calls": [
+                      "tap({\"target\":\"n850\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n850.\n\nThe screen changed substantially since revision b24. Current screen (revision b26, path dev.yii.boxtide, 14 nodes):\n#root screen\n #n864 application \"Boxtide\"\n  #n865 other testid=\"return_back_button\"\n  #n866 button \"Back\"\n  #n867 text \"Return · step 3 of 3\"\n  #n868 scroll-view\n  #n869 other value=\"100\"\n  #n870 text \"Check and confirm.\"\n  #n871 text \"Delivered 8 days ago · within the 30 day window.\"\n  #n872 text \"Items\\nPour-over kit\\nReason\\nItem arrived damaged\\nResolution\\nRefund to card\" text=\"Items Pour-over kit Reason Item arrived damaged Resolution Refund to card\"\n  …[truncated]"
+                  },
+                  {
+                    "index": 6,
+                    "calls": [
+                      "tap({\"target\":\"n874\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n874.\n\nThe screen changed substantially since revision b26. Current screen (revision b28, path dev.yii.boxtide, 14 nodes):\n#root screen\n #n890 application \"Boxtide\"\n  #n891 other testid=\"return_back_button\"\n  #n892 button \"Back\"\n  #n893 text \"Return · step 3 of 3\"\n  #n894 scroll-view\n  #n895 other value=\"100\"\n  #n896 text \"Check and confirm.\"\n  #n897 text \"Delivered 8 days ago · within the 30 day window.\"\n  #n898 text \"Items\\nPour-over kit\\nReason\\nItem arrived damaged\\nResolution\\nRefund to card\" text=\"Items Pour-over kit Reason Item arrived damaged Resolution Refund to card\"\n  …[truncated]"
+                  },
+                  {
+                    "index": 7,
+                    "calls": [
+                      "tap({\"target\":\"n902\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n902.\n\nThe screen changed substantially since revision b28. Current screen (revision b30, path dev.yii.boxtide, 11 nodes):\n#root screen\n #n913 application \"Boxtide\"\n  #n914 button \"Back\"\n  #n915 text \"Return started\"\n  #n916 scroll-view\n  #n917 text \"Return request received.\"\n  #n918 text \"Reference RT-5207 · we will email a prepaid label within one working day.\"\n  #n919 other testid=\"view_refund_status_button\"\n  #n920 button \"View refund status\"\n  #n921 other testid=\"return_done_close_button\"\n  #n922 button \"Back to my orders\""
+                  },
+                  {
+                    "index": 8,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"I navigated to the orders tab, selected order #5207, initiated a return request, completed all three steps, and submitted the request. The return is now sta…[truncated]"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 11,
+                  "since": 2,
+                  "changes": [
+                    "added button \"Back\"",
+                    "added text \"Return started\"",
+                    "added text \"Return request received.\"",
+                    "added text \"Reference RT-5207 · we will email a prepaid label within one working day.\"",
+                    "added other testid=\"view_refund_status_button\"",
+                    "added button \"View refund status\"",
+                    "added other testid=\"return_done_close_button\"",
+                    "added button \"Back to my orders\"",
+                    "removed text \"Boxtide\"",
+                    "removed other testid=\"cart_button\"",
+                    "removed button \"Cart\"",
+                    "removed text \"demo@example.com\\n2 parcels on the way\\n6\\norders\" text=\"demo@example.com 2 parcels on the way 6 orders\""
+                  ],
+                  "more": 18
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 28,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129d8-83f4-707e-ab55-abd9e8ce8cc6:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByText(\"Return started\").first()",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:24:30.178Z",
+                "durationMs": 199,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:24:30.178Z",
+                    "durationMs": 199,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 11,
+                  "since": 3,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 31,
+                  "column": 60
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c0f384f5cab0f3922eaf2021ee4b9eb8ab3acba600327dd0fe6ea04418fd0083",
+        "testId": "tests/boxtide.e2e.ts::cart-flow",
+        "kind": "test",
+        "declarationIndex": 1,
+        "titlePath": [
+          "cart-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 35,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "lite",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "passed",
+        "attempts": [
+          {
+            "id": "01a129d9-65c9-7a32-a9f8-1db78a176ca1",
+            "index": 0,
+            "status": "passed",
+            "startedAt": "2026-10-11T07:24:35.657Z",
+            "durationMs": 46181,
+            "artifacts": [],
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "steps": [
+              {
+                "id": "01a129d9-65c9-7a32-a9f8-1db78a176ca1:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:24:35.659Z",
+                "durationMs": 2752,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 36,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129d9-65c9-7a32-a9f8-1db78a176ca1:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:24:38.412Z",
+                "durationMs": 27381,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:38.413Z",
+                    "durationMs": 482,
+                    "status": "passed",
+                    "bytes": 641,
+                    "count": 14
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:39.861Z",
+                    "durationMs": 3814,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into other \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:43.675Z",
+                    "durationMs": 521,
+                    "status": "passed",
+                    "bytes": 2313,
+                    "count": 78
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:44.197Z",
+                    "durationMs": 5345,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: XCTest recorded a failure while executing type; the action may not have been performed. Hint: The iOS runner session was invalidated. Re-observe with a fresh snapshot before retrying; if the accessibility tree is unavailable, use screenshot plus coordinate commands instea…"
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:49.543Z",
+                    "durationMs": 502,
+                    "status": "passed",
+                    "bytes": 1884,
+                    "count": 60
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:50.046Z",
+                    "durationMs": 6006,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:24:56.052Z",
+                    "durationMs": 494,
+                    "status": "passed",
+                    "bytes": 1936,
+                    "count": 61
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:38.902Z",
+                    "durationMs": 17645,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4223,
+                    "inputTokens": 4155,
+                    "outputTokens": 68
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:24:57.370Z",
+                    "durationMs": 4082,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"hunter2\" into other \"Password\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:01.460Z",
+                    "durationMs": 489,
+                    "status": "passed",
+                    "bytes": 1966,
+                    "count": 61
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:01.949Z",
+                    "durationMs": 1878,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:03.827Z",
+                    "durationMs": 574,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:24:56.550Z",
+                    "durationMs": 7852,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7385,
+                    "inputTokens": 7342,
+                    "outputTokens": 43
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:04.403Z",
+                    "durationMs": 866,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 9093,
+                    "inputTokens": 9045,
+                    "outputTokens": 48
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:05.270Z",
+                    "durationMs": 521,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 3,
+                  "actionSteps": 5,
+                  "observationBytes": 2313,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 3,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 20542,
+                  "outputTokens": 159,
+                  "peakTokensPerCall": 9093,
+                  "cacheReadTokens": 10060
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "655d117befe938bb712994d8ce86a4170d4ff337ebf303115850fd1bdd1c0b9a",
+                  "write": "saved"
+                },
+                "observationRevision": "b14",
+                "explanation": "I signed in with the provided email and password, and the application navigated to the main screen showing the user's information and orders.",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type({\"target\":\"n970\",\"value\":\"demo@example.com\"})",
+                      "type({\"target\":\"n971\",\"value\":\"hunter2\"})",
+                      "tap({\"target\":\"n975\"})"
+                    ],
+                    "outcome": "[type] Typed into #n970.\n\nThe screen changed substantially since revision b2. Current screen (revision b4, path dev.yii.boxtide, 78 nodes):\n#root screen\n #n1056 application \"Boxtide\"\n  #n1057 scroll-view\n  #n1058 text \"Boxtide\"\n  #n1059 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n1060 other \"Email\" testid=\"email_field\" value=\"demo@example.com\" [focused]\n  #n1061 other \"Password\" testid=\"password_field\"\n  #n1062 other testid=\"remember_me\"\n  #n1063 switch \"Keep…[truncated]"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type({\"target\":\"n1316\",\"value\":\"hunter2\"})",
+                      "tap({\"target\":\"n1321\"})"
+                    ],
+                    "outcome": "[type] Typed into #n1316.\n\nThe screen changed substantially since revision b8. Current screen (revision b10, path dev.yii.boxtide, 61 nodes):\n#root screen\n #n1431 application \"Boxtide\"\n  #n1432 scroll-view\n  #n1433 text \"Boxtide\"\n  #n1434 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n1435 other \"Email\" testid=\"email_field\" value=\"demo@example.com\"\n  #n1436 other \"Password\" testid=\"password_field\" value=\"•••••••\" [focused]\n  #n1437 other testid=\"remember_me\"\n  #…[truncated]"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"I signed in with the provided email and password, and the application navigated to the main screen showing the user's information and orders.\"})"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 37,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129d9-65c9-7a32-a9f8-1db78a176ca1:2",
+                "index": 2,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByRole(\"button\", name: /^Orders/)",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:25:05.793Z",
+                "durationMs": 186,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:25:05.793Z",
+                    "durationMs": 186,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "since": 1,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 38,
+                  "column": 55
+                }
+              },
+              {
+                "id": "01a129d9-65c9-7a32-a9f8-1db78a176ca1:3",
+                "index": 3,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Add the pocket speaker to the cart, then open the cart",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:25:05.979Z",
+                "durationMs": 11356,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:05.980Z",
+                    "durationMs": 432,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:07.274Z",
+                    "durationMs": 974,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap other \"home_go_shop\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:08.248Z",
+                    "durationMs": 495,
+                    "status": "passed",
+                    "bytes": 1668,
+                    "count": 30
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:06.415Z",
+                    "durationMs": 2328,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4633,
+                    "inputTokens": 4615,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:09.405Z",
+                    "durationMs": 1323,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap other \"product_p-speaker\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:10.728Z",
+                    "durationMs": 501,
+                    "status": "passed",
+                    "bytes": 820,
+                    "count": 23
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:08.744Z",
+                    "durationMs": 2485,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5426,
+                    "inputTokens": 5408,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:11.952Z",
+                    "durationMs": 986,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Add to cart\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:12.938Z",
+                    "durationMs": 524,
+                    "status": "passed",
+                    "bytes": 855,
+                    "count": 24
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:11.230Z",
+                    "durationMs": 2233,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5855,
+                    "inputTokens": 5837,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:14.074Z",
+                    "durationMs": 1692,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"View cart (1)\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:15.766Z",
+                    "durationMs": 497,
+                    "status": "passed",
+                    "bytes": 705,
+                    "count": 16
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:13.465Z",
+                    "durationMs": 2799,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6301,
+                    "inputTokens": 6283,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:16.265Z",
+                    "durationMs": 664,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6719,
+                    "inputTokens": 6678,
+                    "outputTokens": 41
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:16.929Z",
+                    "durationMs": 407,
+                    "status": "passed",
+                    "bytes": 705,
+                    "count": 16
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 5,
+                  "actionSteps": 4,
+                  "observationBytes": 1668,
+                  "contextBytes": 0,
+                  "ledgerBytes": 316
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 5,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 28821,
+                  "outputTokens": 113,
+                  "peakTokensPerCall": 6719,
+                  "cacheReadTokens": 10014
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "334832fa1d0a60143588b2481140fcee0d85fefb1087757f8bd69ec66fd977ef",
+                  "write": "saved"
+                },
+                "observationRevision": "b26",
+                "explanation": "Added the pocket speaker to the cart and navigated to the cart page, which now displays the item.",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "tap({\"target\":\"n1649\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n1649.\n\nThe screen changed substantially since revision b16. Current screen (revision b18, path dev.yii.boxtide, 30 nodes):\n#root screen\n #n1688 application \"Boxtide\"\n  #n1689 text \"Shop\"\n  #n1690 other testid=\"cart_button\"\n  #n1691 button \"Cart\"\n  #n1692 scroll-view\n  #n1693 text \"Shop\\nSix things we actually use.\" text=\"Shop Six things we actually use.\"\n  #n1694 other \"Search the catalogue\" testid=\"shop_search\"\n  #n1695 scroll-view\n  #n1696 other testid=\"shop_filter_all\"\n  #n1697 button \"All\" [selected]\n  #n1698 other testid=\"shop_filter_kitchen\"\n  #n1699 button \"Kitchen\"\n  #n1…[truncated]"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "tap({\"target\":\"n1708\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n1708.\n\nThe screen changed substantially since revision b18. Current screen (revision b20, path dev.yii.boxtide, 23 nodes):\n#root screen\n #n1739 application \"Boxtide\"\n  #n1740 button \"Back\"\n  #n1741 text \"Pocket speaker\"\n  #n1742 scroll-view\n  #n1743 text \"Pocket speaker\"\n  #n1744 text \"Audio\"\n  #n1745 text \"$99.00\"\n  #n1746 text \"Bluetooth, 12 hour battery, splash-proof.\"\n  #n1747 text \"Specification\"\n  #n1748 text \"Bluetooth 5.4, pairs two at once\"\n  #n1749 text \"IP67 splash and dust rating\"\n  #n1750 text \"20 minute charge for four hours play\"\n  #n1751 text \"Two year repair cov…[truncated]"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap({\"target\":\"n1760\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n1760.\n\nThe screen changed substantially since revision b20. Current screen (revision b22, path dev.yii.boxtide, 24 nodes):\n#root screen\n #n1784 application \"Boxtide\"\n  #n1785 button \"Back\"\n  #n1786 text \"Pocket speaker\"\n  #n1787 scroll-view\n  #n1788 text \"Pocket speaker\"\n  #n1789 text \"Audio\"\n  #n1790 text \"$99.00\"\n  #n1791 text \"Bluetooth, 12 hour battery, splash-proof.\"\n  #n1792 text \"Specification\"\n  #n1793 text \"Bluetooth 5.4, pairs two at once\"\n  #n1794 text \"IP67 splash and dust rating\"\n  #n1795 text \"20 minute charge for four hours play\"\n  #n1796 text \"Two year repair cov…[truncated]"
+                  },
+                  {
+                    "index": 4,
+                    "calls": [
+                      "tap({\"target\":\"n1804\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n1804.\n\nThe screen changed substantially since revision b22. Current screen (revision b24, path dev.yii.boxtide, 16 nodes):\n#root screen\n #n1822 application \"Boxtide\"\n  #n1823 button \"Back\"\n  #n1824 text \"Cart\"\n  #n1825 scroll-view\n  #n1826 text \"1 item\\nPrices include tax.\" text=\"1 item Prices include tax.\"\n  #n1827 other \"Pocket speaker\\n$99.00\\n1\" text=\"Pocket speaker $99.00 1\"\n  #n1828 other testid=\"cart_remove_p-speaker\"\n  #n1829 button \"Remove from cart\"\n  #n1830 other testid=\"cart_qty_p-speaker_minus\"\n  #n1831 button \"Decrease quantity\" [disabled]\n  #n1832 other testid=\"ca…[truncated]"
+                  },
+                  {
+                    "index": 5,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"Added the pocket speaker to the cart and navigated to the cart page, which now displays the item.\"})"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 16,
+                  "since": 2,
+                  "changes": [
+                    "added button \"Back\"",
+                    "added text \"Cart\"",
+                    "added text \"1 item\\nPrices include tax.\" text=\"1 item Prices include tax.\"",
+                    "added other \"Pocket speaker\\n$99.00\\n1\" text=\"Pocket speaker $99.00 1\"",
+                    "added other testid=\"cart_remove_p-speaker\"",
+                    "added button \"Remove from cart\"",
+                    "added other testid=\"cart_qty_p-speaker_minus\"",
+                    "added button \"Decrease quantity\" [disabled]",
+                    "added other testid=\"cart_qty_p-speaker_plus\"",
+                    "added button \"Increase quantity\"",
+                    "added text \"Subtotal\\n$99.00\\nShipping\\n$5.90\\nTotal\\n$104.90\" text=\"Subtotal $99.00 Shipping $5.90 Total $104.90\"",
+                    "added other testid=\"checkout_button\""
+                  ],
+                  "more": 23
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 39,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129d9-65c9-7a32-a9f8-1db78a176ca1:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByTestId(\"cart_remove_p-speaker\")",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:25:17.337Z",
+                "durationMs": 163,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:25:17.337Z",
+                    "durationMs": 163,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 16,
+                  "since": 3,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 40,
+                  "column": 61
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "31053c933c1f2012d74cf78d3a0161071d097c6d66f7c2b71262819fa796be94",
+        "testId": "tests/boxtide.e2e.ts::support-flow",
+        "kind": "test",
+        "declarationIndex": 2,
+        "titlePath": [
+          "support-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 44,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "lite",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a129da-1a32-7d48-b329-4482ef195a87",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-10-11T07:25:21.842Z",
+            "durationMs": 84700,
+            "artifacts": [
+              {
+                "id": "01a129da-1a32-7d48-b329-4482ef195a87:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-support-flow-31053c933c1f2012/attempt-1/screen-at-failure.txt",
+                "size": 1250,
+                "sha256": "f058c3a70c0f184b4fa081d1f274e1c16a89631b092434321e57ac6283cc8370"
+              },
+              {
+                "id": "01a129da-1a32-7d48-b329-4482ef195a87:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-support-flow-31053c933c1f2012/attempt-1/screenshots/001-failure.png",
+                "size": 68493,
+                "sha256": "b3985a7b60a5282afc81a13cacfd5e0f3bc6d3ea0c74707f0dabd064de8c7816"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "ASSERTION_FAILED",
+              "message": "expect.toBeVisible failed\nlocator: getByText(\"Message sent\").first()\nexpected: visible\nobserved: no node (match count 0)",
+              "retryable": false,
+              "phase": "body",
+              "details": {
+                "locator": "getByText(\"Message sent\").first()",
+                "expected": "visible",
+                "observed": "no node",
+                "matches": 0
+              },
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 51,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "nodes": 27,
+              "screen": "01a129da-1a32-7d48-b329-4482ef195a87:artifact:0",
+              "screenshot": "01a129da-1a32-7d48-b329-4482ef195a87:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a129da-1a32-7d48-b329-4482ef195a87:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:25:21.844Z",
+                "durationMs": 2399,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 45,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129da-1a32-7d48-b329-4482ef195a87:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:25:24.245Z",
+                "durationMs": 26937,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:24.262Z",
+                    "durationMs": 451,
+                    "status": "passed",
+                    "bytes": 654,
+                    "count": 14
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:25.862Z",
+                    "durationMs": 3586,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into other \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:29.448Z",
+                    "durationMs": 538,
+                    "status": "passed",
+                    "bytes": 2313,
+                    "count": 78
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:29.986Z",
+                    "durationMs": 4980,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: XCTest recorded a failure while executing type; the action may not have been performed. Hint: The iOS runner session was invalidated. Re-observe with a fresh snapshot before retrying; if the accessibility tree is unavailable, use screenshot plus coordinate commands instea…"
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:34.966Z",
+                    "durationMs": 495,
+                    "status": "passed",
+                    "bytes": 1884,
+                    "count": 60
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:35.461Z",
+                    "durationMs": 5641,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:41.103Z",
+                    "durationMs": 469,
+                    "status": "passed",
+                    "bytes": 1936,
+                    "count": 61
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:24.718Z",
+                    "durationMs": 16854,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4239,
+                    "inputTokens": 4168,
+                    "outputTokens": 71
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:42.613Z",
+                    "durationMs": 3932,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"hunter2\" into other \"Password\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:46.545Z",
+                    "durationMs": 467,
+                    "status": "passed",
+                    "bytes": 1966,
+                    "count": 61
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:41.574Z",
+                    "durationMs": 5438,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7386,
+                    "inputTokens": 7361,
+                    "outputTokens": 25
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:47.897Z",
+                    "durationMs": 1586,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:49.483Z",
+                    "durationMs": 434,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:47.013Z",
+                    "durationMs": 2904,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 8367,
+                    "inputTokens": 8349,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:49.918Z",
+                    "durationMs": 837,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 9103,
+                    "inputTokens": 9066,
+                    "outputTokens": 37
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:50.756Z",
+                    "durationMs": 427,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 4,
+                  "actionSteps": 5,
+                  "observationBytes": 2313,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 4,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 28944,
+                  "outputTokens": 151,
+                  "peakTokensPerCall": 9103,
+                  "cacheReadTokens": 16097
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "39b2c6a559149f774d9d4fb42d88ddce9e7009584da74e8d1a951ab377683bfe",
+                  "write": "saved"
+                },
+                "observationRevision": "b14",
+                "explanation": "Signed in with the provided credentials. The user is now on the home screen.",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type({\"target\":\"n1899\",\"value\":\"demo@example.com\"})",
+                      "type({\"target\":\"n1900\",\"value\":\"hunter2\"})",
+                      "tap({\"target\":\"n1904\"})"
+                    ],
+                    "outcome": "[type] Typed into #n1899.\n\nThe screen changed substantially since revision b2. Current screen (revision b4, path dev.yii.boxtide, 78 nodes):\n#root screen\n #n1985 application \"Boxtide\"\n  #n1986 scroll-view\n  #n1987 text \"Boxtide\"\n  #n1988 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n1989 other \"Email\" testid=\"email_field\" value=\"demo@example.com\" [focused]\n  #n1990 other \"Password\" testid=\"password_field\"\n  #n1991 other testid=\"remember_me\"\n  #n1992 switch \"Kee…[truncated]"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type({\"target\":\"n2245\",\"value\":\"hunter2\"})"
+                    ],
+                    "outcome": "[type] Typed into #n2245.\n\nThe screen changed substantially since revision b8. Current screen (revision b10, path dev.yii.boxtide, 61 nodes):\n#root screen\n #n2360 application \"Boxtide\"\n  #n2361 scroll-view\n  #n2362 text \"Boxtide\"\n  #n2363 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n2364 other \"Email\" testid=\"email_field\" value=\"demo@example.com\"\n  #n2365 other \"Password\" testid=\"password_field\" value=\"•••••••\" [focused]\n  #n2366 other testid=\"remember_me\"\n  #…[truncated]"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap({\"target\":\"n2370\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n2370.\n\nThe screen changed substantially since revision b10. Current screen (revision b12, path dev.yii.boxtide, 25 nodes):\n#root screen\n #n2444 application \"Boxtide\"\n  #n2445 text \"Boxtide\"\n  #n2446 other testid=\"cart_button\"\n  #n2447 button \"Cart\"\n  #n2448 scroll-view\n  #n2449 text \"demo@example.com\\n2 parcels on the way\\n6\\norders\" text=\"demo@example.com 2 parcels on the way 6 orders\"\n  #n2450 text \"Tracking\\nParcels that have not reached you yet.\" text=\"Tracking Parcels that have not reached you yet.\"\n  #n2451 other testid=\"home_active_5213\"\n  #n2452 text \"Pocket speaker + 1 …[truncated]"
+                  },
+                  {
+                    "index": 4,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"Signed in with the provided credentials. The user is now on the home screen.\"})"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 46,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129da-1a32-7d48-b329-4482ef195a87:2",
+                "index": 2,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByRole(\"button\", name: /^Orders/)",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:25:51.184Z",
+                "durationMs": 159,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:25:51.185Z",
+                    "durationMs": 159,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "since": 1,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 47,
+                  "column": 55
+                }
+              },
+              {
+                "id": "01a129da-1a32-7d48-b329-4482ef195a87:3",
+                "index": 3,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Contact support about order {order} with the message {message}",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:25:51.344Z",
+                "durationMs": 47431,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:51.345Z",
+                    "durationMs": 412,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:52.572Z",
+                    "durationMs": 1274,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap other \"home_active_5213\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:53.846Z",
+                    "durationMs": 421,
+                    "status": "passed",
+                    "bytes": 613,
+                    "count": 10
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:51.761Z",
+                    "durationMs": 2506,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4648,
+                    "inputTokens": 4630,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:25:54.932Z",
+                    "durationMs": 4436,
+                    "status": "passed",
+                    "name": "scroll",
+                    "detail": "scroll down"
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:25:59.369Z",
+                    "durationMs": 1071,
+                    "status": "passed",
+                    "bytes": 613,
+                    "count": 10
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:25:54.268Z",
+                    "durationMs": 6173,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4932,
+                    "inputTokens": 4918,
+                    "outputTokens": 14
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:01.188Z",
+                    "durationMs": 1468,
+                    "status": "passed",
+                    "name": "back",
+                    "detail": "navigate back"
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:02.657Z",
+                    "durationMs": 466,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:00.442Z",
+                    "durationMs": 2681,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5205,
+                    "inputTokens": 5197,
+                    "outputTokens": 8
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:03.857Z",
+                    "durationMs": 954,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Support Tab 4 of 5\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:04.811Z",
+                    "durationMs": 423,
+                    "status": "passed",
+                    "bytes": 1249,
+                    "count": 27
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:03.124Z",
+                    "durationMs": 2110,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5917,
+                    "inputTokens": 5899,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:05.987Z",
+                    "durationMs": 1325,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Contact us\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:07.312Z",
+                    "durationMs": 404,
+                    "status": "passed",
+                    "bytes": 667,
+                    "count": 13
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:05.236Z",
+                    "durationMs": 2480,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6516,
+                    "inputTokens": 6498,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:08.580Z",
+                    "durationMs": 3442,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"5213\" into other \"Order number (optional)\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:12.022Z",
+                    "durationMs": 481,
+                    "status": "passed",
+                    "bytes": 2987,
+                    "count": 92
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:07.717Z",
+                    "durationMs": 4787,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6841,
+                    "inputTokens": 6814,
+                    "outputTokens": 27
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:13.541Z",
+                    "durationMs": 1324,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Next keyboard\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:14.865Z",
+                    "durationMs": 472,
+                    "status": "passed",
+                    "bytes": 2394,
+                    "count": 69
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:12.505Z",
+                    "durationMs": 2833,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 8287,
+                    "inputTokens": 8269,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:16.245Z",
+                    "durationMs": 1542,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Next keyboard\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:17.788Z",
+                    "durationMs": 464,
+                    "status": "passed",
+                    "bytes": 2394,
+                    "count": 69
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:15.339Z",
+                    "durationMs": 2914,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 9430,
+                    "inputTokens": 9412,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:19.008Z",
+                    "durationMs": 1492,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap key \"done\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:20.500Z",
+                    "durationMs": 2394,
+                    "status": "passed",
+                    "bytes": 2394,
+                    "count": 69
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:18.254Z",
+                    "durationMs": 4640,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 10573,
+                    "inputTokens": 10555,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:23.775Z",
+                    "durationMs": 1430,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap other \"Message\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:25.205Z",
+                    "durationMs": 472,
+                    "status": "passed",
+                    "bytes": 2010,
+                    "count": 63
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:22.896Z",
+                    "durationMs": 2781,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 11716,
+                    "inputTokens": 11698,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:26.522Z",
+                    "durationMs": 3356,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"My parcel has not moved in four days.\" into other \"Message\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:29.878Z",
+                    "durationMs": 465,
+                    "status": "passed",
+                    "bytes": 2047,
+                    "count": 63
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:25.678Z",
+                    "durationMs": 4665,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 12739,
+                    "inputTokens": 12707,
+                    "outputTokens": 32
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:30.980Z",
+                    "durationMs": 1183,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Send message\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:32.163Z",
+                    "durationMs": 2537,
+                    "status": "passed",
+                    "bytes": 2047,
+                    "count": 63
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:30.345Z",
+                    "durationMs": 4356,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 13756,
+                    "inputTokens": 13738,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:35.558Z",
+                    "durationMs": 1476,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Back\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:37.034Z",
+                    "durationMs": 458,
+                    "status": "passed",
+                    "bytes": 1249,
+                    "count": 27
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:34.703Z",
+                    "durationMs": 2789,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 14773,
+                    "inputTokens": 14755,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:37.493Z",
+                    "durationMs": 806,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 15398,
+                    "inputTokens": 15354,
+                    "outputTokens": 44
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:38.300Z",
+                    "durationMs": 475,
+                    "status": "passed",
+                    "bytes": 1249,
+                    "count": 27
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 14,
+                  "actionSteps": 13,
+                  "observationBytes": 2987,
+                  "contextBytes": 0,
+                  "ledgerBytes": 251
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 14,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 130444,
+                  "outputTokens": 287,
+                  "peakTokensPerCall": 15398,
+                  "cacheReadTokens": 84489
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "1901d10920f39bb66087c83d6c972811168a3f3187b6d558114ab069d938bb5a",
+                  "write": "unconfirmed"
+                },
+                "observationRevision": "b59",
+                "explanation": "Successfully contacted support about order 5213 with the message \"My parcel has not moved in four days.\".",
+                "turns": [
+                  {
+                    "index": 3,
+                    "calls": [
+                      "back({})"
+                    ],
+                    "outcome": "[back] Navigated back.\n\nThe screen changed substantially since revision b22. Current screen (revision b24, path dev.yii.boxtide, 25 nodes):\n#root screen\n #n2666 application \"Boxtide\"\n  #n2667 text \"Boxtide\"\n  #n2668 other testid=\"cart_button\"\n  #n2669 button \"Cart\"\n  #n2670 scroll-view\n  #n2671 text \"demo@example.com\\n2 parcels on the way\\n6\\norders\" text=\"demo@example.com 2 parcels on the way 6 orders\"\n  #n2672 text \"Tracking\\nParcels that have not reached you yet.\" text=\"Tracking Parcels that have not reached you yet.\"\n  #n2673 other testid=\"home_active_5213\"\n  #n2674 text \"Pocket speaker + …[truncated]"
+                  },
+                  {
+                    "index": 4,
+                    "calls": [
+                      "tap({\"target\":\"n2688\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n2688.\n\nThe screen changed substantially since revision b24. Current screen (revision b26, path dev.yii.boxtide, 27 nodes):\n#root screen\n #n2716 application \"Boxtide\"\n  #n2717 text \"Support\"\n  #n2718 other testid=\"cart_button\"\n  #n2719 button \"Cart\"\n  #n2720 scroll-view\n  #n2721 text \"How can we help?\\nSearch the common questions, or talk to a person.\" text=\"How can we help? Search the common questions, or talk to a person.\"\n  #n2722 other \"Search help\" testid=\"support_search\"\n  #n2723 other testid=\"faq_1\"\n  #n2724 text \"Where is my order right now?\"\n  #n2725 other testid=\"faq_2\"…[truncated]"
+                  },
+                  {
+                    "index": 5,
+                    "calls": [
+                      "tap({\"target\":\"n2736\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n2736.\n\nThe screen changed substantially since revision b26. Current screen (revision b28, path dev.yii.boxtide, 13 nodes):\n#root screen\n #n2754 application \"Boxtide\"\n  #n2755 button \"Back\"\n  #n2756 text \"Contact us\"\n  #n2757 scroll-view\n  #n2758 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n2759 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n2760 other \"Order number (optional)\" testid=\"contact_order_field\"\n  #n2761 other \"Message…[truncated]"
+                  },
+                  {
+                    "index": 6,
+                    "calls": [
+                      "type({\"target\":\"n2760\",\"value\":\"5213\"})"
+                    ],
+                    "outcome": "[type] Typed into #n2760.\n\nThe screen changed substantially since revision b28. Current screen (revision b30, path dev.yii.boxtide, 92 nodes):\n#root screen\n #n2857 application \"Boxtide\"\n  #n2858 button \"Back\"\n  #n2859 text \"Contact us\"\n  #n2860 scroll-view\n  #n2861 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n2862 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n2863 other \"Order number (optional)\" testid=\"contact_order_field\" value=\"5213\" [focu…[truncated]"
+                  },
+                  {
+                    "index": 7,
+                    "calls": [
+                      "tap({\"target\":\"n2945\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n2945.\n\nThe screen changed substantially since revision b30. Current screen (revision b32, path dev.yii.boxtide, 69 nodes):\n#root screen\n #n3016 application \"Boxtide\"\n  #n3017 button \"Back\"\n  #n3018 text \"Contact us\"\n  #n3019 scroll-view\n  #n3020 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n3021 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n3022 other \"Order number (optional)\" testid=\"contact_order_field\" value=\"5213\" [focused]\n…[truncated]"
+                  },
+                  {
+                    "index": 8,
+                    "calls": [
+                      "tap({\"target\":\"n3081\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n3081.\n\nThe screen changed substantially since revision b32. Current screen (revision b34, path dev.yii.boxtide, 69 nodes):\n#root screen\n #n3152 application \"Boxtide\"\n  #n3153 button \"Back\"\n  #n3154 text \"Contact us\"\n  #n3155 scroll-view\n  #n3156 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n3157 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n3158 other \"Order number (optional)\" testid=\"contact_order_field\" value=\"5213\" [focused]\n…[truncated]"
+                  },
+                  {
+                    "index": 9,
+                    "calls": [
+                      "tap({\"target\":\"n3216\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n3216.\n\nThe screen changed substantially since revision b34. Current screen (revision b42, path dev.yii.boxtide, 69 nodes):\n#root screen\n #n3696 application \"Boxtide\"\n  #n3697 button \"Back\"\n  #n3698 text \"Contact us\"\n  #n3699 scroll-view\n  #n3700 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n3701 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n3702 other \"Order number (optional)\" testid=\"contact_order_field\" value=\"5213\" [focused]\n…[truncated]"
+                  },
+                  {
+                    "index": 10,
+                    "calls": [
+                      "tap({\"target\":\"n3703\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n3703.\n\nThe screen changed substantially since revision b42. Current screen (revision b44, path dev.yii.boxtide, 63 nodes):\n#root screen\n #n3826 application \"Boxtide\"\n  #n3827 button \"Back\"\n  #n3828 text \"Contact us\"\n  #n3829 scroll-view\n  #n3830 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n3831 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n3832 other \"Order number (optional)\" testid=\"contact_order_field\" value=\"5213\"\n  #n3833 o…[truncated]"
+                  },
+                  {
+                    "index": 11,
+                    "calls": [
+                      "type({\"target\":\"n3833\",\"value\":\"My parcel has not moved in four days.\"})"
+                    ],
+                    "outcome": "[type] Typed into #n3833.\n\nThe screen changed substantially since revision b44. Current screen (revision b46, path dev.yii.boxtide, 63 nodes):\n#root screen\n #n3950 application \"Boxtide\"\n  #n3951 button \"Back\"\n  #n3952 text \"Contact us\"\n  #n3953 scroll-view\n  #n3954 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n3955 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n3956 other \"Order number (optional)\" testid=\"contact_order_field\" value=\"5213\"\n  #n3…[truncated]"
+                  },
+                  {
+                    "index": 12,
+                    "calls": [
+                      "tap({\"target\":\"n3961\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n3961.\n\nThe screen changed substantially since revision b46. Current screen (revision b55, path dev.yii.boxtide, 63 nodes):\n#root screen\n #n4508 application \"Boxtide\"\n  #n4509 button \"Back\"\n  #n4510 text \"Contact us\"\n  #n4511 scroll-view\n  #n4512 text \"Tell us what happened\\nWe reply by email, usually within one working day.\" text=\"Tell us what happened We reply by email, usually within one working day.\"\n  #n4513 button \"Topic\\nOrder issue\" text=\"Topic Order issue\" testid=\"contact_topic\"\n  #n4514 other \"Order number (optional)\" testid=\"contact_order_field\" value=\"5213\"\n  #n4515 o…[truncated]"
+                  },
+                  {
+                    "index": 13,
+                    "calls": [
+                      "tap({\"target\":\"n4509\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n4509.\n\nThe screen changed substantially since revision b55. Current screen (revision b57, path dev.yii.boxtide, 27 nodes):\n#root screen\n #n4596 application \"Boxtide\"\n  #n4597 text \"Support\"\n  #n4598 other testid=\"cart_button\"\n  #n4599 button \"Cart\"\n  #n4600 scroll-view\n  #n4601 text \"How can we help?\\nSearch the common questions, or talk to a person.\" text=\"How can we help? Search the common questions, or talk to a person.\"\n  #n4602 other \"Search help\" testid=\"support_search\"\n  #n4603 other testid=\"faq_1\"\n  #n4604 text \"Where is my order right now?\"\n  #n4605 other testid=\"faq_2\"…[truncated]"
+                  },
+                  {
+                    "index": 14,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"Successfully contacted support about order 5213 with the message \\\"My parcel has not moved in four days.\\\".\"})"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 27,
+                  "since": 2,
+                  "changes": [
+                    "added text \"Support\"",
+                    "added text \"How can we help?\\nSearch the common questions, or talk to a person.\" text=\"How can we help? Search the common questions, or talk to a person.\"",
+                    "added other \"Search help\" testid=\"support_search\"",
+                    "added other testid=\"faq_1\"",
+                    "added text \"Where is my order right now?\"",
+                    "added other testid=\"faq_2\"",
+                    "added text \"How long do I have to return something?\"",
+                    "added other testid=\"faq_3\"",
+                    "added text \"When does a refund reach my account?\"",
+                    "added other testid=\"faq_4\"",
+                    "added text \"Can I change the delivery address after ordering?\"",
+                    "added other testid=\"faq_5\""
+                  ],
+                  "more": 24
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 48,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129da-1a32-7d48-b329-4482ef195a87:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByText(\"Message sent\").first()",
+                "status": "failed",
+                "startedAt": "2026-10-11T07:26:38.776Z",
+                "durationMs": 5181,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:26:38.776Z",
+                    "durationMs": 5181,
+                    "status": "failed",
+                    "count": 19,
+                    "detail": "no node (0 matches) x19"
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 27,
+                  "since": 3,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 51,
+                  "column": 58
+                },
+                "error": {
+                  "category": "test",
+                  "code": "ASSERTION_FAILED",
+                  "message": "expect.toBeVisible failed\nlocator: getByText(\"Message sent\").first()\nexpected: visible\nobserved: no node (match count 0)",
+                  "retryable": false,
+                  "details": {
+                    "locator": "getByText(\"Message sent\").first()",
+                    "expected": "visible",
+                    "observed": "no node",
+                    "matches": 0
+                  },
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 51,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "e4c794c9b7dc06e0f722953f501b2aecf83581891fc3fbc44e6fa0ab28ceb31b",
+        "testId": "tests/boxtide.e2e.ts::address-flow",
+        "kind": "test",
+        "declarationIndex": 3,
+        "titlePath": [
+          "address-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 55,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "lite",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "passed",
+        "attempts": [
+          {
+            "id": "01a129db-6517-7da6-bc77-1aa8cb133814",
+            "index": 0,
+            "status": "passed",
+            "startedAt": "2026-10-11T07:26:46.551Z",
+            "durationMs": 64681,
+            "artifacts": [],
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "steps": [
+              {
+                "id": "01a129db-6517-7da6-bc77-1aa8cb133814:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:26:46.552Z",
+                "durationMs": 2448,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 56,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129db-6517-7da6-bc77-1aa8cb133814:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:26:49.000Z",
+                "durationMs": 26630,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:49.001Z",
+                    "durationMs": 455,
+                    "status": "passed",
+                    "bytes": 654,
+                    "count": 14
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:50.772Z",
+                    "durationMs": 3206,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into other \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:53.978Z",
+                    "durationMs": 466,
+                    "status": "passed",
+                    "bytes": 1819,
+                    "count": 59
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:54.445Z",
+                    "durationMs": 4668,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: XCTest recorded a failure while executing type; the action may not have been performed. Hint: The iOS runner session was invalidated. Re-observe with a fresh snapshot before retrying; if the accessibility tree is unavailable, use screenshot plus coordinate commands instea…"
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:26:59.113Z",
+                    "durationMs": 456,
+                    "status": "passed",
+                    "bytes": 1884,
+                    "count": 60
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:26:59.569Z",
+                    "durationMs": 5088,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:04.657Z",
+                    "durationMs": 465,
+                    "status": "passed",
+                    "bytes": 1936,
+                    "count": 61
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:26:49.459Z",
+                    "durationMs": 15664,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4239,
+                    "inputTokens": 4168,
+                    "outputTokens": 71
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:06.078Z",
+                    "durationMs": 4127,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"hunter2\" into other \"Password\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:10.206Z",
+                    "durationMs": 519,
+                    "status": "passed",
+                    "bytes": 1966,
+                    "count": 61
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:10.725Z",
+                    "durationMs": 1168,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap key \"done\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:11.893Z",
+                    "durationMs": 440,
+                    "status": "passed",
+                    "bytes": 761,
+                    "count": 15
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:12.333Z",
+                    "durationMs": 1377,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:13.710Z",
+                    "durationMs": 415,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:05.124Z",
+                    "durationMs": 9001,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7181,
+                    "inputTokens": 7120,
+                    "outputTokens": 61
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:14.126Z",
+                    "durationMs": 1068,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 9212,
+                    "inputTokens": 9176,
+                    "outputTokens": 36
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:15.195Z",
+                    "durationMs": 435,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 3,
+                  "actionSteps": 6,
+                  "observationBytes": 1966,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 3,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 20464,
+                  "outputTokens": 168,
+                  "peakTokensPerCall": 9212,
+                  "cacheReadTokens": 4018
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "b68b94618f12829e292678ee02fc49150198a3b5949589b2c9e865609ec72574",
+                  "write": "saved"
+                },
+                "observationRevision": "b16",
+                "explanation": "Successfully logged in with email and password as shown by the user home dashboard.",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type({\"target\":\"n5237\",\"value\":\"demo@example.com\"})",
+                      "type({\"target\":\"n5238\",\"value\":\"hunter2\"})",
+                      "tap({\"target\":\"n5242\"})"
+                    ],
+                    "outcome": "[type] Typed into #n5237.\n\nThe screen changed substantially since revision b2. Current screen (revision b4, path dev.yii.boxtide, 59 nodes):\n#root screen\n #n5304 application \"Boxtide\"\n  #n5305 scroll-view\n  #n5306 text \"Boxtide\"\n  #n5307 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n5308 other \"Email\" testid=\"email_field\" value=\"demo@example.com\" [focused]\n  #n5309 other \"Password\" testid=\"password_field\"\n  #n5310 other testid=\"remember_me\"\n  #n5311 switch \"Kee…[truncated]"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type({\"target\":\"n5545\",\"value\":\"hunter2\"})",
+                      "tap({\"target\":\"n5598\"})",
+                      "tap({\"target\":\"n5550\"})"
+                    ],
+                    "outcome": "[type] Typed into #n5545.\n\nThe screen changed substantially since revision b8. Current screen (revision b10, path dev.yii.boxtide, 61 nodes):\n#root screen\n #n5660 application \"Boxtide\"\n  #n5661 scroll-view\n  #n5662 text \"Boxtide\"\n  #n5663 text \"Your orders, sorted.\\nFollow a parcel, send something back, or ask us a question.\" text=\"Your orders, sorted. Follow a parcel, send something back, or ask us a question.\"\n  #n5664 other \"Email\" testid=\"email_field\" value=\"demo@example.com\"\n  #n5665 other \"Password\" testid=\"password_field\" value=\"•••••••\" [focused]\n  #n5666 other testid=\"remember_me\"\n  #…[truncated]"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"Successfully logged in with email and password as shown by the user home dashboard.\"})"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 57,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129db-6517-7da6-bc77-1aa8cb133814:2",
+                "index": 2,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByRole(\"button\", name: /^Orders/)",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:27:15.631Z",
+                "durationMs": 177,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:27:15.631Z",
+                    "durationMs": 177,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 25,
+                  "since": 1,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 58,
+                  "column": 55
+                }
+              },
+              {
+                "id": "01a129db-6517-7da6-bc77-1aa8cb133814:3",
+                "index": 3,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Add a new saved delivery address labelled {label} at {lines}",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:27:15.808Z",
+                "durationMs": 30869,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:15.808Z",
+                    "durationMs": 436,
+                    "status": "passed",
+                    "bytes": 1639,
+                    "count": 25
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:16.976Z",
+                    "durationMs": 988,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Account Tab 5 of 5\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:17.964Z",
+                    "durationMs": 446,
+                    "status": "passed",
+                    "bytes": 1299,
+                    "count": 24
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:16.247Z",
+                    "durationMs": 2164,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 4646,
+                    "inputTokens": 4628,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:19.097Z",
+                    "durationMs": 1465,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap other \"profile_addresses\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:20.562Z",
+                    "durationMs": 540,
+                    "status": "passed",
+                    "bytes": 679,
+                    "count": 12
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:18.412Z",
+                    "durationMs": 2690,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5221,
+                    "inputTokens": 5203,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:21.924Z",
+                    "durationMs": 954,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap other \"add_address_button\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:22.878Z",
+                    "durationMs": 407,
+                    "status": "passed",
+                    "bytes": 392,
+                    "count": 11
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:21.103Z",
+                    "durationMs": 2183,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5565,
+                    "inputTokens": 5547,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:24.059Z",
+                    "durationMs": 2723,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"Office\" into other \"Label\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:26.782Z",
+                    "durationMs": 466,
+                    "status": "passed",
+                    "bytes": 1699,
+                    "count": 60
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:23.286Z",
+                    "durationMs": 3963,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 5812,
+                    "inputTokens": 5788,
+                    "outputTokens": 24
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:28.047Z",
+                    "durationMs": 2863,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"9F, 100 Taiyuan Rd\" into other \"Address\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:30.910Z",
+                    "durationMs": 461,
+                    "status": "passed",
+                    "bytes": 1683,
+                    "count": 58
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:27.250Z",
+                    "durationMs": 4122,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 6741,
+                    "inputTokens": 6708,
+                    "outputTokens": 33
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:32.181Z",
+                    "durationMs": 9688,
+                    "status": "failed",
+                    "name": "dismissKeyboard",
+                    "code": "UNSUPPORTED_CAPABILITY",
+                    "detail": "dismissKeyboard: keyboard dismissal failed: the keyboard has no dismiss key and stayed up through a horizontal and a vertical drag at the centre of the screen. Tap the app's own Done or close control, or press Enter on the field when submitting is what you want."
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:41.870Z",
+                    "durationMs": 440,
+                    "status": "passed",
+                    "bytes": 1683,
+                    "count": 58
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:31.373Z",
+                    "durationMs": 10937,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 7636,
+                    "inputTokens": 7626,
+                    "outputTokens": 10
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-10-11T07:27:43.289Z",
+                    "durationMs": 1553,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Save address\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:44.842Z",
+                    "durationMs": 433,
+                    "status": "passed",
+                    "bytes": 831,
+                    "count": 15
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:42.311Z",
+                    "durationMs": 2964,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 8595,
+                    "inputTokens": 8577,
+                    "outputTokens": 18
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:27:45.276Z",
+                    "durationMs": 950,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 9052,
+                    "inputTokens": 8991,
+                    "outputTokens": 61
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:27:46.227Z",
+                    "durationMs": 449,
+                    "status": "passed",
+                    "bytes": 799,
+                    "count": 14
+                  }
+                ],
+                "agent": "lite",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 8,
+                  "actionSteps": 7,
+                  "observationBytes": 1699,
+                  "contextBytes": 0,
+                  "ledgerBytes": 258
+                },
+                "model": {
+                  "provider": "google.generative-ai",
+                  "model": "gemini-3.1-flash-lite",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/e2e-default-agent@2",
+                  "policyVersion": "e2e-default-agent/2",
+                  "calls": 8,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 53068,
+                  "outputTokens": 200,
+                  "peakTokensPerCall": 9052,
+                  "cacheReadTokens": 26061
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "bffa983f0021766ca0bc00243fa8936eb456ac1fdd101b406d82c253ca65b38d",
+                  "write": "saved"
+                },
+                "observationRevision": "b34",
+                "explanation": "Successfully added the new office address with label 'Office' and lines '9F, 100 Taiyuan Rd'. Verified by the presence of the new address in the 'Addresses' list.",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "tap({\"target\":\"n5915\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n5915.\n\nThe screen changed substantially since revision b18. Current screen (revision b20, path dev.yii.boxtide, 24 nodes):\n#root screen\n #n5939 application \"Boxtide\"\n  #n5940 text \"Account\"\n  #n5941 other testid=\"cart_button\"\n  #n5942 button \"Cart\"\n  #n5943 scroll-view\n  #n5944 text \"Demo account\\ndemo@example.com\" text=\"Demo account demo@example.com\"\n  #n5945 text \"Account\\nWhere things ship and how you pay.\" text=\"Account Where things ship and how you pay.\"\n  #n5946 other testid=\"profile_addresses\"\n  #n5947 text \"Addresses\\n2 saved\" text=\"Addresses 2 saved\"\n  #n5948 other test…[truncated]"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "tap({\"target\":\"n5946\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n5946.\n\nThe screen changed substantially since revision b20. Current screen (revision b22, path dev.yii.boxtide, 12 nodes):\n#root screen\n #n5973 application \"Boxtide\"\n  #n5974 button \"Back\"\n  #n5975 text \"Addresses\"\n  #n5976 scroll-view\n  #n5977 text \"Saved addresses\\nThe default one is used at checkout.\" text=\"Saved addresses The default one is used at checkout.\"\n  #n5978 other testid=\"address_addr_home\"\n  #n5979 text \"Home\\nDefault\\n27 Harbor Ln, Xitun District, Taichung 407\" text=\"Home Default 27 Harbor Ln, Xitun District, Taichung 407\"\n  #n5980 other testid=\"address_addr_work…[truncated]"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap({\"target\":\"n5982\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n5982.\n\nThe screen changed substantially since revision b22. Current screen (revision b24, path dev.yii.boxtide, 11 nodes):\n#root screen\n #n5994 application \"Boxtide\"\n  #n5995 button \"Dismiss\"\n  #n5996 text \"Add an address\"\n  #n5997 other \"Label\" testid=\"address_label_field\"\n  #n5998 other \"Address\" testid=\"address_lines_field\"\n  #n5999 other testid=\"address_default_switch\"\n  #n6000 switch \"Set as default\" value=\"0\"\n  #n6001 other testid=\"address_save_button\"\n  #n6002 button \"Save address\"\n  #n6003 text \"Scrim\""
+                  },
+                  {
+                    "index": 4,
+                    "calls": [
+                      "type({\"target\":\"n5997\",\"value\":\"Office\"})"
+                    ],
+                    "outcome": "[type] Typed into #n5997.\n\nThe screen changed substantially since revision b24. Current screen (revision b26, path dev.yii.boxtide, 60 nodes):\n#root screen\n #n6063 application \"Boxtide\"\n  #n6064 button \"Dismiss\"\n  #n6065 text \"Add an address\"\n  #n6066 other \"Label\" testid=\"address_label_field\" value=\"Office\" [focused]\n  #n6067 other \"Address\" testid=\"address_lines_field\"\n  #n6068 other testid=\"address_default_switch\"\n  #n6069 switch \"Set as default\" value=\"0\"\n  #n6070 other testid=\"address_save_button\"\n  #n6071 button \"Save address\"\n  #n6072 text \"Scrim\"\n  #n6073 other testid=\"inputView\"\n  #n6…[truncated]"
+                  },
+                  {
+                    "index": 5,
+                    "calls": [
+                      "type({\"target\":\"n6067\",\"value\":\"9F, 100 Taiyuan Rd\"})"
+                    ],
+                    "outcome": "[type] Typed into #n6067.\n\nThe screen changed substantially since revision b26. Current screen (revision b28, path dev.yii.boxtide, 58 nodes):\n#root screen\n #n6179 application \"Boxtide\"\n  #n6180 button \"Dismiss\"\n  #n6181 text \"Add an address\"\n  #n6182 other \"Label\" testid=\"address_label_field\" value=\"Office\"\n  #n6183 other \"Address\" testid=\"address_lines_field\" value=\"9F, 100 Taiyuan Rd\" [focused]\n  #n6184 other testid=\"address_default_switch\"\n  #n6185 switch \"Set as default\" value=\"0\"\n  #n6186 other testid=\"address_save_button\"\n  #n6187 button \"Save address\"\n  #n6188 text \"Scrim\"\n  #n6189 oth…[truncated]"
+                  },
+                  {
+                    "index": 6,
+                    "calls": [
+                      "dismiss_keyboard({})"
+                    ],
+                    "outcome": "[dismiss_keyboard] dismiss_keyboard failed: POLICY_DENIED: keyboard dismissal failed: the keyboard has no dismiss key and stayed up through a horizontal and a vertical drag at the centre of the screen. Tap the app's own Done or close control, or press Enter on the field when submitting is what you want.\n\nThe screen changed substantially since revision b28. Current screen (revision b30, path dev.yii.boxtide, 58 nodes):\n#root screen\n #n6293 application \"Boxtide\"\n  #n6294 button \"Dismiss\"\n  #n6295 text \"Add an address\"\n  #n6296 other \"Label\" testid=\"address_label_field\" value=\"Office\"\n  #n6297 ot…[truncated]"
+                  },
+                  {
+                    "index": 7,
+                    "calls": [
+                      "tap({\"target\":\"n6301\"})"
+                    ],
+                    "outcome": "[tap] Tapped #n6301.\n\nThe screen changed substantially since revision b30. Current screen (revision b32, path dev.yii.boxtide, 15 nodes):\n#root screen\n #n6364 application \"Boxtide\"\n  #n6365 button \"Back\"\n  #n6366 text \"Addresses\"\n  #n6367 scroll-view\n  #n6368 text \"Saved addresses\\nThe default one is used at checkout.\" text=\"Saved addresses The default one is used at checkout.\"\n  #n6369 other testid=\"address_addr_home\"\n  #n6370 text \"Home\\nDefault\\n27 Harbor Ln, Xitun District, Taichung 407\" text=\"Home Default 27 Harbor Ln, Xitun District, Taichung 407\"\n  #n6371 other testid=\"address_addr_work…[truncated]"
+                  },
+                  {
+                    "index": 8,
+                    "calls": [
+                      "complete_step({\"status\":\"passed\",\"summary\":\"Successfully added the new office address with label 'Office' and lines '9F, 100 Taiyuan Rd'. Verified by the presence of the new address in the 'Addresses'…[truncated]"
+                    ],
+                    "outcome": "[complete_step] Step concluded."
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 14,
+                  "since": 2,
+                  "changes": [
+                    "added button \"Back\"",
+                    "added text \"Addresses\"",
+                    "added text \"Saved addresses\\nThe default one is used at checkout.\" text=\"Saved addresses The default one is used at checkout.\"",
+                    "added other testid=\"address_addr_home\"",
+                    "added text \"Home\\nDefault\\n27 Harbor Ln, Xitun District, Taichung 407\" text=\"Home Default 27 Harbor Ln, Xitun District, Taichung 407\"",
+                    "added other testid=\"address_addr_workshop\"",
+                    "added text \"Workshop\\n3F, 51 Dadun Rd, Nantun District, Taichung 408\" text=\"Workshop 3F, 51 Dadun Rd, Nantun District, Taichung 408\"",
+                    "added other testid=\"address_addr_office\"",
+                    "added text \"Office\\n9F, 100 Taiyuan Rd\" text=\"Office 9F, 100 Taiyuan Rd\"",
+                    "added other testid=\"add_address_button\"",
+                    "added button \"Add an address\"",
+                    "removed text \"Boxtide\""
+                  ],
+                  "more": 21
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 59,
+                  "column": 15
+                }
+              },
+              {
+                "id": "01a129db-6517-7da6-bc77-1aa8cb133814:4",
+                "index": 4,
+                "kind": "assertion",
+                "api": "expect.toBeVisible",
+                "label": "getByText(/^Office/).first()",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:27:46.677Z",
+                "durationMs": 159,
+                "events": [
+                  {
+                    "kind": "poll",
+                    "name": "expect",
+                    "startedAt": "2026-10-11T07:27:46.677Z",
+                    "durationMs": 159,
+                    "status": "passed",
+                    "count": 1
+                  }
+                ],
+                "artifacts": [],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 14,
+                  "since": 3,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 62,
+                  "column": 53
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "summary": {
+      "discovered": 4,
+      "selected": 4,
+      "executed": 4,
+      "passed": 3,
+      "failed": 1,
+      "interrupted": 0,
+      "flaky": 0,
+      "skipped": 0
+    },
+    "limits": {
+      "maxAgentContextBytes": 16384,
+      "maxLedgerBytes": 8192,
+      "maxObservationBytes": 262144,
+      "maxEventsPerStep": 1000,
+      "maxModelTokensPerCall": 64000
+    },
+    "usage": {
+      "discoveredResults": 4,
+      "maxAgentContextBytes": 0,
+      "maxLedgerBytes": 316,
+      "maxObservationBytes": 2987,
+      "artifactBytes": 69743,
+      "downloads": 0,
+      "events": 176,
+      "modelTokens": 354877,
+      "maxModelCallsInStep": 14,
+      "maxActionStepsInStep": 13,
+      "modelCachedTokens": 188816
+    }
+  }
+}

@@ -602,6 +602,95 @@ hybrid-v2 在 seed 4 少的那一次，是 `nav_orders_v14` 信心 0.34 停下�
 - **要誠實說的：** 這是另一批跑的，30 次裡只遇到一次平手，所以 30/30 有一部分是這一批運氣好。
   能下的結論是「平手時多問一次，比停下划算，而且不會破壞送出前的安全停」，不是「保證 100%」
 
+## 專案 H：e2e 與 Patrol 實測，同一個 app、同一把尺（2026-10-11 追加）
+
+同樣四條流程，換成社群會用的兩個框架：TesterArmy 的 e2e（0.19.0，從 OS 層驅動，agent-device）
+與 Patrol（4.10，在 app 行程裡）。全部在 iPhone 17e 模擬器（iOS 26.5）上跑，判定一樣讀 store：
+e2e 從外面跑，所以每支測試結束時另外連 VM service 讀 `boxtide.state`（`e2e/state_check.py`）。
+chaos 用 `--dart-define=CHAOS_SEED=4` 編進 app，因為這兩個框架都是自己啟動 app。
+這一輪沒有 Android：`demo_app` 沒有 android 平台，機器也沒有可用的 emulator。
+
+### e2e，LLM agent（gemini-3.1-flash-lite）
+
+| 跑法 | e2e 判通過 | store 真的完成 | 假通過 | 4 支牆鐘 | 模型呼叫 | $ / 4 支 |
+|---|---|---|---|---|---|---|
+| 正常版，無快取 ×3 | 11/12 | 10/12 | **1** | 249–272s | 48 | $0.087–0.091 |
+| 正常版，重播 ×2 | 8/8 | 8/8 | 0 | 195–200s | 17–23 | $0.027–0.038 |
+| chaos，舊錄製上重播 | 2/4 | 2/4 | 0 | 354s | 36 | $0.071 |
+| chaos，重錄後重播 | 2/4 | 2/4 | 0 | 313s | 41 | $0.094 |
+| chaos，無快取 ×2 | 6/8 | 6/8 | 0 | 278–297s | 47–54 | $0.093–0.115 |
+
+- **假通過來自測試本身。** 客服單送出了，訂單欄位卻是空的；測試只檢查「Message sent」標題。
+  黑箱框架看不到欄位裡存了什麼，Patrol 版的同一條流程直接斷言 store。
+- **重播只省一半。** 任務那一段全數重播成功（7/7、4/4、6/6 個動作），失敗的都是登入：
+  重播往 Flutter 的密碼欄位打字時 XCTest 回報失敗、runner session 失效，交還給 agent 重做。
+- **畫面位置只有 bundle id。** 所有步驟的 `screen.location` 都是 `dev.yii.boxtide`，原始碼推論的
+  Flutter 標題問題成立。但重播主要靠控制項比對和終點變化，任務段落照樣重播成功，影響比預期小。
+
+### e2e，Jev decision executor：在 Flutter iOS 上動不了
+
+9 輪、36 支測試全部在第一步停下（`The decision model cannot make progress`）。原因不在 Jev：
+
+- **iOS 上 Flutter 的文字欄位都是 `Other`。** `semprobe` 對照六種寫法（沒包、`Semantics(identifier)`、
+  加 `container`、加 `textField: true`、密碼欄位有包與沒包），XCTest 回報的類型全部是 `Other`
+  （`TextInputSemanticsObject`）。decision executor 依角色提供操作，`other` 上不提供「打字」。
+  `fill` 能填 Email，密碼欄位第一次會讓 runner session 失效、第二次才成功；`pressSequentially` 直接被拒絕
+- **改成只點不打字也不行。** 登入用 locator 寫死、Jev 只負責退貨與購物車後，它點對了 Orders 分頁，
+  卻在訂單列表停住：每一列是沒有名字的 `other testid="order_5213"`，文字在旁邊另一個節點，
+  沒有可以當點擊目標的名字
+
+同一個 Jev 在 Dart 層（marionette）是 17/18，在 OS 層這個 app 上一步都走不動。差別是它拿到的選項：
+decision executor 只在文字框類型上提供打字，同一層的 LLM 不受這個限制，是 10/12。17/18 是 macOS 桌面版（專案 E），
+同一台 iOS 模擬器上透過 marionette 補跑是 18/18（見下方「marionette 加 Jev，同一台 iOS 模擬器」）。e2e 的 `vision`（截圖定位的 `tap_at`、`type_at`）這次沒開。
+
+### Patrol
+
+| 跑法 | 結果 | 每支執行 | 整輪（含 build） |
+|---|---|---|---|
+| 正常版第一次 | 3/4，購物車在畫面外、要先 `scrollTo()` | 4–13s | 3m46s（首次 build） |
+| 正常版 | 4/4 | 5–7s（整輪不含 build 103.4s，每支 25.9s） | 2m52s |
+| chaos seed 4 | 3/4，退貨在 `nav_orders` 斷掉 | 4–12s | 2m52s |
+| 套用修復後，chaos seed 4 | **1/1 轉綠** | 6s | 50s |
+
+chaos 只改了退貨流程的 key：其他三條流程用的是寫死的 key，從來不會被改名，所以腳本照過。
+這跟專案 F 一致，那裡的 0/12 也是退貨流程。
+
+導入成本（iOS）：`patrol` dev dependency、pubspec 設定、`RunnerUITests` target、兩個 build phase、
+Podfile 巢狀 target、關平行與 script sandbox。用 `xcodeproj` gem 寫成 `demo_app/ios/add_patrol_target.rb`
+照官方範例複製設定，沒有開 Xcode。
+
+### 修復模式：Patrol 紅燈，Jev 提案，人審後轉綠
+
+`runner/repair.py` 在 chaos 版上讓 Jev（marionette）走一次退貨流程，再把它實際操作的 key 對回腳本：
+
+- Jev 完成任務，store 確認 5207 進入退貨；14 步、20 次模型呼叫、$0.00097、12.5s
+- 提案 3 個改名全對（`nav_orders`、`start_return_button`、`return_next_button` → `_v14`），0 遺漏。
+  配對是前綴比對，demo 改名是加尾碼，所以 Jev 操作過就一定配得上；真實的整個換名會落到 `unmatched` / `extra`。
+  這裡是純 Jev 加手寫值表，專案 F 同設定在改到 `email_field` 的 seed 7、91 是 0/3，只跑了 seed 4 的退貨流程一次
+- 另外標出腳本沒有的動作：`scroll`。這一項我第一次沒套，測試照樣紅；套上後又紅一次，因為
+  Patrol 的 `scrollTo()` 預設捲第一個 Scrollable，而這頁第一個是篩選 chip 那一排。指定訂單清單後轉綠
+
+提案對了，套用仍然要有人看：三次裡有兩次是套用的人（我）漏了細節，不是 Jev 錯。
+
+### marionette 加 Jev，同一台 iOS 模擬器（2026-10-25 補跑）
+
+17/18 是 macOS 桌面版，0/36 是 iOS 模擬器，平台不同。用 `arms.py` 在同一台 iPhone 17e 上重跑專案 E 的
+hybrid-v2（Jev 挑、flash-lite 寫），六個任務各 3 次，app 由 `flutter run -d <udid>` 啟動，判定讀 store：
+
+| arm | runs | really done | false pass | median wall | mean $/run | median decision |
+|---|---|---|---|---|---|---|
+| hybrid-v2 | 18 | **18/18** | 0 | 8.3s | $0.00099 | 210ms |
+
+原始資料：`results/arms-runs-20261025T102114Z.json`，表：`arms-20261025T102114Z.md`。
+這時模擬器 runtime 已隨 Xcode 更新到 iOS 27.0（e2e 那輪是 26.5，舊 runtime 已移除），Flutter 3.47.8。
+`arms.py` 每次跑前用 osascript 把 macOS 視窗叫到前景，在 iOS 上這一步會報錯，對結果沒有影響。
+
+### 結論
+
+- 把關的是 Patrol：快（測試本身每支 5–7 秒，整輪每支約 26 秒）、能直接讀 store，改名時的修法可以由 Jev 提出
+- e2e 的 LLM agent 在改版動到的退貨流程上不用快取 1/2、重播 0/2，每支 50–70 秒（Patrol 整輪每支約 26 秒，約 2.5 倍）、會假通過、重播在 Flutter 密碼欄位斷掉
+- e2e 加 Jev 目前在 Flutter iOS 上不能用，卡在 Flutter 的 iOS 無障礙樹加上 decision executor 的角色限制，不是模型
+
 ## 影片與 GIF
 
 `results/media/`，由 `runner/record_steps.py`、`runner/record_gif.py` 產生，可重現。換品牌後全部重錄。
@@ -628,5 +717,5 @@ hybrid-v2 在 seed 4 少的那一次，是 `nav_orders_v14` 信心 0.34 停下�
   那支 demo 長得一樣，而這個 repo 要講的是 E2E；要看 GenUI 畫面請看他的原作
 - **真實產品的對照。** 兩顆地雷還沒拆：測試環境跟正式環境還沒拆開，而 app 已經用了
   `SentryWidgetsFlutterBinding`，會跟 `MarionetteBinding` 撞
-- **patrol 對照組。** 現在的基準線是同傳輸層的手寫腳本，那對「隔離決策層」是對的，
-  但社群認得的是 patrol，上台講的時候值得補一格
+- **patrol 對照組。** 已補（專案 H），只跑了 iOS 模擬器
+- **Android。** 專案 H 沒有 Android：Flutter 欄位在 Android 是 EditText，e2e 加 Jev 的結論可能不同

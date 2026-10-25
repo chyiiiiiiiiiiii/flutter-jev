@@ -1,0 +1,831 @@
+{
+  "schemaVersion": "report-1",
+  "run": {
+    "id": "01a129ec-660a-7e76-8d5e-7682b130ea98",
+    "specVersion": "0.1",
+    "runner": {
+      "name": "e2e",
+      "version": "0.19.0"
+    },
+    "status": "blocked",
+    "exitCode": 1,
+    "startedAt": "2026-10-11T07:45:29.804Z",
+    "finishedAt": "2026-10-11T07:45:51.969Z",
+    "project": {
+      "id": "boxtide-e2e",
+      "configDigest": "596db5778eb7545832ef8da4107fd995afabb4f459ec37fbeefb07310b285cb9"
+    },
+    "environment": {
+      "ci": false,
+      "trustNoticeShown": false,
+      "os": "darwin 25.6.0",
+      "arch": "arm64",
+      "runtime": "node v24.21.0"
+    },
+    "vcs": {
+      "commit": "c3cefdd6dacd7a07a323ff39b0ba1413773eab73",
+      "branch": "main",
+      "dirty": true
+    },
+    "targets": [
+      {
+        "id": "iphone",
+        "index": 0,
+        "platform": "ios",
+        "environment": "test",
+        "engine": {
+          "name": "mobile",
+          "version": "0.11.0",
+          "spiVersion": 1
+        },
+        "capabilities": [
+          "actions",
+          "artifacts",
+          "device",
+          "keyboard",
+          "location",
+          "observation",
+          "pointer"
+        ],
+        "artifactCapabilities": [
+          "screenshot",
+          "video"
+        ],
+        "stateCapability": false
+      }
+    ],
+    "serialGroups": [],
+    "results": [
+      {
+        "id": "37e13879b0de2eff31a359271ece8214366582f88eb4d4d78252af9b9e1b4d11",
+        "testId": "tests/boxtide.e2e.ts::return-flow",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "return-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 24,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a129ec-8aeb-7626-ba95-6242a5b879bc",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-10-11T07:45:30.347Z",
+            "durationMs": 7677,
+            "artifacts": [
+              {
+                "id": "01a129ec-8aeb-7626-ba95-6242a5b879bc:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-return-flow-37e13879b0de2eff/attempt-1/screen-at-failure.txt",
+                "size": 629,
+                "sha256": "310c0a99b3eabf40daae7725ba7e467057964a4105793034876cdea77e431019"
+              },
+              {
+                "id": "01a129ec-8aeb-7626-ba95-6242a5b879bc:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-return-flow-37e13879b0de2eff/attempt-1/screenshots/001-failure.png",
+                "size": 33479,
+                "sha256": "87a47f02a388cc99990914a2a9ac4675c601e9a68081efdd49fc2105e1e92cf6"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model cannot make progress.",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 26,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "nodes": 14,
+              "screen": "01a129ec-8aeb-7626-ba95-6242a5b879bc:artifact:0",
+              "screenshot": "01a129ec-8aeb-7626-ba95-6242a5b879bc:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a129ec-8aeb-7626-ba95-6242a5b879bc:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:45:32.378Z",
+                "durationMs": 2223,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 25,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129ec-8aeb-7626-ba95-6242a5b879bc:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-10-11T07:45:34.605Z",
+                "durationMs": 1346,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:45:34.608Z",
+                    "durationMs": 422,
+                    "status": "passed",
+                    "bytes": 628,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:45:35.033Z",
+                    "durationMs": 917,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1048,
+                    "inputTokens": 949,
+                    "outputTokens": 99
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 1,
+                  "actionSteps": 0,
+                  "observationBytes": 628,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.13.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 1,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 949,
+                  "outputTokens": 99,
+                  "peakTokensPerCall": 1048
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "9d2b82a3dfe59bde073cafd06e281be5d64ff54acecd014814d79e9fe8bdbed0"
+                },
+                "observationRevision": "b2",
+                "explanation": "The decision model cannot make progress.",
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 14,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 26,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model cannot make progress.",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 26,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5f9610666de0f7fa757a16fdc25fbd3e6def066371ccc16b84f0cd0f55e57fbb",
+        "testId": "tests/boxtide.e2e.ts::cart-flow",
+        "kind": "test",
+        "declarationIndex": 1,
+        "titlePath": [
+          "cart-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 35,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a129ec-a8ee-728e-a084-d27ee54c281d",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-10-11T07:45:38.030Z",
+            "durationMs": 4008,
+            "artifacts": [
+              {
+                "id": "01a129ec-a8ee-728e-a084-d27ee54c281d:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-cart-flow-5f9610666de0f7fa/attempt-1/screen-at-failure.txt",
+                "size": 629,
+                "sha256": "1623c80ed5784fc7bb159121d0ee50dbaa11131eb8852fa571b22f4b3d09d8f1"
+              },
+              {
+                "id": "01a129ec-a8ee-728e-a084-d27ee54c281d:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-cart-flow-5f9610666de0f7fa/attempt-1/screenshots/001-failure.png",
+                "size": 33479,
+                "sha256": "87a47f02a388cc99990914a2a9ac4675c601e9a68081efdd49fc2105e1e92cf6"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model cannot make progress.",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 37,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "nodes": 14,
+              "screen": "01a129ec-a8ee-728e-a084-d27ee54c281d:artifact:0",
+              "screenshot": "01a129ec-a8ee-728e-a084-d27ee54c281d:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a129ec-a8ee-728e-a084-d27ee54c281d:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:45:38.031Z",
+                "durationMs": 2279,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 36,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129ec-a8ee-728e-a084-d27ee54c281d:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-10-11T07:45:40.310Z",
+                "durationMs": 652,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:45:40.310Z",
+                    "durationMs": 451,
+                    "status": "passed",
+                    "bytes": 628,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:45:40.761Z",
+                    "durationMs": 200,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1048,
+                    "inputTokens": 949,
+                    "outputTokens": 99
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 1,
+                  "actionSteps": 0,
+                  "observationBytes": 628,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.13.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 1,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 949,
+                  "outputTokens": 99,
+                  "peakTokensPerCall": 1048
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "4d254ead5de126968a79617b8e181b3307ea01600977c77672ca3c777ed056b0"
+                },
+                "observationRevision": "b2",
+                "explanation": "The decision model cannot make progress.",
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 14,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 37,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model cannot make progress.",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 37,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ee2099c45906bb4507bf6358cc0312ec6a28d7a27c914d2d1cbdf42923c46b10",
+        "testId": "tests/boxtide.e2e.ts::support-flow",
+        "kind": "test",
+        "declarationIndex": 2,
+        "titlePath": [
+          "support-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 44,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a129ec-b898-7da3-89f6-df5fb13a5e48",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-10-11T07:45:42.040Z",
+            "durationMs": 4964,
+            "artifacts": [
+              {
+                "id": "01a129ec-b898-7da3-89f6-df5fb13a5e48:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-support-flow-ee2099c45906bb45/attempt-1/screen-at-failure.txt",
+                "size": 642,
+                "sha256": "e710eb3752f2eb04020caf9a33bb473083c2815dbc43d7c347559c6d68f1de26"
+              },
+              {
+                "id": "01a129ec-b898-7da3-89f6-df5fb13a5e48:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-support-flow-ee2099c45906bb45/attempt-1/screenshots/001-failure.png",
+                "size": 33479,
+                "sha256": "87a47f02a388cc99990914a2a9ac4675c601e9a68081efdd49fc2105e1e92cf6"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model cannot make progress.",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 46,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "nodes": 14,
+              "screen": "01a129ec-b898-7da3-89f6-df5fb13a5e48:artifact:0",
+              "screenshot": "01a129ec-b898-7da3-89f6-df5fb13a5e48:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a129ec-b898-7da3-89f6-df5fb13a5e48:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:45:42.041Z",
+                "durationMs": 2292,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 45,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129ec-b898-7da3-89f6-df5fb13a5e48:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-10-11T07:45:44.333Z",
+                "durationMs": 581,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:45:44.334Z",
+                    "durationMs": 409,
+                    "status": "passed",
+                    "bytes": 641,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:45:44.743Z",
+                    "durationMs": 172,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1048,
+                    "inputTokens": 949,
+                    "outputTokens": 99
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 1,
+                  "actionSteps": 0,
+                  "observationBytes": 641,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.13.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 1,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 949,
+                  "outputTokens": 99,
+                  "peakTokensPerCall": 1048
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "4da016ee43e26e97eb1eeffb68ce00adbb5da212646511ea2d2ffef28aa1e78d"
+                },
+                "observationRevision": "b2",
+                "explanation": "The decision model cannot make progress.",
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 14,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 46,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model cannot make progress.",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 46,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "57f281da23855791859bfe4c9f033b668d596ebcdb96a07c9c858ec4e56b0c86",
+        "testId": "tests/boxtide.e2e.ts::address-flow",
+        "kind": "test",
+        "declarationIndex": 3,
+        "titlePath": [
+          "address-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 55,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a129ec-cbfe-7c79-94bb-80a68a9e8051",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-10-11T07:45:47.006Z",
+            "durationMs": 4916,
+            "artifacts": [
+              {
+                "id": "01a129ec-cbfe-7c79-94bb-80a68a9e8051:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-address-flow-57f281da23855791/attempt-1/screen-at-failure.txt",
+                "size": 642,
+                "sha256": "3b09ec01c07de818297f3782c4cf8d8b32d4e32cbf14c05477ba97ed91a0a485"
+              },
+              {
+                "id": "01a129ec-cbfe-7c79-94bb-80a68a9e8051:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-address-flow-57f281da23855791/attempt-1/screenshots/001-failure.png",
+                "size": 33479,
+                "sha256": "87a47f02a388cc99990914a2a9ac4675c601e9a68081efdd49fc2105e1e92cf6"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model cannot make progress.",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 57,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone 17e"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "nodes": 14,
+              "screen": "01a129ec-cbfe-7c79-94bb-80a68a9e8051:artifact:0",
+              "screenshot": "01a129ec-cbfe-7c79-94bb-80a68a9e8051:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a129ec-cbfe-7c79-94bb-80a68a9e8051:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-10-11T07:45:47.007Z",
+                "durationMs": 2143,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 56,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a129ec-cbfe-7c79-94bb-80a68a9e8051:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-10-11T07:45:49.150Z",
+                "durationMs": 697,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-10-11T07:45:49.151Z",
+                    "durationMs": 450,
+                    "status": "passed",
+                    "bytes": 641,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-10-11T07:45:49.602Z",
+                    "durationMs": 246,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1048,
+                    "inputTokens": 949,
+                    "outputTokens": 99
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 1,
+                  "actionSteps": 0,
+                  "observationBytes": 641,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.13.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 1,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 949,
+                  "outputTokens": 99,
+                  "peakTokensPerCall": 1048
+                },
+                "cache": {
+                  "mode": "missed",
+                  "reason": "no-entry",
+                  "replayedActions": 0,
+                  "totalActions": 0,
+                  "entry": "8ae7b744293b29fb9642213db889b351853277b53aa4199c41cb9c5acde695a1"
+                },
+                "observationRevision": "b2",
+                "explanation": "The decision model cannot make progress.",
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 14,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 57,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model cannot make progress.",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 57,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "summary": {
+      "discovered": 4,
+      "selected": 4,
+      "executed": 4,
+      "passed": 0,
+      "failed": 4,
+      "interrupted": 0,
+      "flaky": 0,
+      "skipped": 0
+    },
+    "limits": {
+      "maxAgentContextBytes": 16384,
+      "maxLedgerBytes": 8192,
+      "maxObservationBytes": 262144,
+      "maxEventsPerStep": 1000,
+      "maxModelTokensPerCall": 64000
+    },
+    "usage": {
+      "discoveredResults": 4,
+      "maxAgentContextBytes": 0,
+      "maxLedgerBytes": 18,
+      "maxObservationBytes": 641,
+      "artifactBytes": 136458,
+      "downloads": 0,
+      "events": 8,
+      "modelTokens": 4192,
+      "maxModelCallsInStep": 1,
+      "maxActionStepsInStep": 0
+    }
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "flow": "return-flow",
+    "jev_verdict": "pass",
+    "done": true,
+    "steps": 14,
+    "model_calls": 20,
+    "cost_usd": 0.000965,
+    "wall_seconds": 12.47,
+    "used": [
+      "email_field",
+      "password_field",
+      "signin_button",
+      "nav_orders_v14",
+      "scroll",
+      "order_5207",
+      "start_return_button_v14",
+      "return_next_button_v14",
+      "return_notes_field",
+      "scroll",
+      "return_next_button_v14",
+      "return_confirm",
+      "return_next_button_v14"
+    ],
+    "mapping": {
+      "nav_orders": "nav_orders_v14",
+      "start_return_button": "start_return_button_v14",
+      "return_next_button": "return_next_button_v14"
+    },
+    "unmatched": [],
+    "extra": [
+      "scroll",
+      "return_notes_field"
+    ],
+    "score": {
+      "renamed": 3,
+      "proposed": 3,
+      "correct": 3,
+      "missed": []
+    }
+  }
+]
