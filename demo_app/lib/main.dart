@@ -13,6 +13,10 @@ void main() {
     MarionetteBinding.ensureInitialized();
     _registerChaos();
     _registerState();
+    // A tool that launches the app itself (e2e, Patrol) cannot call the
+    // extension before the first frame, so the churn can also be baked in.
+    const seed = int.fromEnvironment('CHAOS_SEED');
+    if (seed != 0) Store.instance.setChaos(seed);
   } else {
     WidgetsFlutterBinding.ensureInitialized();
   }

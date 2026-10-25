@@ -46,6 +46,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  patrol: ^4.10.0
+
+patrol:
+  app_name: Boxtide
+  ios:
+    bundle_id: dev.yii.boxtide
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
