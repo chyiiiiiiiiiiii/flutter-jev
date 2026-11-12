@@ -1,0 +1,1627 @@
+{
+  "schemaVersion": "report-1",
+  "run": {
+    "id": "01a1c66b-80c6-732d-9a57-8565468df84c",
+    "specVersion": "0.1",
+    "runner": {
+      "name": "e2e",
+      "version": "0.23.0"
+    },
+    "status": "blocked",
+    "exitCode": 1,
+    "startedAt": "2026-11-10T17:05:07.847Z",
+    "finishedAt": "2026-11-10T17:06:12.825Z",
+    "project": {
+      "id": "boxtide-e2e",
+      "configDigest": "f1ce0c5211bf8fb0137013913451237cf1e05d107b40adb7e800a7bdba05c9d1"
+    },
+    "environment": {
+      "ci": false,
+      "trustNoticeShown": false,
+      "os": "darwin 25.6.0",
+      "arch": "arm64",
+      "runtime": "node v24.21.0"
+    },
+    "vcs": {
+      "commit": "29ee914c2b1b7346ac53e203e77d37b8d10ea94f",
+      "branch": "main",
+      "dirty": true
+    },
+    "targets": [
+      {
+        "id": "iphone",
+        "index": 0,
+        "platform": "ios",
+        "environment": "test",
+        "engine": {
+          "name": "mobile",
+          "version": "0.12.6",
+          "spiVersion": 1
+        },
+        "capabilities": [
+          "actions",
+          "artifacts",
+          "device",
+          "keyboard",
+          "location",
+          "observation",
+          "pointer"
+        ],
+        "artifactCapabilities": [
+          "screenshot",
+          "video"
+        ],
+        "stateCapability": false
+      }
+    ],
+    "serialGroups": [],
+    "results": [
+      {
+        "id": "37e13879b0de2eff31a359271ece8214366582f88eb4d4d78252af9b9e1b4d11",
+        "testId": "tests/boxtide.e2e.ts::return-flow",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "return-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 24,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a1c66b-ae80-7d8a-a1a4-7c6fae053d97",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-11-10T17:05:08.224Z",
+            "durationMs": 20159,
+            "artifacts": [
+              {
+                "id": "01a1c66b-ae80-7d8a-a1a4-7c6fae053d97:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-return-flow-37e13879b0de2eff/attempt-1/screen-at-failure.txt",
+                "size": 1759,
+                "sha256": "33e96be76c0955cc92c9329a89420d8b30da5da9f89c12cdf3b23a709af7e511"
+              },
+              {
+                "id": "01a1c66b-ae80-7d8a-a1a4-7c6fae053d97:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-return-flow-37e13879b0de2eff/attempt-1/screenshots/001-failure.png",
+                "size": 63674,
+                "sha256": "04ca0294c7fc0674d386a30ed625ea2767fc957decfae332d953f20969f94b1c"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model chose type but no target for it (p=0.970, confidence 0.940).",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 26,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone Duo"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 466,
+                "height": 678
+              },
+              "nodes": 55,
+              "screen": "01a1c66b-ae80-7d8a-a1a4-7c6fae053d97:artifact:0",
+              "screenshot": "01a1c66b-ae80-7d8a-a1a4-7c6fae053d97:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a1c66b-ae80-7d8a-a1a4-7c6fae053d97:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-11-10T17:05:10.187Z",
+                "durationMs": 3540,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 25,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a1c66b-ae80-7d8a-a1a4-7c6fae053d97:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-11-10T17:05:13.729Z",
+                "durationMs": 13721,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:13.730Z",
+                    "durationMs": 187,
+                    "status": "passed",
+                    "bytes": 632,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:13.919Z",
+                    "durationMs": 680,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1235,
+                    "inputTokens": 1115,
+                    "outputTokens": 120
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:14.600Z",
+                    "durationMs": 227,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 895,
+                    "inputTokens": 857,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:14.828Z",
+                    "durationMs": 1279,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 206,
+                    "inputTokens": 196,
+                    "outputTokens": 10
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:16.108Z",
+                    "durationMs": 2791,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into textbox \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:18.900Z",
+                    "durationMs": 218,
+                    "status": "passed",
+                    "bytes": 852,
+                    "count": 21
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:19.118Z",
+                    "durationMs": 217,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1373,
+                    "inputTokens": 1245,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:19.335Z",
+                    "durationMs": 189,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 997,
+                    "inputTokens": 959,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:19.524Z",
+                    "durationMs": 842,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 259,
+                    "inputTokens": 252,
+                    "outputTokens": 7
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:20.366Z",
+                    "durationMs": 850,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: No focused text input was available for typing. Hint: Focus a visible text input, then retry type or fill. If the input is not exposed by accessibility, use a coordinate focus command before typing."
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:21.216Z",
+                    "durationMs": 209,
+                    "status": "passed",
+                    "bytes": 1653,
+                    "count": 54
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:21.425Z",
+                    "durationMs": 189,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1493,
+                    "inputTokens": 1365,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:21.615Z",
+                    "durationMs": 180,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1169,
+                    "inputTokens": 1117,
+                    "outputTokens": 52
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:21.795Z",
+                    "durationMs": 761,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:22.556Z",
+                    "durationMs": 230,
+                    "status": "passed",
+                    "bytes": 1704,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:22.786Z",
+                    "durationMs": 182,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1536,
+                    "inputTokens": 1408,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:22.969Z",
+                    "durationMs": 223,
+                    "status": "passed",
+                    "bytes": 1704,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:23.192Z",
+                    "durationMs": 173,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1111,
+                    "inputTokens": 1066,
+                    "outputTokens": 45
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:23.365Z",
+                    "durationMs": 208,
+                    "status": "passed",
+                    "bytes": 1704,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:23.574Z",
+                    "durationMs": 195,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1584,
+                    "inputTokens": 1456,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:23.769Z",
+                    "durationMs": 180,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1260,
+                    "inputTokens": 1208,
+                    "outputTokens": 52
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:23.950Z",
+                    "durationMs": 884,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap textbox \"Password\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:24.835Z",
+                    "durationMs": 2184,
+                    "status": "passed",
+                    "bytes": 1758,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:27.019Z",
+                    "durationMs": 240,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1617,
+                    "inputTokens": 1489,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:27.260Z",
+                    "durationMs": 189,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1216,
+                    "inputTokens": 1185,
+                    "outputTokens": 31
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 14,
+                  "actionSteps": 4,
+                  "observationBytes": 1758,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.14.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 14,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 14918,
+                  "outputTokens": 1033,
+                  "peakTokensPerCall": 1617
+                },
+                "observationRevision": "b28",
+                "explanation": "The decision model chose type but no target for it (p=0.970, confidence 0.940).",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type [1] textbox \"Email\" = \"demo@example.com\""
+                    ],
+                    "outcome": "op p=0.890, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type [2] textbox \"Password\" = \"hunter2\""
+                    ],
+                    "outcome": "op p=0.890, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap [4] button \"Sign in\""
+                    ],
+                    "outcome": "op p=0.480, target p=0.670, page changed"
+                  },
+                  {
+                    "index": 4,
+                    "calls": [
+                      "tap [2] textbox \"Password\""
+                    ],
+                    "outcome": "op p=0.280, target p=0.490, page unchanged"
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 55,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 26,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model chose type but no target for it (p=0.970, confidence 0.940).",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 26,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5f9610666de0f7fa757a16fdc25fbd3e6def066371ccc16b84f0cd0f55e57fbb",
+        "testId": "tests/boxtide.e2e.ts::cart-flow",
+        "kind": "test",
+        "declarationIndex": 1,
+        "titlePath": [
+          "cart-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 35,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a1c66b-fd42-76b9-a728-b1142e5879b1",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-11-10T17:05:28.386Z",
+            "durationMs": 13332,
+            "artifacts": [
+              {
+                "id": "01a1c66b-fd42-76b9-a728-b1142e5879b1:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-cart-flow-5f9610666de0f7fa/attempt-1/screen-at-failure.txt",
+                "size": 1759,
+                "sha256": "95fb6636de571d097a5513b65f8074771672c950f8f84be5fe607d95b69c3d8e"
+              },
+              {
+                "id": "01a1c66b-fd42-76b9-a728-b1142e5879b1:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-cart-flow-5f9610666de0f7fa/attempt-1/screenshots/001-failure.png",
+                "size": 63787,
+                "sha256": "6d5f39e873cbece4ff8e135fa1cfc415250862c11bf87bb8025f24da2a364ddb"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model chose type but no target for it (p=0.970, confidence 0.940).",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 37,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone Duo"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 466,
+                "height": 678
+              },
+              "nodes": 55,
+              "screen": "01a1c66b-fd42-76b9-a728-b1142e5879b1:artifact:0",
+              "screenshot": "01a1c66b-fd42-76b9-a728-b1142e5879b1:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a1c66b-fd42-76b9-a728-b1142e5879b1:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-11-10T17:05:28.387Z",
+                "durationMs": 3978,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 36,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a1c66b-fd42-76b9-a728-b1142e5879b1:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-11-10T17:05:32.365Z",
+                "durationMs": 8413,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:32.365Z",
+                    "durationMs": 190,
+                    "status": "passed",
+                    "bytes": 658,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:32.555Z",
+                    "durationMs": 268,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1235,
+                    "inputTokens": 1115,
+                    "outputTokens": 120
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:32.824Z",
+                    "durationMs": 193,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 895,
+                    "inputTokens": 857,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:33.017Z",
+                    "durationMs": 851,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 206,
+                    "inputTokens": 196,
+                    "outputTokens": 10
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:33.869Z",
+                    "durationMs": 2675,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into textbox \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:36.544Z",
+                    "durationMs": 214,
+                    "status": "passed",
+                    "bytes": 892,
+                    "count": 21
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:36.758Z",
+                    "durationMs": 184,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1373,
+                    "inputTokens": 1245,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:36.942Z",
+                    "durationMs": 190,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 997,
+                    "inputTokens": 959,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:37.132Z",
+                    "durationMs": 811,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 264,
+                    "inputTokens": 252,
+                    "outputTokens": 12
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:37.944Z",
+                    "durationMs": 815,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: No focused text input was available for typing. Hint: Focus a visible text input, then retry type or fill. If the input is not exposed by accessibility, use a coordinate focus command before typing."
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:38.759Z",
+                    "durationMs": 219,
+                    "status": "passed",
+                    "bytes": 1706,
+                    "count": 54
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:38.978Z",
+                    "durationMs": 182,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1493,
+                    "inputTokens": 1365,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:39.161Z",
+                    "durationMs": 221,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1169,
+                    "inputTokens": 1117,
+                    "outputTokens": 52
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:39.382Z",
+                    "durationMs": 748,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:40.130Z",
+                    "durationMs": 210,
+                    "status": "passed",
+                    "bytes": 1758,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:40.340Z",
+                    "durationMs": 220,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1536,
+                    "inputTokens": 1408,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:40.561Z",
+                    "durationMs": 216,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1135,
+                    "inputTokens": 1104,
+                    "outputTokens": 31
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 10,
+                  "actionSteps": 3,
+                  "observationBytes": 1758,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.14.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 10,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 9618,
+                  "outputTokens": 685,
+                  "peakTokensPerCall": 1536
+                },
+                "observationRevision": "b8",
+                "explanation": "The decision model chose type but no target for it (p=0.970, confidence 0.940).",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type [1] textbox \"Email\" = \"demo@example.com\""
+                    ],
+                    "outcome": "op p=0.910, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type [2] textbox \"Password\" = \"hunter2\""
+                    ],
+                    "outcome": "op p=0.870, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap [4] button \"Sign in\""
+                    ],
+                    "outcome": "op p=0.360, target p=0.710, page changed"
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 55,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 37,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model chose type but no target for it (p=0.970, confidence 0.940).",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 37,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ee2099c45906bb4507bf6358cc0312ec6a28d7a27c914d2d1cbdf42923c46b10",
+        "testId": "tests/boxtide.e2e.ts::support-flow",
+        "kind": "test",
+        "declarationIndex": 2,
+        "titlePath": [
+          "support-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 44,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a1c66c-315c-7eef-adf8-2b569e5a70ec",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-11-10T17:05:41.724Z",
+            "durationMs": 17249,
+            "artifacts": [
+              {
+                "id": "01a1c66c-315c-7eef-adf8-2b569e5a70ec:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-support-flow-ee2099c45906bb45/attempt-1/screen-at-failure.txt",
+                "size": 1759,
+                "sha256": "d0ac8eed2475a705cc5ba93f6b2039be64844f70b3204d7a0b9a5dbf6b8e28c5"
+              },
+              {
+                "id": "01a1c66c-315c-7eef-adf8-2b569e5a70ec:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-support-flow-ee2099c45906bb45/attempt-1/screenshots/001-failure.png",
+                "size": 63674,
+                "sha256": "04ca0294c7fc0674d386a30ed625ea2767fc957decfae332d953f20969f94b1c"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model chose type but no target for it (p=0.960, confidence 0.920).",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 46,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone Duo"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 466,
+                "height": 678
+              },
+              "nodes": 55,
+              "screen": "01a1c66c-315c-7eef-adf8-2b569e5a70ec:artifact:0",
+              "screenshot": "01a1c66c-315c-7eef-adf8-2b569e5a70ec:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a1c66c-315c-7eef-adf8-2b569e5a70ec:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-11-10T17:05:41.725Z",
+                "durationMs": 3531,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 45,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a1c66c-315c-7eef-adf8-2b569e5a70ec:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-11-10T17:05:45.257Z",
+                "durationMs": 12859,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:45.257Z",
+                    "durationMs": 192,
+                    "status": "passed",
+                    "bytes": 658,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:45.449Z",
+                    "durationMs": 221,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1235,
+                    "inputTokens": 1115,
+                    "outputTokens": 120
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:45.670Z",
+                    "durationMs": 181,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 895,
+                    "inputTokens": 857,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:45.851Z",
+                    "durationMs": 1401,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 206,
+                    "inputTokens": 196,
+                    "outputTokens": 10
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:47.253Z",
+                    "durationMs": 2729,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into textbox \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:49.982Z",
+                    "durationMs": 206,
+                    "status": "passed",
+                    "bytes": 892,
+                    "count": 21
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:50.188Z",
+                    "durationMs": 208,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1373,
+                    "inputTokens": 1245,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:50.396Z",
+                    "durationMs": 170,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 997,
+                    "inputTokens": 959,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:50.566Z",
+                    "durationMs": 1022,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 259,
+                    "inputTokens": 252,
+                    "outputTokens": 7
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:51.588Z",
+                    "durationMs": 833,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: No focused text input was available for typing. Hint: Focus a visible text input, then retry type or fill. If the input is not exposed by accessibility, use a coordinate focus command before typing."
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:52.421Z",
+                    "durationMs": 207,
+                    "status": "passed",
+                    "bytes": 1706,
+                    "count": 54
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:52.628Z",
+                    "durationMs": 185,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1493,
+                    "inputTokens": 1365,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:52.814Z",
+                    "durationMs": 215,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1169,
+                    "inputTokens": 1117,
+                    "outputTokens": 52
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:53.029Z",
+                    "durationMs": 770,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:53.799Z",
+                    "durationMs": 206,
+                    "status": "passed",
+                    "bytes": 1758,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:54.005Z",
+                    "durationMs": 208,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1536,
+                    "inputTokens": 1408,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:54.213Z",
+                    "durationMs": 377,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1212,
+                    "inputTokens": 1160,
+                    "outputTokens": 52
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:05:54.590Z",
+                    "durationMs": 906,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap textbox \"Password\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:05:55.496Z",
+                    "durationMs": 2241,
+                    "status": "passed",
+                    "bytes": 1758,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:57.738Z",
+                    "durationMs": 188,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1569,
+                    "inputTokens": 1441,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:05:57.927Z",
+                    "durationMs": 188,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1168,
+                    "inputTokens": 1137,
+                    "outputTokens": 31
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 12,
+                  "actionSteps": 4,
+                  "observationBytes": 1758,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.14.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 12,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 12252,
+                  "outputTokens": 860,
+                  "peakTokensPerCall": 1569
+                },
+                "observationRevision": "b24",
+                "explanation": "The decision model chose type but no target for it (p=0.960, confidence 0.920).",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type [1] textbox \"Email\" = \"demo@example.com\""
+                    ],
+                    "outcome": "op p=0.920, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type [2] textbox \"Password\" = \"hunter2\""
+                    ],
+                    "outcome": "op p=0.890, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap [4] button \"Sign in\""
+                    ],
+                    "outcome": "op p=0.340, target p=0.730, page changed"
+                  },
+                  {
+                    "index": 4,
+                    "calls": [
+                      "tap [2] textbox \"Password\""
+                    ],
+                    "outcome": "op p=0.220, target p=0.460, page unchanged"
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 55,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 46,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model chose type but no target for it (p=0.960, confidence 0.920).",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 46,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "57f281da23855791859bfe4c9f033b668d596ebcdb96a07c9c858ec4e56b0c86",
+        "testId": "tests/boxtide.e2e.ts::address-flow",
+        "kind": "test",
+        "declarationIndex": 3,
+        "titlePath": [
+          "address-flow"
+        ],
+        "file": "tests/boxtide.e2e.ts",
+        "source": {
+          "file": "tests/boxtide.e2e.ts",
+          "line": 55,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": true,
+        "status": "failed",
+        "attempts": [
+          {
+            "id": "01a1c66c-74bf-78e6-b7fb-cb2723bc1414",
+            "index": 0,
+            "status": "failed",
+            "startedAt": "2026-11-10T17:05:58.975Z",
+            "durationMs": 13815,
+            "artifacts": [
+              {
+                "id": "01a1c66c-74bf-78e6-b7fb-cb2723bc1414:artifact:0",
+                "kind": "log",
+                "mediaType": "text/plain",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-address-flow-57f281da23855791/attempt-1/screen-at-failure.txt",
+                "size": 1759,
+                "sha256": "4d385720b2f01109138e77ae6b48f8c537a08afd4803d7858d1f3c8dd0823ab3"
+              },
+              {
+                "id": "01a1c66c-74bf-78e6-b7fb-cb2723bc1414:artifact:1",
+                "kind": "screenshot",
+                "mediaType": "image/png",
+                "redaction": "complete",
+                "producer": {
+                  "kind": "attempt"
+                },
+                "path": "boxtide-address-flow-57f281da23855791/attempt-1/screenshots/001-failure.png",
+                "size": 63839,
+                "sha256": "065574104cffa1e67e9df07a9740476765cac5f055d14810a097f3086dd15e29"
+              }
+            ],
+            "error": {
+              "category": "test",
+              "code": "AUTOMATION_UNSUPPORTED",
+              "message": "agent.act blocked: The decision model chose type but no target for it (p=0.960, confidence 0.920).",
+              "retryable": false,
+              "phase": "body",
+              "source": {
+                "file": "tests/boxtide.e2e.ts",
+                "line": 57,
+                "column": 3
+              }
+            },
+            "secondaryErrors": [],
+            "cleanup": "complete",
+            "environment": {
+              "platform": "ios",
+              "device": "iPhone Duo"
+            },
+            "failure": {
+              "url": "dev.yii.boxtide",
+              "viewport": {
+                "width": 466,
+                "height": 678
+              },
+              "nodes": 55,
+              "screen": "01a1c66c-74bf-78e6-b7fb-cb2723bc1414:artifact:0",
+              "screenshot": "01a1c66c-74bf-78e6-b7fb-cb2723bc1414:artifact:1"
+            },
+            "steps": [
+              {
+                "id": "01a1c66c-74bf-78e6-b7fb-cb2723bc1414:0",
+                "index": 0,
+                "kind": "app",
+                "api": "app.open",
+                "label": "",
+                "status": "passed",
+                "startedAt": "2026-11-10T17:05:58.976Z",
+                "durationMs": 4037,
+                "events": [],
+                "artifacts": [],
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 56,
+                  "column": 13
+                }
+              },
+              {
+                "id": "01a1c66c-74bf-78e6-b7fb-cb2723bc1414:1",
+                "index": 1,
+                "kind": "agent",
+                "api": "agent.act",
+                "label": "Sign in with email {email} and password {password}",
+                "status": "blocked",
+                "startedAt": "2026-11-10T17:06:03.013Z",
+                "durationMs": 8971,
+                "events": [
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:06:03.013Z",
+                    "durationMs": 405,
+                    "status": "passed",
+                    "bytes": 658,
+                    "count": 14
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:03.418Z",
+                    "durationMs": 213,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1235,
+                    "inputTokens": 1115,
+                    "outputTokens": 120
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:03.632Z",
+                    "durationMs": 187,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 895,
+                    "inputTokens": 857,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:03.819Z",
+                    "durationMs": 1026,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 206,
+                    "inputTokens": 196,
+                    "outputTokens": 10
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:06:04.845Z",
+                    "durationMs": 2776,
+                    "status": "passed",
+                    "name": "type",
+                    "detail": "type \"demo@example.com\" into textbox \"Email\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:06:07.621Z",
+                    "durationMs": 229,
+                    "status": "passed",
+                    "bytes": 892,
+                    "count": 21
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:07.850Z",
+                    "durationMs": 209,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1373,
+                    "inputTokens": 1245,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:08.059Z",
+                    "durationMs": 222,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 997,
+                    "inputTokens": 959,
+                    "outputTokens": 38
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:08.281Z",
+                    "durationMs": 944,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 264,
+                    "inputTokens": 252,
+                    "outputTokens": 12
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:06:09.225Z",
+                    "durationMs": 841,
+                    "status": "failed",
+                    "name": "type",
+                    "code": "ENGINE_FAILURE",
+                    "detail": "type: perform fill failed: No focused text input was available for typing. Hint: Focus a visible text input, then retry type or fill. If the input is not exposed by accessibility, use a coordinate focus command before typing."
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:06:10.066Z",
+                    "durationMs": 203,
+                    "status": "passed",
+                    "bytes": 1706,
+                    "count": 54
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:10.269Z",
+                    "durationMs": 196,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1493,
+                    "inputTokens": 1365,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:10.465Z",
+                    "durationMs": 198,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1169,
+                    "inputTokens": 1117,
+                    "outputTokens": 52
+                  },
+                  {
+                    "kind": "engine",
+                    "startedAt": "2026-11-10T17:06:10.664Z",
+                    "durationMs": 742,
+                    "status": "passed",
+                    "name": "tap",
+                    "detail": "tap button \"Sign in\""
+                  },
+                  {
+                    "kind": "observation",
+                    "startedAt": "2026-11-10T17:06:11.406Z",
+                    "durationMs": 208,
+                    "status": "passed",
+                    "bytes": 1758,
+                    "count": 55
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:11.615Z",
+                    "durationMs": 187,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1536,
+                    "inputTokens": 1408,
+                    "outputTokens": 128
+                  },
+                  {
+                    "kind": "model",
+                    "startedAt": "2026-11-10T17:06:11.802Z",
+                    "durationMs": 182,
+                    "status": "passed",
+                    "name": "executor",
+                    "count": 1135,
+                    "inputTokens": 1104,
+                    "outputTokens": 31
+                  }
+                ],
+                "agent": "jev",
+                "artifacts": [],
+                "metrics": {
+                  "modelCalls": 10,
+                  "actionSteps": 3,
+                  "observationBytes": 1758,
+                  "contextBytes": 0,
+                  "ledgerBytes": 18
+                },
+                "model": {
+                  "provider": "typesafe.decision",
+                  "model": "jev-1.14.0",
+                  "endpoint": "provider-default",
+                  "adapterVersion": "executor/decision@2",
+                  "policyVersion": "decision/2",
+                  "calls": 10,
+                  "tokenAccounting": "provider",
+                  "inputTokens": 9618,
+                  "outputTokens": 685,
+                  "peakTokensPerCall": 1536
+                },
+                "observationRevision": "b8",
+                "explanation": "The decision model chose type but no target for it (p=0.960, confidence 0.920).",
+                "turns": [
+                  {
+                    "index": 1,
+                    "calls": [
+                      "type [1] textbox \"Email\" = \"demo@example.com\""
+                    ],
+                    "outcome": "op p=0.880, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 2,
+                    "calls": [
+                      "type [2] textbox \"Password\" = \"hunter2\""
+                    ],
+                    "outcome": "op p=0.920, target p=1.000, page changed"
+                  },
+                  {
+                    "index": 3,
+                    "calls": [
+                      "tap [4] button \"Sign in\""
+                    ],
+                    "outcome": "op p=0.370, target p=0.730, page changed"
+                  }
+                ],
+                "screen": {
+                  "location": "dev.yii.boxtide",
+                  "nodes": 55,
+                  "changes": []
+                },
+                "source": {
+                  "file": "tests/boxtide.e2e.ts",
+                  "line": 57,
+                  "column": 15
+                },
+                "error": {
+                  "category": "test",
+                  "code": "AUTOMATION_UNSUPPORTED",
+                  "message": "agent.act blocked: The decision model chose type but no target for it (p=0.960, confidence 0.920).",
+                  "retryable": false,
+                  "source": {
+                    "file": "tests/boxtide.e2e.ts",
+                    "line": 57,
+                    "column": 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4c76d6c4f1907f70a3a3ecf93a7b2e976e8165a83ce776a0281f40131d4613ca",
+        "testId": "tests/taps.e2e.ts::taps%20return-flow",
+        "kind": "test",
+        "declarationIndex": 0,
+        "titlePath": [
+          "taps return-flow"
+        ],
+        "file": "tests/taps.e2e.ts",
+        "source": {
+          "file": "tests/taps.e2e.ts",
+          "line": 25,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": false,
+        "status": "skipped",
+        "skip": {
+          "cause": "filtered",
+          "reason": "file not selected by a positional argument"
+        },
+        "attempts": []
+      },
+      {
+        "id": "45824bee61c3c2fb764bb954eb8c95747a374985c9af39142c3b9711e79c69cc",
+        "testId": "tests/taps.e2e.ts::taps%20cart-flow",
+        "kind": "test",
+        "declarationIndex": 1,
+        "titlePath": [
+          "taps cart-flow"
+        ],
+        "file": "tests/taps.e2e.ts",
+        "source": {
+          "file": "tests/taps.e2e.ts",
+          "line": 35,
+          "column": 1
+        },
+        "targetId": "iphone",
+        "platform": "ios",
+        "agent": "jev",
+        "repeat": 0,
+        "tags": [],
+        "selected": false,
+        "status": "skipped",
+        "skip": {
+          "cause": "filtered",
+          "reason": "file not selected by a positional argument"
+        },
+        "attempts": []
+      }
+    ],
+    "errors": [],
+    "summary": {
+      "discovered": 6,
+      "selected": 4,
+      "executed": 4,
+      "passed": 0,
+      "failed": 4,
+      "interrupted": 0,
+      "flaky": 0,
+      "skipped": 0
+    },
+    "limits": {
+      "maxAgentContextBytes": 16384,
+      "maxLedgerBytes": 8192,
+      "maxObservationBytes": 262144,
+      "maxEventsPerStep": 1000,
+      "maxModelTokensPerCall": 64000
+    },
+    "usage": {
+      "discoveredResults": 6,
+      "maxAgentContextBytes": 0,
+      "maxLedgerBytes": 18,
+      "maxObservationBytes": 1758,
+      "artifactBytes": 262010,
+      "downloads": 0,
+      "events": 80,
+      "modelTokens": 49669,
+      "maxModelCallsInStep": 14,
+      "maxActionStepsInStep": 4
+    }
+  }
+}

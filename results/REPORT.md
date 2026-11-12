@@ -685,11 +685,54 @@ hybrid-v2（Jev 挑、flash-lite 寫），六個任務各 3 次，app 由 `flutt
 這時模擬器 runtime 已隨 Xcode 更新到 iOS 27.0（e2e 那輪是 26.5，舊 runtime 已移除），Flutter 3.47.8。
 `arms.py` 每次跑前用 osascript 把 macOS 視窗叫到前景，在 iOS 上這一步會報錯，對結果沒有影響。
 
+### e2e 0.23 重跑 Jev（2026-11-11 補跑）
+
+e2e 升到 0.23.0（agent-device 0.21.36、@e2e-dev/decision 0.3.2）。iOS 26.5 runtime 已移除，只剩 iOS 27.2，
+而 iPhone 17e 不相容這個 runtime，所以改用新建的 iPhone Duo 模擬器（`iPhone Duo E2E`，語系 en-US、US 鍵盤）。
+`jevv` 是同一個 Jev executor 加 `vision: true`。`scripted-login.e2e.ts` 把登入寫死成 locator（密碼 `fill` 失敗重試一次），
+agent 只負責四條流程。app 用兩個 build 旗標做對照：`MERGE_SEMANTICS`（`identified()` 外包 `MergeSemantics`）
+與 `BUTTON_ROWS`（`RowCard` 有 `onTap` 時包 `Semantics(button: true)`），見 `demo_app/lib/kit.dart`。
+
+| build | 登入 | agent | 結果 | store 確認 | 4 支牆鐘 | 模型呼叫 | $ / 4 支 |
+|---|---|---|---|---|---|---|---|
+| 原樣 | agent | jev | 0/4 | — | 65.6s | 46 | $0.0019 |
+| 原樣 | agent | jevv | 0/4 | — | 133.4s | 47 | $0.0021 |
+| 原樣 | agent | lite | 1/4 | 退貨 | 334.2s | 78 | $0.199 |
+| 原樣 | locator | jev | 0/4 | — | 65.7s | 20 | $0.0013 |
+| 原樣 | locator | jevv | 0/4 | — | 82.2s | 20 | $0.0013 |
+| 原樣 | locator | lite | 2/4 | 退貨、購物車 | 308.1s | 61 | $0.181 |
+| MERGE | agent | jev | 0/4 | — | 74.0s | 50 | $0.0022 |
+| MERGE | locator | jev | 0/4 | — | 84.5s | 20 | $0.0012 |
+| MERGE | locator | jevv | 0/4 | — | 86.7s | 20 | $0.0013 |
+| MERGE + BUTTON_ROWS | agent | jev | 0/4 | — | 56.3s | 42 | $0.0017 |
+| MERGE + BUTTON_ROWS | locator | jev ×3 | **1/4 ×3** | 退貨 ×3 | 89.3–101.8s | 41–45 | $0.0024–0.0027 |
+| MERGE + BUTTON_ROWS | locator | jevv | 1/4 | 退貨 | 143.3s | 52 | $0.0033 |
+
+- **`Other` 是 e2e 那邊修好的。** 同一台 iOS 27.2 模擬器，0.19 把 Email 欄位讀成 `other "Email"`，0.23 是 `textbox "Email"`
+  （0.19 對照是在另一個 `git worktree` 裡、裝回 0.19 的依賴跑的）
+- **密碼欄位仍然第一次失敗。** agent 的 `type` 回 `No focused text input`（ENGINE_FAILURE），locator `fill` 也要第二次才成功。
+  LLM 會再打一次，Jev 不會，所以 agent 登入的每一輪都是 0/4
+- **原樣 build 卡在訂單列。** Jev 以 0.97 點了 Orders 分頁，接著 `chose tap but no target`：訂單列是沒有名字的 `other`
+- **只加 `MergeSemantics` 不夠。** 按鈕變成帶名字和 testid 的 `button`，訂單列變成帶 testid 的 `text`，仍不是可點的角色
+- **再加按鈕角色，退貨流程 3/3。** `InkWell` 只給點擊動作、不給按鈕角色。標成按鈕後 Jev 每次 16 次模型呼叫、11.6–11.8s
+  走完退貨，整支含登入約 30s，store 確認 5207 進入退貨
+- **剩下三條的停點。** 購物車：商品卡不是 `RowCard`，仍是 `text`，進到 Shop 就停（3 次裡有 1 次是登入後的檢查沒過）；
+  客服：`Contact us` 回 `Ref @e13 has no usable bounds` 兩次；地址：填完兩欄、按 Save 後畫面仍在表單，
+  連續三次收鍵盤失敗（`Three actions in a row failed or changed nothing`）
+- **vision 沒有幫上忙。** `jevv` 多了截圖座標的 `tap_at`，Jev 一次都沒選
+- **LLM 在新環境也變差。** lite 是 1/4、2/4，第一輪是 10/12。舊 runtime 已移除，分不出是 e2e、iOS 27.2 還是機型造成，
+  所以兩輪不直接比較
+
+原始資料：`results/e2e/clean.log`、`merge.log`、`a11y.log` 與對應的 `report-v023{c,m,a}-*`、`store-v023{c,m,a}-*`。
+第一個 iPhone Duo 模擬器繼承了 zh-TW 和注音鍵盤，打字被改寫（例如 `Office在`），那一批 23 個檔案移到
+`results/e2e/zh-keyboard-simulator/`，不列入上表。
+
 ### 結論
 
 - 把關的是 Patrol：快（測試本身每支 5–7 秒，整輪每支約 26 秒）、能直接讀 store，改名時的修法可以由 Jev 提出
 - e2e 的 LLM agent 在改版動到的退貨流程上不用快取 1/2、重播 0/2，每支 50–70 秒（Patrol 整輪每支約 26 秒，約 2.5 倍）、會假通過、重播在 Flutter 密碼欄位斷掉
-- e2e 加 Jev 目前在 Flutter iOS 上不能用，卡在 Flutter 的 iOS 無障礙樹加上 decision executor 的角色限制，不是模型
+- e2e 加 Jev 在 0.19 上不能用，卡在 Flutter 的 iOS 無障礙樹加上 decision executor 的角色限制，不是模型。
+  0.23 修好了文字欄位；app 再補 `MergeSemantics` 和可點列表項目的按鈕角色後，退貨流程 3/3（每輪 1/4），模型與測試都沒改
 
 ## 影片與 GIF
 
