@@ -7,8 +7,15 @@ import 'theme.dart';
 
 /// Wraps a widget so marionette can match it by Semantics `identifier` as well
 /// as by `Key`. Two stable selectors beats one, and neither is the visible copy.
-Widget identified(String id, Widget child) =>
-    Semantics(identifier: id, container: true, child: child);
+Widget identified(String id, Widget child) {
+  final tagged = Semantics(identifier: id, container: true, child: child);
+  // e2e's advice for Flutter: merge, so the id, the label and the role reach
+  // the OS on one node instead of an unnamed parent and a text child.
+  return _mergeSemantics ? MergeSemantics(child: tagged) : tagged;
+}
+
+const _mergeSemantics = bool.fromEnvironment('MERGE_SEMANTICS');
+const _buttonRows = bool.fromEnvironment('BUTTON_ROWS');
 
 enum Tone { neutral, good, warn, bad }
 
@@ -101,7 +108,7 @@ class RowCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final text = Theme.of(context).textTheme;
-    return Card(
+    final card = Card(
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(Tk.radius),
@@ -160,6 +167,9 @@ class RowCard extends StatelessWidget {
         ),
       ),
     );
+    // InkWell gives a tap action but no button role, so on iOS a tappable row
+    // reads as text and a decision model has nothing to tap.
+    return _buttonRows && onTap != null ? Semantics(button: true, child: card) : card;
   }
 }
 

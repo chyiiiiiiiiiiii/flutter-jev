@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import os
 import re
 import subprocess
 import sys
@@ -23,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "runner"))
 from arms import TASKS  # noqa: E402
 from transport import Marionette  # noqa: E402
 
-UDID = "B0600F84-6242-446E-A687-3648EBC0A8BF"  # iPhone 17e, kept for this experiment
+UDID = os.environ.get("E2E_UDID", "B0600F84-6242-446E-A687-3648EBC0A8BF")  # iPhone 17e by default
 BUNDLE = "dev.yii.boxtide"
 
 
